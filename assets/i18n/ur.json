@@ -1,0 +1,22 @@
+{
+  "Component Name": "-------",
+  "Admin": "ایڈمن",
+  "User": "صارف",
+  "User Type": "صارف کی قسم",
+  "Teacher": "استاد",
+  "Parents":"والدین",
+
+  "Fields": "-------",
+  "Id": "شناخت",
+  "Identity": "شناخت",
+  "Name": "نام",
+  "Title": "نام",
+  "Description":"تفصیل",
+  "Desc":"تفصیل",
+
+  "Messages": "-------",
+
+
+  "End of Every thing": ""
+
+}
