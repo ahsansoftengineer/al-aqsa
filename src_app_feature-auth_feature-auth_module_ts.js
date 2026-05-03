@@ -1,59 +1,49 @@
 "use strict";
-(self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_auth_auth_module_ts"],{
+(self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_feature-auth_feature-auth_module_ts"],{
 
-/***/ 431:
-/*!*********************************************!*\
-  !*** ./src/app/auth/auth-routing.module.ts ***!
-  \*********************************************/
+/***/ 8679:
+/*!*************************************************************!*\
+  !*** ./src/app/feature-auth/feature-auth-routing.module.ts ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AuthRoutingModule": () => (/* binding */ AuthRoutingModule)
+/* harmony export */   "Routez": () => (/* binding */ Routez)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forget-password/forget-password.component */ 2765);
-/* harmony import */ var _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sign-in/sign-in.component */ 9345);
-/* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sign-up/sign-up.component */ 8263);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forget-password/forget-password.component */ 4780);
+/* harmony import */ var _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sign-in/sign-in.component */ 1624);
+/* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sign-up/sign-up.component */ 5503);
 
 
 
-
-
-
-const routes = [
+const Routez = [
     { path: '', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__.SignInComponent },
     { path: 'sign-in', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__.SignInComponent },
     { path: 'sign-up', component: _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_2__.SignUpComponent },
     { path: 'forget-password', component: _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_0__.ForgetPasswordComponent },
     { path: '**', component: _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__.SignInComponent },
 ];
-class AuthRoutingModule {
-    static ɵfac = function AuthRoutingModule_Factory(t) { return new (t || AuthRoutingModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: AuthRoutingModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule] });
-}
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](AuthRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 1674:
-/*!*************************************!*\
-  !*** ./src/app/auth/auth.module.ts ***!
-  \*************************************/
+/***/ 5247:
+/*!*****************************************************!*\
+  !*** ./src/app/feature-auth/feature-auth.module.ts ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AuthModule": () => (/* binding */ AuthModule)
+/* harmony export */   "FeatureAuthModule": () => (/* binding */ FeatureAuthModule)
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 4666);
-/* harmony import */ var _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./auth-routing.module */ 431);
-/* harmony import */ var _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sign-in/sign-in.component */ 9345);
-/* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sign-up/sign-up.component */ 8263);
-/* harmony import */ var _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./forget-password/forget-password.component */ 2765);
+/* harmony import */ var _sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sign-in/sign-in.component */ 1624);
+/* harmony import */ var _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sign-up/sign-up.component */ 5503);
+/* harmony import */ var _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./forget-password/forget-password.component */ 4780);
+/* harmony import */ var _feature_auth_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./feature-auth-routing.module */ 8679);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -61,20 +51,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-class AuthModule {
-    static ɵfac = function AuthModule_Factory(t) { return new (t || AuthModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({ type: AuthModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__.AuthRoutingModule] });
+
+
+class FeatureAuthModule {
+    static ɵfac = function FeatureAuthModule_Factory(t) { return new (t || FeatureAuthModule)(); };
+    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({ type: FeatureAuthModule });
+    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule.forChild(_feature_auth_routing_module__WEBPACK_IMPORTED_MODULE_3__.Routez)] });
 }
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](AuthModule, { declarations: [_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_1__.SignInComponent, _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_2__.SignUpComponent, _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_3__.ForgetPasswordComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _auth_routing_module__WEBPACK_IMPORTED_MODULE_0__.AuthRoutingModule] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵsetNgModuleScope"](FeatureAuthModule, { declarations: [_sign_in_sign_in_component__WEBPACK_IMPORTED_MODULE_0__.SignInComponent, _sign_up_sign_up_component__WEBPACK_IMPORTED_MODULE_1__.SignUpComponent, _forget_password_forget_password_component__WEBPACK_IMPORTED_MODULE_2__.ForgetPasswordComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterModule] }); })();
 
 
 /***/ }),
 
-/***/ 2765:
-/*!*******************************************************************!*\
-  !*** ./src/app/auth/forget-password/forget-password.component.ts ***!
-  \*******************************************************************/
+/***/ 4780:
+/*!***************************************************************************!*\
+  !*** ./src/app/feature-auth/forget-password/forget-password.component.ts ***!
+  \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -97,10 +89,10 @@ class ForgetPasswordComponent {
 
 /***/ }),
 
-/***/ 9345:
-/*!***************************************************!*\
-  !*** ./src/app/auth/sign-in/sign-in.component.ts ***!
-  \***************************************************/
+/***/ 1624:
+/*!***********************************************************!*\
+  !*** ./src/app/feature-auth/sign-in/sign-in.component.ts ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -123,10 +115,10 @@ class SignInComponent {
 
 /***/ }),
 
-/***/ 8263:
-/*!***************************************************!*\
-  !*** ./src/app/auth/sign-up/sign-up.component.ts ***!
-  \***************************************************/
+/***/ 5503:
+/*!***********************************************************!*\
+  !*** ./src/app/feature-auth/sign-up/sign-up.component.ts ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -150,4 +142,4 @@ class SignUpComponent {
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_auth_auth_module_ts.js.map
+//# sourceMappingURL=src_app_feature-auth_feature-auth_module_ts.js.map

@@ -26,7 +26,7 @@ const routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     {
         path: 'auth',
-        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_auth_auth_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./auth/auth.module */ 1674)).then((m) => m.AuthModule),
+        loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature-auth_feature-auth_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./feature-auth/feature-auth.module */ 5247)).then((m) => m.FeatureAuthModule),
     },
     {
         path: '',
@@ -40,7 +40,7 @@ const routes = [
         children: [
             {
                 path: 'dashboard',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_dashboard_dashboard_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./dashboard/dashboard.module */ 4814)).then((m) => m.DashboardModule),
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature-dashboard_feature-dashboard_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./feature-dashboard/feature-dashboard.module */ 680)).then((m) => m.FeatureDashboardModule),
             },
             {
                 path: 'feature',
@@ -138,7 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_modules_angularz_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./shared/modules/angularz.module */ 2180);
 /* harmony import */ var _shared_modules_rootz_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared/modules/rootz.module */ 4465);
 /* harmony import */ var _shared_component_utils_utils_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shared/component/utils/utils.module */ 7289);
-/* harmony import */ var _core_static_AppInjector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./core/static/AppInjector */ 6858);
+/* harmony import */ var _core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./core/service/app.srvc.injector */ 8213);
 /* harmony import */ var _theme_theme_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./theme/theme.module */ 5056);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 2560);
 
@@ -155,7 +155,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppModule {
     constructor(injector) {
-        _core_static_AppInjector__WEBPACK_IMPORTED_MODULE_6__.AppInjector.injector = injector;
+        _core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_6__.AppInjector.injector = injector;
     }
     static ɵfac = function AppModule_Factory(t) { return new (t || AppModule)(_angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_8__.Injector)); };
     static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_8__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent] });
@@ -176,6 +176,281 @@ class AppModule {
         _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
         _shared_component_utils_utils_module__WEBPACK_IMPORTED_MODULE_5__.UtilsModule,
         _theme_theme_module__WEBPACK_IMPORTED_MODULE_7__.ThemeModule] }); })();
+
+
+/***/ }),
+
+/***/ 4587:
+/*!*********************************************!*\
+  !*** ./src/app/core/class-static/custom.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Custom": () => (/* binding */ Custom)
+/* harmony export */ });
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ 5474);
+
+// Custom Class Should be abstract and has all Static Methods
+class Custom {
+    static handleError(error) {
+        return (0,rxjs__WEBPACK_IMPORTED_MODULE_0__.throwError)(() => error);
+    }
+    static jsontoFormData(jo, // Json Object
+    pk = '', // Parent Key
+    carryFormData) {
+        const formData = carryFormData || new FormData();
+        let index = 0;
+        Object.keys(jo).forEach((key) => {
+            if (Object.prototype.hasOwnProperty.call(jo, key)) {
+                if (jo[key] !== null && jo[key] !== undefined) {
+                    let propName = pk || key;
+                    if (pk && this.isObject(jo)) {
+                        propName = pk + '[' + key + ']';
+                    }
+                    if (pk && this.isArray(jo)) {
+                        propName = pk + '[' + index + ']';
+                    }
+                    if (jo[key] instanceof File) {
+                        formData.append(propName, jo[key]);
+                    }
+                    else if (jo[key] instanceof FileList) {
+                        for (let j = 0; j < jo[key].length; j++) {
+                            formData.append(propName + '[' + j + ']', jo[key].item(j));
+                        }
+                    }
+                    else if (this.isArray(jo[key]) || this.isObject(jo[key])) {
+                        this.jsontoFormData(jo[key], propName, formData);
+                    }
+                    else if (typeof jo[key] === 'boolean') {
+                        formData.append(propName, +jo[key] ? '1' : '0');
+                    }
+                    else {
+                        formData.append(propName, jo[key]);
+                    }
+                }
+            }
+            index++;
+        });
+        return formData;
+    }
+    // FOR CHECKING THE GIVEN INPUT IS ARRAY
+    static isArray(val) {
+        const toString = {}.toString;
+        return toString.call(val) === '[object Array]';
+    }
+    // FOR CHECKING THE GIVEN INPUT IS OBJECT
+    static isObject(val) {
+        return !this.isArray(val) && typeof val === 'object' && !!val;
+    }
+    static objToURLQuery(searchObject) {
+        let result = '';
+        const obj = searchObject;
+        Object.keys(obj).forEach((key) => {
+            if (obj[key] != null &&
+                obj[key] != '' &&
+                obj[key] != undefined &&
+                typeof obj[key] != 'object') {
+                result += '&' + key + '=' + obj[key];
+            }
+        });
+        if (result)
+            result = result.substring(1, result.length);
+        return result;
+    }
+    static arrayToObj(arr) {
+        // first make sure that each val is between quotes
+        const res = arr.map((val) => val);
+        // join the vals with the comma's in between
+        let result = res.join(',');
+        // add the final brackets around it
+        result = '(' + result + ')';
+        return result;
+    }
+    // Most Used by doesn't required
+    static emptyCheck(val) {
+        return val != undefined && val != null && val != '';
+    }
+}
+
+
+/***/ }),
+
+/***/ 9061:
+/*!********************************************!*\
+  !*** ./src/app/core/class-static/regex.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "RegExps": () => (/* binding */ RegExps)
+/* harmony export */ });
+/* eslint-disable no-useless-escape */
+/* eslint-disable @typescript-eslint/no-inferrable-types */
+class RegExps {
+    // NUMERIC
+    // static NUM: RegExp = /^[0-9]*$/;
+    static NUM = /^(\d+(\.\d+)?)$/; // Numerics and decimals
+    static NO_DECIMAL = /^[\d]*$/;
+    static DECIMAL = (precision) => {
+        var expression = /^\d+\.{0,1}\d{0,2}$/;
+        return new RegExp(expression);
+    };
+    // ALPHABATIC
+    static ALPHA = /^[a-zA-Z -]*$/;
+    static ALPHANUM = /([a-zA-Z0-9 _-]+)$/;
+    static DATE_RANGE = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+    // SPECIFIC
+    static SPECIALCHARS = /[!~`@$%^&*()+\=\[\]{};':"\\|<>\?]/;
+    static WHITE_SPACE = /^[^\s]+(\s+[^\s]+)*$/;
+    static HYPHEN_REG = /^(?!-).*[^-]$/;
+    static EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    static PASSWORD = /^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[^\w\s])\S{8,}$/;
+    static POSITIVENUM = /^(?:[+\d].*\d|\d)$/;
+}
+
+
+/***/ }),
+
+/***/ 6299:
+/*!*********************************************************!*\
+  !*** ./src/app/core/class-static/validation-message.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "VAL": () => (/* binding */ VAL)
+/* harmony export */ });
+class VAL {
+    static _translate;
+    static ENTER = (val) => {
+        return {
+            key: 'ENTER',
+            lbl: val,
+            en: 'Please enter ' + val,
+            ur: ' براہ کرم'.concat(' ', this._translate?.instant(val), ' ', 'درج کریں۔'),
+        };
+    };
+    static SELECT = (val) => {
+        return {
+            key: 'SELECT',
+            lbl: val,
+            en: 'Please select ' + val,
+            ur: ' براہ کرم'.concat(' ', this._translate.instant(val), ' ', 'منتخب کریں۔'),
+        };
+    };
+    static WHITE_SPACE = {
+        key: 'WHIE_SPACE',
+        en: 'White space not allowed',
+        ur: 'خالی جگہ کی اجازت نہیں ہے۔',
+    };
+    static MAX_CHAR = (val) => {
+        return {
+            key: 'MAX_CHAR',
+            en: 'Maximum ' + val + ' characters allowed',
+            ur: ' زیادہ سے زیادہ'.concat(' ', val, ' ', 'حروف کی اجازت ہے۔'),
+        };
+    };
+    static MIN_CHAR = (val) => {
+        return {
+            key: 'MIN_CHAR',
+            en: 'Minimum ' + val + ' characters allowed',
+            ur: ' کم از کم'.concat(' ', val, ' ', 'حروف کی اجازت ہے۔'),
+        };
+    };
+    static NUM = {
+        key: 'NUM',
+        en: 'Only numbers allowed',
+        ur: 'صرف نمبروں کی اجازت ہے۔',
+    };
+    static DECIMAL = {
+        key: 'DECIMAL',
+        en: 'Only whole numbers allowed',
+        ur: 'اعشاریہ نمبر کی اجازت نہیں ہے۔',
+    };
+    static MIN = (val) => {
+        return {
+            key: 'MIN',
+            en: 'Minimum digits ' + val + ' allowed',
+            ur: ' کم از کم'.concat(' ', val, ' ', 'ہندسے کی اجازت ہے۔'),
+        };
+    };
+    static MAX = (val) => {
+        return {
+            key: 'MAX',
+            en: 'Maximum digits ' + val + ' allowed',
+            ur: ' زیادہ سے زیادہ'.concat(' ', val, ' ', 'ہندسے کی اجازت ہے۔'),
+        };
+    };
+    static NUM_POS = {
+        key: 'NUM_POS',
+        en: 'Only positive numbers allowed',
+        ur: 'منفی نمبروں کی اجازت نہیں ہے۔',
+    };
+    static ALPHA = {
+        key: 'ALPHA',
+        en: 'Only alphabets allowed',
+        ur: 'صرف انگریزی حروف تہجی کی اجازت ہے۔',
+    };
+    static ALPHANUM = {
+        key: 'ALPHANUM',
+        en: 'Only alphabets and numbers allowed',
+        ur: 'صرف انگریزی حروف تہجی اور ریاضی کے نمبروں کی اجازت ہے۔',
+    };
+    static HYPHEN = {
+        key: 'HYPHEN',
+        en: 'Hyphen not allowed at start and end',
+        ur: 'شروع اور آخر میں ہائفن (-) کی اجازت نہیں ہے۔',
+    };
+    static PATTERN = {
+        key: 'PATTERN',
+        en: 'Special characters not allowed',
+        ur: 'خصوصی حروف کی اجازت نہیں ہے۔',
+    };
+    static EMAIL = {
+        key: 'EMAIL',
+        en: 'Invalid email containing "@, .com"',
+        ur: 'ای میل ایڈریس کو '.concat(' ', 'abc@xyz.com', 'پیٹرن کی پیروی کرنا چاہیے'),
+    };
+    static PASSWORD = {
+        key: 'PASSWORD',
+        en: 'Invalid password must contains Upper Case, Lower Case, Number and Special Character.',
+        ur: 'پاس ورڈ میں اپر کیس، لوئر کیس، نمبر اور خصوصی کریکٹر ہونا چاہیے۔',
+    };
+    static DATE_EQUAL = {
+        key: 'DATE_EQUAL',
+        en: 'Date must be equal current date',
+        ur: ' تاریخ موجودہ تاریخ کے برابر ہونی چاہیے۔',
+    };
+    static MIN_DATE = {
+        key: 'MIN_DATE',
+        en: 'Date must be <= current date',
+        ur: ' تاریخ موجودہ تاریخ سے کم اور مساوی ہونی چاہیے۔',
+    };
+    static MAX_DATE = {
+        key: 'MAX_DATE',
+        en: 'Date must be >= current date',
+        ur: ' تاریخ موجودہ تاریخ سے بڑی اور مساوی ہونی چاہیے۔',
+    };
+    static CONFIRM = {
+        key: 'CONFIRM',
+        en: 'Please enter Confirm Password',
+        ur: 'براہ کرم تصدیقی پاس ورڈ درج کریں۔',
+    };
+    static MATCH = {
+        key: 'MATCH',
+        en: 'Your passwords are not match',
+        ur: 'آپ کے پاس ورڈ ایک جیسے ہونے چاہئیں',
+    };
+    static DUPLICATE = {
+        key: 'DUPLICATE',
+        en: 'Duplicate Selection Not Allowed',
+        ur: 'ڈپلیکیٹ انتخاب کی اجازت نہیں ہے۔',
+    };
+}
 
 
 /***/ }),
@@ -308,7 +583,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ 598);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/custom */ 1147);
+/* harmony import */ var _class_static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../class-static/custom */ 4587);
 /* harmony import */ var _base_class_b_inject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./base.class.b.inject */ 4789);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
 
@@ -320,7 +595,7 @@ class BaseClassFuncs extends _base_class_b_inject__WEBPACK_IMPORTED_MODULE_2__.B
         this._fb = this._fs._fb;
     }
     emptyCheck(val) {
-        return _static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(val);
+        return _class_static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(val);
     }
     mergeParam(providedParameters) {
         return { ...this.param, ...providedParameters };
@@ -455,7 +730,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ 745);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../service */ 4968);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../static/AppInjector */ 6858);
+/* harmony import */ var _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../service/app.srvc.injector */ 8213);
 /* harmony import */ var _enums__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../enums */ 9442);
 
 
@@ -488,13 +763,13 @@ class LB {
     constructor(param, cols) {
         this.param = param;
         this.cols = cols;
-        this._fb = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder);
-        this._router = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_5__.Router);
-        this._activeRoute = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute);
-        this._http = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.HTTPService);
-        this._swl = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.SwalService);
-        this._fs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.FormService);
-        this._vs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.ValidatorService);
+        this._fb = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder);
+        this._router = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_5__.Router);
+        this._activeRoute = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute);
+        this._http = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.HTTPService);
+        this._swl = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.SwalService);
+        this._fs = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.FormService);
+        this._vs = _service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(_service__WEBPACK_IMPORTED_MODULE_0__.ValidatorService);
         this.fa = this._fb.array([]);
     }
     resetProperties() {
@@ -969,6 +1244,32 @@ var URLz;
 
 /***/ }),
 
+/***/ 8213:
+/*!***************************************************!*\
+  !*** ./src/app/core/service/app.srvc.injector.ts ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AppInjector": () => (/* binding */ AppInjector)
+/* harmony export */ });
+class AppInjector {
+    static _injector;
+    static set injector(injector) {
+        this._injector = injector;
+    }
+    static get injector() {
+        return this._injector;
+    }
+    static get(token, notFoundValue, flags) {
+        return this._injector.get(token);
+    }
+}
+
+
+/***/ }),
+
 /***/ 4968:
 /*!***************************************!*\
   !*** ./src/app/core/service/index.ts ***!
@@ -1193,7 +1494,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ 598);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../class/base.class.a.ng */ 8040);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/AppInjector */ 6858);
+/* harmony import */ var _app_srvc_injector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.srvc.injector */ 8213);
 /* harmony import */ var _srvc_b_validator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./srvc.b.validator */ 4094);
 /* harmony import */ var _srvc_b_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./srvc.b.form */ 500);
 /* harmony import */ var _srvc_b_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./srvc.b.http */ 374);
@@ -1220,10 +1521,10 @@ class FormSubmitService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_
     _swl;
     constructor() {
         super();
-        this._http = _static_AppInjector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_http__WEBPACK_IMPORTED_MODULE_5__.HTTPService);
-        this._fs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_4__.FormService);
-        this._vs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_validator__WEBPACK_IMPORTED_MODULE_3__.ValidatorService);
-        this._swl = _static_AppInjector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_swal__WEBPACK_IMPORTED_MODULE_6__.SwalService);
+        this._http = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_http__WEBPACK_IMPORTED_MODULE_5__.HTTPService);
+        this._fs = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_4__.FormService);
+        this._vs = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_validator__WEBPACK_IMPORTED_MODULE_3__.ValidatorService);
+        this._swl = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_2__.AppInjector.get(_srvc_b_swal__WEBPACK_IMPORTED_MODULE_6__.SwalService);
     }
     _onSubmit(ps = this.defaultBehaviour) {
         ps = this.mergeSubmitParam(ps);
@@ -1358,7 +1659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ 2508);
 /* harmony import */ var _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../class/base.class.a.ng */ 8040);
-/* harmony import */ var _static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/custom */ 1147);
+/* harmony import */ var _class_static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../class-static/custom */ 4587);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -1377,7 +1678,7 @@ class FormService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_0__.Ba
         return fg?.contains(fieldName);
     }
     _hasVal(fieldName, fg = this._form) {
-        return _static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(this._getVal(fieldName, fg));
+        return _class_static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(this._getVal(fieldName, fg));
     }
     _hasGroup(groupName, fieldName) {
         const group = this._form?.get(groupName);
@@ -1427,7 +1728,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _enums_url_enum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../enums/url.enum */ 3208);
 /* harmony import */ var _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../class/base.class.a.ng */ 8040);
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ 2340);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/AppInjector */ 6858);
+/* harmony import */ var _app_srvc_injector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.srvc.injector */ 8213);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -1464,7 +1765,7 @@ class HTTPService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_1__.Ba
     // sealed and final key word
     constructor(injector) {
         super();
-        this.http = _static_AppInjector__WEBPACK_IMPORTED_MODULE_3__.AppInjector.get(_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient);
+        this.http = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_3__.AppInjector.get(_angular_common_http__WEBPACK_IMPORTED_MODULE_4__.HttpClient);
     }
     get(param) {
         return this.http.get(this.finalResult(param)).pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_5__.catchError)((error) => {
@@ -1641,7 +1942,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _srvc_b_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./srvc.b.http */ 374);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ 8699);
 /* harmony import */ var _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../class/base.class.a.ng */ 8040);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../static/AppInjector */ 6858);
+/* harmony import */ var _app_srvc_injector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.srvc.injector */ 8213);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -1656,9 +1957,9 @@ class SwalService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_3__.Ba
     _fs;
     constructor() {
         super();
-        this._fs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_1__.FormService);
-        this._http = _static_AppInjector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_srvc_b_http__WEBPACK_IMPORTED_MODULE_2__.HTTPService);
-        this._translate = _static_AppInjector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__.TranslateService);
+        this._fs = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_1__.FormService);
+        this._http = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_srvc_b_http__WEBPACK_IMPORTED_MODULE_2__.HTTPService);
+        this._translate = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_4__.AppInjector.get(_ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__.TranslateService);
     }
     handleError(error) {
         return (0,rxjs__WEBPACK_IMPORTED_MODULE_6__.throwError)(() => error);
@@ -1772,12 +2073,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ValidatorService": () => (/* binding */ ValidatorService)
 /* harmony export */ });
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ 2508);
-/* harmony import */ var _static_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../static/regex */ 1132);
+/* harmony import */ var _class_static_regex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../class-static/regex */ 9061);
 /* harmony import */ var _srvc_b_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./srvc.b.form */ 500);
-/* harmony import */ var _static_custom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/custom */ 1147);
-/* harmony import */ var _static_validation_message__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../static/validation-message */ 523);
+/* harmony import */ var _class_static_custom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../class-static/custom */ 4587);
+/* harmony import */ var _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../class-static/validation-message */ 6299);
 /* harmony import */ var _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../class/base.class.a.ng */ 8040);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/AppInjector */ 6858);
+/* harmony import */ var _app_srvc_injector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.srvc.injector */ 8213);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -1793,8 +2094,8 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
     showWarning = false;
     constructor() {
         super();
-        this._fs = _static_AppInjector__WEBPACK_IMPORTED_MODULE_5__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_1__.FormService);
-        _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL._translate = this._translate;
+        this._fs = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_5__.AppInjector.get(_srvc_b_form__WEBPACK_IMPORTED_MODULE_1__.FormService);
+        _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL._translate = this._translate;
     }
     // BELOW METHODS IS TO DISPLAY ERROR MESSAGES
     toTitleCase(str) {
@@ -1881,43 +2182,43 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
                 if (param.authorized != undefined && a == param.authorized)
                     return null;
                 if (param.isField == undefined)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ENTER(fn);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ENTER(fn);
                 else
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.SELECT(fn);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.SELECT(fn);
             }
-            else if (_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(a) && a != '0') {
+            else if (_class_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(a) && a != '0') {
                 if (param.maxChar && a.length > param.maxChar)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX_CHAR(param.maxChar);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX_CHAR(param.maxChar);
                 else if (param.minChar && a.length < param.minChar)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN_CHAR(param.minChar);
-                else if (!_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.WHITE_SPACE.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.WHITE_SPACE;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN_CHAR(param.minChar);
+                else if (!_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.WHITE_SPACE.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.WHITE_SPACE;
                 else if (param.num || param.max || param.min) {
-                    if (!_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.NUM.test(a))
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.NUM;
+                    if (!_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.NUM.test(a))
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.NUM;
                     else if (a % 1 != 0 && !param.decimal)
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DECIMAL;
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DECIMAL;
                     else if (param.min && Number(a) < param.min)
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN(param.min);
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN(param.min);
                     else if (param.max && Number(a) > param.max)
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX(param.min);
-                    else if (!_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.POSITIVENUM.test(a))
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.NUM_POS;
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX(param.min);
+                    else if (!_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.POSITIVENUM.test(a))
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.NUM_POS;
                     else
                         return null;
                 }
-                else if (param.alpha && !_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.ALPHA.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ALPHA;
-                else if (param.alphaNum && !_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.ALPHANUM.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ALPHANUM;
-                else if (param.hypenreg && !_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.HYPHEN_REG.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.HYPHEN;
-                else if (param.specialChar && _static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.SPECIALCHARS.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.PATTERN;
-                else if (param.email && !_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.EMAIL.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.EMAIL;
-                else if (param.password && !_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.PASSWORD.test(a))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.PASSWORD;
+                else if (param.alpha && !_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.ALPHA.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ALPHA;
+                else if (param.alphaNum && !_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.ALPHANUM.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.ALPHANUM;
+                else if (param.hypenreg && !_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.HYPHEN_REG.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.HYPHEN;
+                else if (param.specialChar && _class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.SPECIALCHARS.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.PATTERN;
+                else if (param.email && !_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.EMAIL.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.EMAIL;
+                else if (param.password && !_class_static_regex__WEBPACK_IMPORTED_MODULE_0__.RegExps.PASSWORD.test(a))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.PASSWORD;
                 else
                     return null;
             }
@@ -1928,7 +2229,7 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
         return (control) => {
             const a = control?.value;
             if (!a || a == 0) {
-                return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.SELECT(fn);
+                return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.SELECT(fn);
             }
         };
     }
@@ -1936,21 +2237,21 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
         return (control) => {
             const b = new Date(control?.value);
             let a;
-            if (_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(b) && b instanceof Date) {
+            if (_class_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(b) && b instanceof Date) {
                 a = b?.getTime() ?? '';
             }
-            if (_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(b)) {
+            if (_class_static_custom__WEBPACK_IMPORTED_MODULE_2__.Custom.emptyCheck(b)) {
                 if (dat?.currentDate != undefined && a != dat?.currentDate?.getTime()) {
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DATE_EQUAL;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DATE_EQUAL;
                 }
                 else if (b?.toDateString() == dat?.minDate?.toDateString() ||
                     b?.toDateString() == dat?.maxDate?.toDateString())
                     return null; // when case is >= | <=
                 else if (dat?.minDate != undefined && dat?.minDate?.getTime() > a) {
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN_DATE;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MIN_DATE;
                 }
                 else if (dat?.maxDate != undefined && dat?.maxDate?.getTime() < a) {
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX_DATE;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MAX_DATE;
                 }
                 else
                     return null;
@@ -1969,7 +2270,7 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
                         repeat++;
                     }
                     if (repeat > 1) {
-                        fieldA?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        fieldA?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
                         // return VAL.DUPLICATE; // maybe it required
                     }
                     else {
@@ -2000,9 +2301,9 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
                         repeat++;
                     }
                     if (repeat > 1) {
-                        fieldA?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        fieldB?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE;
+                        fieldA?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        fieldB?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE;
                     }
                     else {
                         if (fieldA?.errors?.key == 'DUPLICATE') {
@@ -2035,11 +2336,11 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
                         repeat++;
                     }
                     if (repeat >= 1) {
-                        fieldA?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        fieldB?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        fielda?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        fieldb?.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
-                        return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE;
+                        fieldA?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        fieldB?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        fielda?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        fieldb?.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE);
+                        return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.DUPLICATE;
                     }
                     else if (fieldA?.errors?.key == 'DUPLICATE' ||
                         fieldB?.errors?.key == 'DUPLICATE') {
@@ -2059,12 +2360,12 @@ class ValidatorService extends _class_base_class_a_ng__WEBPACK_IMPORTED_MODULE_4
             const fieldB = group?.get(field2);
             if (fieldA !== null && fieldB !== null) {
                 if (fieldB.value == '') {
-                    fieldB.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.CONFIRM);
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.CONFIRM;
+                    fieldB.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.CONFIRM);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.CONFIRM;
                 }
                 else if (fieldA.value != fieldB.value) {
-                    fieldB.setErrors(_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MATCH);
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MATCH;
+                    fieldB.setErrors(_class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MATCH);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_3__.VAL.MATCH;
                 }
                 else {
                     fieldB.setErrors(null);
@@ -2145,8 +2446,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ValidatorService2": () => (/* binding */ ValidatorService2)
 /* harmony export */ });
 /* harmony import */ var _constant_constant__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constant/constant */ 8203);
-/* harmony import */ var _static_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../static/regex */ 1132);
-/* harmony import */ var _static_validation_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../static/validation-message */ 523);
+/* harmony import */ var _class_static_regex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../class-static/regex */ 9061);
+/* harmony import */ var _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../class-static/validation-message */ 6299);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -2165,18 +2466,18 @@ class ValidatorService2 {
                 return null;
             const val = control?.value;
             if (this.emptyCheck(val) && param.required)
-                return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
+                return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
             else if (!this.emptyCheck(val)) {
                 if (isNaN(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.NUM;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.NUM;
                 // else if (param.decimal === 0 && !RegExps.NUM.test(val)) return VAL.NUM;
                 else if (Number(val) < param.min)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN(val);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN(val);
                 else if (Number(val) > param.max)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX(val);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX(val);
                 else if (param.decimal !== 0 &&
-                    !_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.DECIMAL(param.decimal).test(val)) {
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.DECIMAL;
+                    !_class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.DECIMAL(param.decimal).test(val)) {
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.DECIMAL;
                 }
             }
             return null;
@@ -2190,20 +2491,20 @@ class ValidatorService2 {
             if (!control)
                 return null;
             if (this.emptyCheck(val) && param.required)
-                return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
+                return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
             else if (!this.emptyCheck(val)) {
                 if (param.max && val.length > param.max)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX_CHAR(param.max);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX_CHAR(param.max);
                 else if (param.min && val.length < param.min)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN_CHAR(param.min);
-                else if (!_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.WHITE_SPACE.test(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.WHITE_SPACE;
-                else if (param.alpha && !_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.ALPHA.test(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ALPHA;
-                else if (param.alphaNum && !_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.ALPHANUM.test(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ALPHANUM;
-                else if (param.special != 0 && _static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.SPECIALCHARS.test(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.PATTERN;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN_CHAR(param.min);
+                else if (!_class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.WHITE_SPACE.test(val))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.WHITE_SPACE;
+                else if (param.alpha && !_class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.ALPHA.test(val))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ALPHA;
+                else if (param.alphaNum && !_class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.ALPHANUM.test(val))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ALPHANUM;
+                else if (param.special != 0 && _class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.SPECIALCHARS.test(val))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.PATTERN;
                 else
                     return null;
             }
@@ -2216,17 +2517,17 @@ class ValidatorService2 {
                 return null;
             const val = control?.value?.toString();
             if (this.emptyCheck(val) && param.required)
-                return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
+                return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.ENTER('');
             else if (!this.emptyCheck(val)) {
                 if (isNaN(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.NUM;
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.NUM;
                 // else if (!RegExps.NUM.test(val)) return VAL.NUM;
-                else if (!_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.NO_DECIMAL.test(val))
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.DECIMAL;
+                else if (!_class_static_regex__WEBPACK_IMPORTED_MODULE_1__.RegExps.NO_DECIMAL.test(val))
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.DECIMAL;
                 else if (val?.length < param.min)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN_CHAR(param.min);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MIN_CHAR(param.min);
                 else if (val?.length > param.max)
-                    return _static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX_CHAR(param.max);
+                    return _class_static_validation_message__WEBPACK_IMPORTED_MODULE_2__.VAL.MAX_CHAR(param.max);
             }
             return null;
         };
@@ -2507,7 +2808,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _static_AppInjector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../static/AppInjector */ 6858);
+/* harmony import */ var _app_srvc_injector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.srvc.injector */ 8213);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -2518,8 +2819,8 @@ class UtilService {
     _router;
     date;
     constructor() {
-        this._datePipe = _static_AppInjector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_common__WEBPACK_IMPORTED_MODULE_1__.DatePipe);
-        this._router = _static_AppInjector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_2__.Router);
+        this._datePipe = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_common__WEBPACK_IMPORTED_MODULE_1__.DatePipe);
+        this._router = _app_srvc_injector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_router__WEBPACK_IMPORTED_MODULE_2__.Router);
     }
     _getCurrentdatenadTime() {
         this.date = new Date();
@@ -2608,307 +2909,6 @@ const Btn = {
         console.log(undefined, 'Triggered');
     }
 };
-
-
-/***/ }),
-
-/***/ 6858:
-/*!********************************************!*\
-  !*** ./src/app/core/static/AppInjector.ts ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AppInjector": () => (/* binding */ AppInjector)
-/* harmony export */ });
-class AppInjector {
-    static _injector;
-    static set injector(injector) {
-        this._injector = injector;
-    }
-    static get injector() {
-        return this._injector;
-    }
-    static get(token, notFoundValue, flags) {
-        return this._injector.get(token);
-    }
-}
-
-
-/***/ }),
-
-/***/ 1147:
-/*!***************************************!*\
-  !*** ./src/app/core/static/custom.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Custom": () => (/* binding */ Custom)
-/* harmony export */ });
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! rxjs */ 5474);
-
-// Custom Class Should be abstract and has all Static Methods
-class Custom {
-    static handleError(error) {
-        return (0,rxjs__WEBPACK_IMPORTED_MODULE_0__.throwError)(() => error);
-    }
-    static jsontoFormData(jo, // Json Object
-    pk = '', // Parent Key
-    carryFormData) {
-        const formData = carryFormData || new FormData();
-        let index = 0;
-        Object.keys(jo).forEach((key) => {
-            if (Object.prototype.hasOwnProperty.call(jo, key)) {
-                if (jo[key] !== null && jo[key] !== undefined) {
-                    let propName = pk || key;
-                    if (pk && this.isObject(jo)) {
-                        propName = pk + '[' + key + ']';
-                    }
-                    if (pk && this.isArray(jo)) {
-                        propName = pk + '[' + index + ']';
-                    }
-                    if (jo[key] instanceof File) {
-                        formData.append(propName, jo[key]);
-                    }
-                    else if (jo[key] instanceof FileList) {
-                        for (let j = 0; j < jo[key].length; j++) {
-                            formData.append(propName + '[' + j + ']', jo[key].item(j));
-                        }
-                    }
-                    else if (this.isArray(jo[key]) || this.isObject(jo[key])) {
-                        this.jsontoFormData(jo[key], propName, formData);
-                    }
-                    else if (typeof jo[key] === 'boolean') {
-                        formData.append(propName, +jo[key] ? '1' : '0');
-                    }
-                    else {
-                        formData.append(propName, jo[key]);
-                    }
-                }
-            }
-            index++;
-        });
-        return formData;
-    }
-    // FOR CHECKING THE GIVEN INPUT IS ARRAY
-    static isArray(val) {
-        const toString = {}.toString;
-        return toString.call(val) === '[object Array]';
-    }
-    // FOR CHECKING THE GIVEN INPUT IS OBJECT
-    static isObject(val) {
-        return !this.isArray(val) && typeof val === 'object' && !!val;
-    }
-    static objToURLQuery(searchObject) {
-        let result = '';
-        const obj = searchObject;
-        Object.keys(obj).forEach((key) => {
-            if (obj[key] != null &&
-                obj[key] != '' &&
-                obj[key] != undefined &&
-                typeof obj[key] != 'object') {
-                result += '&' + key + '=' + obj[key];
-            }
-        });
-        if (result)
-            result = result.substring(1, result.length);
-        return result;
-    }
-    static arrayToObj(arr) {
-        // first make sure that each val is between quotes
-        const res = arr.map((val) => val);
-        // join the vals with the comma's in between
-        let result = res.join(',');
-        // add the final brackets around it
-        result = '(' + result + ')';
-        return result;
-    }
-    // Most Used by doesn't required
-    static emptyCheck(val) {
-        return val != undefined && val != null && val != '';
-    }
-}
-
-
-/***/ }),
-
-/***/ 1132:
-/*!**************************************!*\
-  !*** ./src/app/core/static/regex.ts ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "RegExps": () => (/* binding */ RegExps)
-/* harmony export */ });
-/* eslint-disable no-useless-escape */
-/* eslint-disable @typescript-eslint/no-inferrable-types */
-class RegExps {
-    // NUMERIC
-    // static NUM: RegExp = /^[0-9]*$/;
-    static NUM = /^(\d+(\.\d+)?)$/; // Numerics and decimals
-    static NO_DECIMAL = /^[\d]*$/;
-    static DECIMAL = (precision) => {
-        var expression = /^\d+\.{0,1}\d{0,2}$/;
-        return new RegExp(expression);
-    };
-    // ALPHABATIC
-    static ALPHA = /^[a-zA-Z -]*$/;
-    static ALPHANUM = /([a-zA-Z0-9 _-]+)$/;
-    static DATE_RANGE = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
-    // SPECIFIC
-    static SPECIALCHARS = /[!~`@$%^&*()+\=\[\]{};':"\\|<>\?]/;
-    static WHITE_SPACE = /^[^\s]+(\s+[^\s]+)*$/;
-    static HYPHEN_REG = /^(?!-).*[^-]$/;
-    static EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    static PASSWORD = /^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[^\w\s])\S{8,}$/;
-    static POSITIVENUM = /^(?:[+\d].*\d|\d)$/;
-}
-
-
-/***/ }),
-
-/***/ 523:
-/*!***************************************************!*\
-  !*** ./src/app/core/static/validation-message.ts ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "VAL": () => (/* binding */ VAL)
-/* harmony export */ });
-class VAL {
-    static _translate;
-    static ENTER = (val) => {
-        return {
-            key: 'ENTER',
-            lbl: val,
-            en: 'Please enter ' + val,
-            ur: ' براہ کرم'.concat(' ', this._translate?.instant(val), ' ', 'درج کریں۔'),
-        };
-    };
-    static SELECT = (val) => {
-        return {
-            key: 'SELECT',
-            lbl: val,
-            en: 'Please select ' + val,
-            ur: ' براہ کرم'.concat(' ', this._translate.instant(val), ' ', 'منتخب کریں۔'),
-        };
-    };
-    static WHITE_SPACE = {
-        key: 'WHIE_SPACE',
-        en: 'White space not allowed',
-        ur: 'خالی جگہ کی اجازت نہیں ہے۔',
-    };
-    static MAX_CHAR = (val) => {
-        return {
-            key: 'MAX_CHAR',
-            en: 'Maximum ' + val + ' characters allowed',
-            ur: ' زیادہ سے زیادہ'.concat(' ', val, ' ', 'حروف کی اجازت ہے۔'),
-        };
-    };
-    static MIN_CHAR = (val) => {
-        return {
-            key: 'MIN_CHAR',
-            en: 'Minimum ' + val + ' characters allowed',
-            ur: ' کم از کم'.concat(' ', val, ' ', 'حروف کی اجازت ہے۔'),
-        };
-    };
-    static NUM = {
-        key: 'NUM',
-        en: 'Only numbers allowed',
-        ur: 'صرف نمبروں کی اجازت ہے۔',
-    };
-    static DECIMAL = {
-        key: 'DECIMAL',
-        en: 'Only whole numbers allowed',
-        ur: 'اعشاریہ نمبر کی اجازت نہیں ہے۔',
-    };
-    static MIN = (val) => {
-        return {
-            key: 'MIN',
-            en: 'Minimum digits ' + val + ' allowed',
-            ur: ' کم از کم'.concat(' ', val, ' ', 'ہندسے کی اجازت ہے۔'),
-        };
-    };
-    static MAX = (val) => {
-        return {
-            key: 'MAX',
-            en: 'Maximum digits ' + val + ' allowed',
-            ur: ' زیادہ سے زیادہ'.concat(' ', val, ' ', 'ہندسے کی اجازت ہے۔'),
-        };
-    };
-    static NUM_POS = {
-        key: 'NUM_POS',
-        en: 'Only positive numbers allowed',
-        ur: 'منفی نمبروں کی اجازت نہیں ہے۔',
-    };
-    static ALPHA = {
-        key: 'ALPHA',
-        en: 'Only alphabets allowed',
-        ur: 'صرف انگریزی حروف تہجی کی اجازت ہے۔',
-    };
-    static ALPHANUM = {
-        key: 'ALPHANUM',
-        en: 'Only alphabets and numbers allowed',
-        ur: 'صرف انگریزی حروف تہجی اور ریاضی کے نمبروں کی اجازت ہے۔',
-    };
-    static HYPHEN = {
-        key: 'HYPHEN',
-        en: 'Hyphen not allowed at start and end',
-        ur: 'شروع اور آخر میں ہائفن (-) کی اجازت نہیں ہے۔',
-    };
-    static PATTERN = {
-        key: 'PATTERN',
-        en: 'Special characters not allowed',
-        ur: 'خصوصی حروف کی اجازت نہیں ہے۔',
-    };
-    static EMAIL = {
-        key: 'EMAIL',
-        en: 'Invalid email containing "@, .com"',
-        ur: 'ای میل ایڈریس کو '.concat(' ', 'abc@xyz.com', 'پیٹرن کی پیروی کرنا چاہیے'),
-    };
-    static PASSWORD = {
-        key: 'PASSWORD',
-        en: 'Invalid password must contains Upper Case, Lower Case, Number and Special Character.',
-        ur: 'پاس ورڈ میں اپر کیس، لوئر کیس، نمبر اور خصوصی کریکٹر ہونا چاہیے۔',
-    };
-    static DATE_EQUAL = {
-        key: 'DATE_EQUAL',
-        en: 'Date must be equal current date',
-        ur: ' تاریخ موجودہ تاریخ کے برابر ہونی چاہیے۔',
-    };
-    static MIN_DATE = {
-        key: 'MIN_DATE',
-        en: 'Date must be <= current date',
-        ur: ' تاریخ موجودہ تاریخ سے کم اور مساوی ہونی چاہیے۔',
-    };
-    static MAX_DATE = {
-        key: 'MAX_DATE',
-        en: 'Date must be >= current date',
-        ur: ' تاریخ موجودہ تاریخ سے بڑی اور مساوی ہونی چاہیے۔',
-    };
-    static CONFIRM = {
-        key: 'CONFIRM',
-        en: 'Please enter Confirm Password',
-        ur: 'براہ کرم تصدیقی پاس ورڈ درج کریں۔',
-    };
-    static MATCH = {
-        key: 'MATCH',
-        en: 'Your passwords are not match',
-        ur: 'آپ کے پاس ورڈ ایک جیسے ہونے چاہئیں',
-    };
-    static DUPLICATE = {
-        key: 'DUPLICATE',
-        en: 'Duplicate Selection Not Allowed',
-        ur: 'ڈپلیکیٹ انتخاب کی اجازت نہیں ہے۔',
-    };
-}
 
 
 /***/ }),
@@ -3923,7 +3923,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ 1989);
 /* harmony import */ var src_app_core_class__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/class */ 3538);
-/* harmony import */ var src_app_core_static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/static/custom */ 1147);
+/* harmony import */ var src_app_core_class_static_custom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/class-static/custom */ 4587);
 
 
 
@@ -3996,7 +3996,7 @@ class BaseControlComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0
         event.stopPropagation();
     }
     emptyCheck(val) {
-        return src_app_core_static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(val);
+        return src_app_core_class_static_custom__WEBPACK_IMPORTED_MODULE_1__.Custom.emptyCheck(val);
     }
     statusChangesSubscription() {
         const subs = this.control?.statusChanges?.subscribe(() => {
@@ -4298,7 +4298,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "DateComponent": () => (/* binding */ DateComponent)
 /* harmony export */ });
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4666);
-/* harmony import */ var src_app_core_static_AppInjector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/static/AppInjector */ 6858);
+/* harmony import */ var src_app_core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/service/app.srvc.injector */ 8213);
 /* harmony import */ var _base_control_z_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../base-control-z.component */ 2220);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ 2508);
@@ -4338,7 +4338,7 @@ class DateComponent extends _base_control_z_component__WEBPACK_IMPORTED_MODULE_1
     //   super(injector);
     // }
     ngOnInit() {
-        this.datePipe = src_app_core_static_AppInjector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_common__WEBPACK_IMPORTED_MODULE_3__.DatePipe);
+        this.datePipe = src_app_core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_0__.AppInjector.get(_angular_common__WEBPACK_IMPORTED_MODULE_3__.DatePipe);
         super.ngOnInit();
         if (this.disabled)
             this.control.disable();
@@ -6723,7 +6723,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TblACComponent": () => (/* binding */ TblACComponent)
 /* harmony export */ });
-/* harmony import */ var src_app_core_static_custom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/static/custom */ 1147);
+/* harmony import */ var src_app_core_class_static_custom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/class-static/custom */ 4587);
 /* harmony import */ var _control_base_control_ac_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../control/base-control-ac.component */ 7714);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4666);
@@ -6755,7 +6755,7 @@ class TblACComponent extends _control_base_control_ac_component__WEBPACK_IMPORTE
     ngOnInit() {
         super.ngOnInit();
         this.searchControl.valueChanges.subscribe((x) => {
-            if (!src_app_core_static_custom__WEBPACK_IMPORTED_MODULE_0__.Custom.emptyCheck(x)) {
+            if (!src_app_core_class_static_custom__WEBPACK_IMPORTED_MODULE_0__.Custom.emptyCheck(x)) {
                 this.control.patchValue(null);
             }
         });
@@ -7796,7 +7796,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ErrorMessagePipe": () => (/* binding */ ErrorMessagePipe)
 /* harmony export */ });
 /* harmony import */ var src_app_core_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/service */ 4968);
-/* harmony import */ var src_app_core_static_AppInjector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/static/AppInjector */ 6858);
+/* harmony import */ var src_app_core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/core/service/app.srvc.injector */ 8213);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
 
 
@@ -7806,7 +7806,7 @@ __webpack_require__.r(__webpack_exports__);
 class ErrorMessagePipe {
     _vs;
     constructor(injector) {
-        this._vs = src_app_core_static_AppInjector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(src_app_core_service__WEBPACK_IMPORTED_MODULE_0__.ValidatorService);
+        this._vs = src_app_core_service_app_srvc_injector__WEBPACK_IMPORTED_MODULE_1__.AppInjector.get(src_app_core_service__WEBPACK_IMPORTED_MODULE_0__.ValidatorService);
     }
     transform(control, ...args) {
         return '';

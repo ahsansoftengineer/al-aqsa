@@ -1,98 +1,37 @@
 "use strict";
-(self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_dashboard_dashboard_module_ts"],{
+(self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_feature-dashboard_feature-dashboard_module_ts"],{
 
-/***/ 425:
-/*!*******************************************************!*\
-  !*** ./src/app/dashboard/dashboard-routing.module.ts ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DashboardRoutingModule": () => (/* binding */ DashboardRoutingModule)
-/* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard/dashboard.component */ 2488);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2560);
-
-
-
-
-const routes = [
-    {
-        path: '',
-        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__.DashboardComponent,
-        data: {}
-    }
-];
-class DashboardRoutingModule {
-    static ɵfac = function DashboardRoutingModule_Factory(t) { return new (t || DashboardRoutingModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: DashboardRoutingModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule.forChild(routes), _angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule] });
-}
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](DashboardRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterModule] }); })();
-
-
-/***/ }),
-
-/***/ 4814:
-/*!***********************************************!*\
-  !*** ./src/app/dashboard/dashboard.module.ts ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DashboardModule": () => (/* binding */ DashboardModule)
-/* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 4666);
-/* harmony import */ var _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dashboard-routing.module */ 425);
-/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard/dashboard.component */ 2488);
-/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/grid-list */ 2642);
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/card */ 2156);
-/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/menu */ 8589);
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/icon */ 7822);
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/button */ 4522);
-/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/cdk/layout */ 3278);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 2560);
-
-
-
-
-
-
-
-
-
-
-class DashboardModule {
-    static ɵfac = function DashboardModule_Factory(t) { return new (t || DashboardModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineNgModule"]({ type: DashboardModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.CommonModule,
-            _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_0__.DashboardRoutingModule,
-            _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_4__.MatGridListModule,
-            _angular_material_card__WEBPACK_IMPORTED_MODULE_5__.MatCardModule,
-            _angular_material_menu__WEBPACK_IMPORTED_MODULE_6__.MatMenuModule,
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__.MatIconModule,
-            _angular_material_button__WEBPACK_IMPORTED_MODULE_8__.MatButtonModule,
-            _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_9__.LayoutModule] });
-}
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsetNgModuleScope"](DashboardModule, { declarations: [_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.CommonModule,
-        _dashboard_routing_module__WEBPACK_IMPORTED_MODULE_0__.DashboardRoutingModule,
-        _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_4__.MatGridListModule,
-        _angular_material_card__WEBPACK_IMPORTED_MODULE_5__.MatCardModule,
-        _angular_material_menu__WEBPACK_IMPORTED_MODULE_6__.MatMenuModule,
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_7__.MatIconModule,
-        _angular_material_button__WEBPACK_IMPORTED_MODULE_8__.MatButtonModule,
-        _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_9__.LayoutModule] }); })();
-
-
-/***/ }),
-
-/***/ 2488:
+/***/ 4223:
 /*!************************************************************!*\
-  !*** ./src/app/dashboard/dashboard/dashboard.component.ts ***!
+  !*** ./src/app/feature-dashboard/admin/admin.component.ts ***!
   \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AdminComponent": () => (/* binding */ AdminComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class AdminComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    static ɵfac = function AdminComponent_Factory(t) { return new (t || AdminComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminComponent, selectors: [["aam-admin"]], decls: 2, vars: 0, template: function AdminComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "admin works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhZG1pbi5jb21wb25lbnQuc2NzcyJ9 */"] });
+}
+
+
+/***/ }),
+
+/***/ 7735:
+/*!********************************************************************!*\
+  !*** ./src/app/feature-dashboard/dashboard/dashboard.component.ts ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -234,7 +173,264 @@ class DashboardComponent {
   });
 }
 
+/***/ }),
+
+/***/ 554:
+/*!***********************************************************************!*\
+  !*** ./src/app/feature-dashboard/feature-dashboard-routing.module.ts ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Routez": () => (/* binding */ Routez)
+/* harmony export */ });
+/* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./admin/admin.component */ 4223);
+/* harmony import */ var _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dashboard/dashboard.component */ 7735);
+/* harmony import */ var _finance_finance_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finance/finance.component */ 6428);
+/* harmony import */ var _parent_parent_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parent/parent.component */ 4679);
+/* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./student/student.component */ 6229);
+/* harmony import */ var _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./teacher/teacher.component */ 9231);
+
+
+
+
+
+
+const Routez = [
+    // ✅ THIS is the missing piece
+    {
+        path: '',
+        redirectTo: 'admin',
+        pathMatch: 'full',
+    },
+    // {
+    //   path: 'type',
+    //   component: UserTypeComponent,
+    //   data: {
+    //     title: 'User Type',
+    //     linkCreate: '/feature/user/type-add',
+    //     permission: [URL_ACTION.VIEW],
+    //     layer: ['User', 'User Type'],
+    //   },
+    // },
+    {
+        path: 'admin',
+        component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_0__.AdminComponent,
+        data: {}
+    },
+    {
+        path: 'finance',
+        component: _finance_finance_component__WEBPACK_IMPORTED_MODULE_2__.FinanceComponent,
+        data: {}
+    },
+    {
+        path: 'parent',
+        component: _parent_parent_component__WEBPACK_IMPORTED_MODULE_3__.ParentComponent,
+        data: {}
+    },
+    {
+        path: 'student',
+        component: _student_student_component__WEBPACK_IMPORTED_MODULE_4__.StudentComponent,
+        data: {}
+    },
+    {
+        path: 'teacher',
+        component: _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_5__.TeacherComponent,
+        data: {}
+    },
+    {
+        path: 'main',
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent,
+        data: {}
+    },
+    {
+        path: '',
+        component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_1__.DashboardComponent,
+        data: {}
+    }
+];
+
+
+/***/ }),
+
+/***/ 680:
+/*!***************************************************************!*\
+  !*** ./src/app/feature-dashboard/feature-dashboard.module.ts ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FeatureDashboardModule": () => (/* binding */ FeatureDashboardModule)
+/* harmony export */ });
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var _feature_dashboard_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../feature-dashboard/dashboard/dashboard.component */ 7735);
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/grid-list */ 2642);
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/card */ 2156);
+/* harmony import */ var _angular_material_menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/menu */ 8589);
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/icon */ 7822);
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/button */ 4522);
+/* harmony import */ var _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/cdk/layout */ 3278);
+/* harmony import */ var _feature_dashboard_finance_finance_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../feature-dashboard/finance/finance.component */ 6428);
+/* harmony import */ var _feature_dashboard_admin_admin_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../feature-dashboard/admin/admin.component */ 4223);
+/* harmony import */ var _feature_dashboard_teacher_teacher_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../feature-dashboard/teacher/teacher.component */ 9231);
+/* harmony import */ var _feature_dashboard_parent_parent_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../feature-dashboard/parent/parent.component */ 4679);
+/* harmony import */ var _feature_dashboard_student_student_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../feature-dashboard/student/student.component */ 6229);
+/* harmony import */ var _feature_dashboard_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./feature-dashboard-routing.module */ 554);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ 124);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 2560);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class FeatureDashboardModule {
+    static ɵfac = function FeatureDashboardModule_Factory(t) { return new (t || FeatureDashboardModule)(); };
+    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineNgModule"]({ type: FeatureDashboardModule });
+    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_8__.CommonModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule.forChild(_feature_dashboard_routing_module__WEBPACK_IMPORTED_MODULE_6__.Routez),
+            _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_10__.MatGridListModule,
+            _angular_material_card__WEBPACK_IMPORTED_MODULE_11__.MatCardModule,
+            _angular_material_menu__WEBPACK_IMPORTED_MODULE_12__.MatMenuModule,
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_13__.MatIconModule,
+            _angular_material_button__WEBPACK_IMPORTED_MODULE_14__.MatButtonModule,
+            _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_15__.LayoutModule] });
+}
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵsetNgModuleScope"](FeatureDashboardModule, { declarations: [_feature_dashboard_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_0__.DashboardComponent,
+        _feature_dashboard_finance_finance_component__WEBPACK_IMPORTED_MODULE_1__.FinanceComponent,
+        _feature_dashboard_admin_admin_component__WEBPACK_IMPORTED_MODULE_2__.AdminComponent,
+        _feature_dashboard_teacher_teacher_component__WEBPACK_IMPORTED_MODULE_3__.TeacherComponent,
+        _feature_dashboard_parent_parent_component__WEBPACK_IMPORTED_MODULE_4__.ParentComponent,
+        _feature_dashboard_student_student_component__WEBPACK_IMPORTED_MODULE_5__.StudentComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_8__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_9__.RouterModule, _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_10__.MatGridListModule,
+        _angular_material_card__WEBPACK_IMPORTED_MODULE_11__.MatCardModule,
+        _angular_material_menu__WEBPACK_IMPORTED_MODULE_12__.MatMenuModule,
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_13__.MatIconModule,
+        _angular_material_button__WEBPACK_IMPORTED_MODULE_14__.MatButtonModule,
+        _angular_cdk_layout__WEBPACK_IMPORTED_MODULE_15__.LayoutModule] }); })();
+
+
+/***/ }),
+
+/***/ 6428:
+/*!****************************************************************!*\
+  !*** ./src/app/feature-dashboard/finance/finance.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "FinanceComponent": () => (/* binding */ FinanceComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class FinanceComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    static ɵfac = function FinanceComponent_Factory(t) { return new (t || FinanceComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: FinanceComponent, selectors: [["aam-finance"]], decls: 2, vars: 0, template: function FinanceComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "finance works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJmaW5hbmNlLmNvbXBvbmVudC5zY3NzIn0= */"] });
+}
+
+
+/***/ }),
+
+/***/ 4679:
+/*!**************************************************************!*\
+  !*** ./src/app/feature-dashboard/parent/parent.component.ts ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ParentComponent": () => (/* binding */ ParentComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class ParentComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    static ɵfac = function ParentComponent_Factory(t) { return new (t || ParentComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ParentComponent, selectors: [["aam-parent"]], decls: 2, vars: 0, template: function ParentComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "parent works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJwYXJlbnQuY29tcG9uZW50LnNjc3MifQ== */"] });
+}
+
+
+/***/ }),
+
+/***/ 6229:
+/*!****************************************************************!*\
+  !*** ./src/app/feature-dashboard/student/student.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "StudentComponent": () => (/* binding */ StudentComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class StudentComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    static ɵfac = function StudentComponent_Factory(t) { return new (t || StudentComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: StudentComponent, selectors: [["aam-student"]], decls: 2, vars: 0, template: function StudentComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "student works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHVkZW50LmNvbXBvbmVudC5zY3NzIn0= */"] });
+}
+
+
+/***/ }),
+
+/***/ 9231:
+/*!****************************************************************!*\
+  !*** ./src/app/feature-dashboard/teacher/teacher.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TeacherComponent": () => (/* binding */ TeacherComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class TeacherComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+    static ɵfac = function TeacherComponent_Factory(t) { return new (t || TeacherComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: TeacherComponent, selectors: [["aam-teacher"]], decls: 2, vars: 0, template: function TeacherComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "teacher works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ0ZWFjaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
+}
+
+
 /***/ })
 
 }]);
-//# sourceMappingURL=src_app_dashboard_dashboard_module_ts.js.map
+//# sourceMappingURL=src_app_feature-dashboard_feature-dashboard_module_ts.js.map

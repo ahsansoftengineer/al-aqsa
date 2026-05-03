@@ -24,13 +24,41 @@ const routes = [
         component: _feature_component__WEBPACK_IMPORTED_MODULE_0__.FeatureComponent,
         children: [
             {
-                path: 'user',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_userz_userz_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./userz/userz.module */ 8679)).then((m) => m.UserzModule),
-            },
-            {
                 path: '',
                 redirectTo: 'user',
                 pathMatch: 'full',
+            },
+            {
+                path: 'user',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_userz_userz_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./userz/userz.module */ 6848)).then((m) => m.UserzModule),
+            },
+            {
+                path: 'account-in',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_account-in_account-in_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./account-in/account-in.module */ 538)).then((m) => m.AccountInModule),
+            },
+            {
+                path: 'account-out',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_account-out_account-out_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./account-out/account-out.module */ 6521)).then((m) => m.AccountOutModule),
+            },
+            {
+                path: 'education',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_education_education_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./education/education.module */ 5455)).then((m) => m.EducationModule),
+            },
+            {
+                path: 'exam',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_education-exam_education-exam_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./education-exam/education-exam.module */ 827)).then((m) => m.EducationExamModule),
+            },
+            {
+                path: 'syllabus',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_education-syllabus_education-syllabus_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./education-syllabus/education-syllabus.module */ 6672)).then((m) => m.EducationSyllabusModule),
+            },
+            {
+                path: 'file-upload',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_file-upload_file-upload_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./file-upload/file-upload.module */ 5081)).then((m) => m.FileUploadModule),
+            },
+            {
+                path: 'notification',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_feature_notification_notification_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./notification/notification.module */ 576)).then((m) => m.NotificationModule),
             },
         ],
     },
