@@ -11,7 +11,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "DATA_DUMMY": () => (/* binding */ DATA_DUMMY)
 /* harmony export */ });
-const DATA_DUMMY = (name, length) => {
+const DATA_DUMMY = (name, length = 15) => {
     let data = [];
     for (let i = 0; i < length; i++) {
         const element = {
@@ -143,6 +143,30 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 2118:
+/*!************************************************************!*\
+  !*** ./src/app/feature/userz/a-index/a-index.component.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AIndexComponent": () => (/* binding */ AIndexComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class AIndexComponent {
+    static ɵfac = function AIndexComponent_Factory(t) { return new (t || AIndexComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AIndexComponent, selectors: [["aam-a-index"]], decls: 2, vars: 0, template: function AIndexComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "a-index works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, encapsulation: 2 });
+}
+
+
+/***/ }),
+
 /***/ 7069:
 /*!****************************************************************!*\
   !*** ./src/app/feature/userz/admin-add/admin-add.component.ts ***!
@@ -193,7 +217,7 @@ class AdminAddComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0__.
         });
     }
     static ɵfac = function AdminAddComponent_Factory(t) { return new (t || AdminAddComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute)); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: AdminAddComponent, selectors: [["aam-admin-add"]], hostAttrs: [2, "width", "100% !important"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function AdminAddComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: AdminAddComponent, selectors: [["aam-admin-add"]], hostAttrs: [2, "width", "100% !important"], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row", "m-0"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function AdminAddComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "form", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngSubmit", function AdminAddComponent_Template_form_ngSubmit_0_listener() { return ctx._onSubmit(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 1);
@@ -470,7 +494,7 @@ class AdminComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_1__.Bas
             query: this._fb.group({ 'is_advance': ['1'] }).value,
         }, ['id', 'title', 'gender', 'email', 'status', 'desc', 'createdAt', 'updatedAt', 'actions']);
         this.lb.beforeHit = () => {
-            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Admin', 10);
+            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Admin');
             console.log(records);
             this.lb.ds.data = records;
             this.lb.tbl.length = records.length;
@@ -541,7 +565,7 @@ class ParentAddComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0__
         });
     }
     static ɵfac = function ParentAddComponent_Factory(t) { return new (t || ParentAddComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute)); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ParentAddComponent, selectors: [["aam-parents-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function ParentAddComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ParentAddComponent, selectors: [["aam-parents-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row", "m-0"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function ParentAddComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "form", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngSubmit", function ParentAddComponent_Template_form_ngSubmit_0_listener() { return ctx._onSubmit(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 1);
@@ -818,7 +842,7 @@ class ParentComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_1__.Ba
             query: this._fb.group({ 'is_advance': ['1'] }).value,
         }, ['id', 'title', 'gender', 'email', 'status', 'desc', 'createdAt', 'updatedAt', 'actions']);
         this.lb.beforeHit = () => {
-            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Admin', 10);
+            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Admin');
             console.log(records);
             this.lb.ds.data = records;
             this.lb.tbl.length = records.length;
@@ -889,7 +913,7 @@ class StudentAddComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0_
         });
     }
     static ɵfac = function StudentAddComponent_Factory(t) { return new (t || StudentAddComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute)); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: StudentAddComponent, selectors: [["aam-student-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 9, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row"], ["field", "code", "lbl", "Student Code"], ["field", "title", "lbl", "Name"], ["field", "fatherName", "lbl", "Father Name"], ["field", "className", "lbl", "Class"], ["field", "section", "lbl", "Section"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function StudentAddComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: StudentAddComponent, selectors: [["aam-student-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 9, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row", "m-0"], ["field", "code", "lbl", "Student Code"], ["field", "title", "lbl", "Name"], ["field", "fatherName", "lbl", "Father Name"], ["field", "className", "lbl", "Class"], ["field", "section", "lbl", "Section"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function StudentAddComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "form", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngSubmit", function StudentAddComponent_Template_form_ngSubmit_0_listener() { return ctx._onSubmit(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 1);
@@ -1122,7 +1146,7 @@ class StudentComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_1__.B
             query: this._fb.group({ 'is_advance': ['1'] }).value,
         }, ['id', 'code', 'name', 'className', 'section', 'status', 'actions']);
         this.lb.beforeHit = () => {
-            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Student', 10);
+            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Student');
             console.log(records);
             this.lb.ds.data = records;
             this.lb.tbl.length = records.length;
@@ -1193,7 +1217,7 @@ class TeacherAddComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0_
         });
     }
     static ɵfac = function TeacherAddComponent_Factory(t) { return new (t || TeacherAddComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__.ActivatedRoute)); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: TeacherAddComponent, selectors: [["aam-teacher-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function TeacherAddComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: TeacherAddComponent, selectors: [["aam-teacher-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵInheritDefinitionFeature"]], decls: 7, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row", "m-0"], ["field", "title", "lbl", "Name"], ["field", "gender", "lbl", "Gender"], ["field", "email", "lbl", "Email"], ["field", "status", "lbl", "Status"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function TeacherAddComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "form", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵlistener"]("ngSubmit", function TeacherAddComponent_Template_form_ngSubmit_0_listener() { return ctx._onSubmit(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](1, "div", 1);
@@ -1492,7 +1516,7 @@ class TeacherComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_1__.B
             query: this._fb.group({ 'is_advance': ['1'] }).value,
         }, ['id', 'title', 'gender', 'email', 'status', 'desc', 'createdAt', 'updatedAt', 'actions']);
         this.lb.beforeHit = () => {
-            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Teacher', 10);
+            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('Teacher');
             console.log(records);
             this.lb.ds.data = records;
             this.lb.tbl.length = records.length;
@@ -1568,7 +1592,7 @@ class UserTypeAddComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_0
         });
     }
     static ɵfac = function UserTypeAddComponent_Factory(t) { return new (t || UserTypeAddComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute)); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: UserTypeAddComponent, selectors: [["aam-user-type-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵInheritDefinitionFeature"]], decls: 4, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row"], ["field", "title", "lbl", "User Type"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function UserTypeAddComponent_Template(rf, ctx) { if (rf & 1) {
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({ type: UserTypeAddComponent, selectors: [["aam-user-type-add"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵInheritDefinitionFeature"]], decls: 4, vars: 2, consts: [[3, "formGroup", "ngSubmit"], [1, "row", "m-0"], ["field", "title", "lbl", "User Type"], ["field", "desc", "lbl", "Description", 3, "req"]], template: function UserTypeAddComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "form", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngSubmit", function UserTypeAddComponent_Template_form_ngSubmit_0_listener() { return ctx._onSubmit(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 1);
@@ -1863,7 +1887,7 @@ class UserTypeComponent extends src_app_core_class__WEBPACK_IMPORTED_MODULE_1__.
             query: this._fb.group({ 'is_advance': ['1'] }).value,
         }, ['id', 'title', 'status', 'desc', 'createdAt', 'updatedAt', 'actions']);
         this.lb.beforeHit = () => {
-            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('User Type', 10);
+            let records = (0,src_app_core__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)('User Type');
             this.lb.ds.data = records;
             this.lb.tbl.length = records.length;
             return (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.of)(this.lb);
@@ -1894,16 +1918,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Routez": () => (/* binding */ Routez)
 /* harmony export */ });
 /* harmony import */ var src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/core/enums */ 9442);
-/* harmony import */ var _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./admin-add/admin-add.component */ 7069);
-/* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin/admin.component */ 2837);
-/* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./student/student.component */ 9227);
-/* harmony import */ var _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./student-add/student-add.component */ 2444);
-/* harmony import */ var _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./teacher-add/teacher-add.component */ 2352);
-/* harmony import */ var _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./teacher/teacher.component */ 9405);
-/* harmony import */ var _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./user-type-add/user-type-add.component */ 3461);
-/* harmony import */ var _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-type/user-type.component */ 5912);
-/* harmony import */ var _parent_parents_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./parent/parents.component */ 8379);
-/* harmony import */ var _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./parent-add/parents-add.component */ 1614);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./a-index/a-index.component */ 2118);
+/* harmony import */ var _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin-add/admin-add.component */ 7069);
+/* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin/admin.component */ 2837);
+/* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./student/student.component */ 9227);
+/* harmony import */ var _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./student-add/student-add.component */ 2444);
+/* harmony import */ var _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./teacher-add/teacher-add.component */ 2352);
+/* harmony import */ var _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./teacher/teacher.component */ 9405);
+/* harmony import */ var _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./user-type-add/user-type-add.component */ 3461);
+/* harmony import */ var _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./user-type/user-type.component */ 5912);
+/* harmony import */ var _parent_parents_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./parent/parents.component */ 8379);
+/* harmony import */ var _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./parent-add/parents-add.component */ 1614);
+
 
 
 
@@ -1919,12 +1945,21 @@ const Routez = [
     // ✅ THIS is the missing piece
     {
         path: '',
-        redirectTo: 'admin',
+        redirectTo: 'index',
         pathMatch: 'full',
     },
     {
+        path: 'index',
+        component: _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__.AIndexComponent,
+        data: {
+            title: 'User Type',
+            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
+            layer: ['User'],
+        },
+    },
+    {
         path: 'type',
-        component: _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_8__.UserTypeComponent,
+        component: _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_9__.UserTypeComponent,
         data: {
             title: 'User Type',
             linkCreate: '/feature/user/type-add',
@@ -1934,7 +1969,7 @@ const Routez = [
     },
     {
         path: 'type-add',
-        component: _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_7__.UserTypeAddComponent,
+        component: _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_8__.UserTypeAddComponent,
         data: {
             title: 'User Type',
             linkList: '/feature/user/type',
@@ -1944,7 +1979,7 @@ const Routez = [
     },
     {
         path: 'admin',
-        component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_2__.AdminComponent,
+        component: _admin_admin_component__WEBPACK_IMPORTED_MODULE_3__.AdminComponent,
         data: {
             title: 'Admin',
             linkCreate: '/feature/user/admin-add',
@@ -1954,7 +1989,7 @@ const Routez = [
     },
     {
         path: 'admin-add',
-        component: _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_1__.AdminAddComponent,
+        component: _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_2__.AdminAddComponent,
         data: {
             title: 'Admin',
             linkList: '/feature/user/admin',
@@ -1964,7 +1999,7 @@ const Routez = [
     },
     {
         path: 'teacher',
-        component: _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_6__.TeacherComponent,
+        component: _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_7__.TeacherComponent,
         data: {
             title: 'Teacher',
             linkCreate: '/feature/user/teacher-add',
@@ -1974,7 +2009,7 @@ const Routez = [
     },
     {
         path: 'teacher-add',
-        component: _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_5__.TeacherAddComponent,
+        component: _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_6__.TeacherAddComponent,
         data: {
             title: 'Teacher',
             linkList: '/feature/user/teacher',
@@ -1984,7 +2019,7 @@ const Routez = [
     },
     {
         path: 'parent',
-        component: _parent_parents_component__WEBPACK_IMPORTED_MODULE_9__.ParentComponent,
+        component: _parent_parents_component__WEBPACK_IMPORTED_MODULE_10__.ParentComponent,
         data: {
             title: 'Parent',
             linkCreate: '/feature/user/parent-add',
@@ -1994,7 +2029,7 @@ const Routez = [
     },
     {
         path: 'parent-add',
-        component: _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_10__.ParentAddComponent,
+        component: _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_11__.ParentAddComponent,
         data: {
             title: 'Parent',
             linkList: '/feature/user/parent',
@@ -2004,7 +2039,7 @@ const Routez = [
     },
     {
         path: 'student',
-        component: _student_student_component__WEBPACK_IMPORTED_MODULE_3__.StudentComponent,
+        component: _student_student_component__WEBPACK_IMPORTED_MODULE_4__.StudentComponent,
         data: {
             title: 'Student Profile',
             linkCreate: '/feature/user/student-add',
@@ -2014,7 +2049,7 @@ const Routez = [
     },
     {
         path: 'student-add',
-        component: _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_4__.StudentAddComponent,
+        component: _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_5__.StudentAddComponent,
         data: {
             title: 'Student Admission',
             linkList: '/feature/user/student',
@@ -2037,23 +2072,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "UserzModule": () => (/* binding */ UserzModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _userz_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userz-routing.module */ 7865);
 /* harmony import */ var src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/shared/shared.module */ 4466);
-/* harmony import */ var _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin-add/admin-add.component */ 7069);
-/* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin/admin.component */ 2837);
-/* harmony import */ var _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./user-type/user-type.component */ 5912);
-/* harmony import */ var _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user-type-add/user-type-add.component */ 3461);
-/* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./student/student.component */ 9227);
-/* harmony import */ var _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./student-add/student-add.component */ 2444);
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/button */ 4522);
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/icon */ 7822);
-/* harmony import */ var _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./teacher/teacher.component */ 9405);
-/* harmony import */ var _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./teacher-add/teacher-add.component */ 2352);
-/* harmony import */ var _parent_parents_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./parent/parents.component */ 8379);
-/* harmony import */ var _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./parent-add/parents-add.component */ 1614);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./a-index/a-index.component */ 2118);
+/* harmony import */ var _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./admin-add/admin-add.component */ 7069);
+/* harmony import */ var _admin_admin_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin/admin.component */ 2837);
+/* harmony import */ var _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./user-type/user-type.component */ 5912);
+/* harmony import */ var _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./user-type-add/user-type-add.component */ 3461);
+/* harmony import */ var _student_student_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./student/student.component */ 9227);
+/* harmony import */ var _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./student-add/student-add.component */ 2444);
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/material/button */ 4522);
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/material/icon */ 7822);
+/* harmony import */ var _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./teacher/teacher.component */ 9405);
+/* harmony import */ var _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./teacher-add/teacher-add.component */ 2352);
+/* harmony import */ var _parent_parents_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./parent/parents.component */ 8379);
+/* harmony import */ var _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./parent-add/parents-add.component */ 1614);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/router */ 124);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/core */ 2560);
+
 
 
 
@@ -2074,25 +2111,26 @@ __webpack_require__.r(__webpack_exports__);
 
 class UserzModule {
     static ɵfac = function UserzModule_Factory(t) { return new (t || UserzModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineNgModule"]({ type: UserzModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.CommonModule,
-            _angular_router__WEBPACK_IMPORTED_MODULE_14__.RouterModule.forChild(_userz_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez),
+    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineNgModule"]({ type: UserzModule });
+    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.CommonModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_15__.RouterModule.forChild(_userz_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez),
             src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__.SharedModule,
-            _angular_material_button__WEBPACK_IMPORTED_MODULE_15__.MatButtonModule,
-            _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__.MatIconModule] });
+            _angular_material_button__WEBPACK_IMPORTED_MODULE_16__.MatButtonModule,
+            _angular_material_icon__WEBPACK_IMPORTED_MODULE_17__.MatIconModule] });
 }
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_12__["ɵɵsetNgModuleScope"](UserzModule, { declarations: [_admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_2__.AdminAddComponent,
-        _admin_admin_component__WEBPACK_IMPORTED_MODULE_3__.AdminComponent,
-        _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_4__.UserTypeComponent,
-        _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_5__.UserTypeAddComponent,
-        _student_student_component__WEBPACK_IMPORTED_MODULE_6__.StudentComponent,
-        _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_7__.StudentAddComponent,
-        _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_8__.TeacherComponent,
-        _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_9__.TeacherAddComponent,
-        _parent_parents_component__WEBPACK_IMPORTED_MODULE_10__.ParentComponent,
-        _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_11__.ParentAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_13__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_14__.RouterModule, src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__.SharedModule,
-        _angular_material_button__WEBPACK_IMPORTED_MODULE_15__.MatButtonModule,
-        _angular_material_icon__WEBPACK_IMPORTED_MODULE_16__.MatIconModule] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_13__["ɵɵsetNgModuleScope"](UserzModule, { declarations: [_a_index_a_index_component__WEBPACK_IMPORTED_MODULE_2__.AIndexComponent,
+        _admin_add_admin_add_component__WEBPACK_IMPORTED_MODULE_3__.AdminAddComponent,
+        _admin_admin_component__WEBPACK_IMPORTED_MODULE_4__.AdminComponent,
+        _user_type_user_type_component__WEBPACK_IMPORTED_MODULE_5__.UserTypeComponent,
+        _user_type_add_user_type_add_component__WEBPACK_IMPORTED_MODULE_6__.UserTypeAddComponent,
+        _student_student_component__WEBPACK_IMPORTED_MODULE_7__.StudentComponent,
+        _student_add_student_add_component__WEBPACK_IMPORTED_MODULE_8__.StudentAddComponent,
+        _teacher_teacher_component__WEBPACK_IMPORTED_MODULE_9__.TeacherComponent,
+        _teacher_add_teacher_add_component__WEBPACK_IMPORTED_MODULE_10__.TeacherAddComponent,
+        _parent_parents_component__WEBPACK_IMPORTED_MODULE_11__.ParentComponent,
+        _parent_add_parents_add_component__WEBPACK_IMPORTED_MODULE_12__.ParentAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_14__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_15__.RouterModule, src_app_shared_shared_module__WEBPACK_IMPORTED_MODULE_1__.SharedModule,
+        _angular_material_button__WEBPACK_IMPORTED_MODULE_16__.MatButtonModule,
+        _angular_material_icon__WEBPACK_IMPORTED_MODULE_17__.MatIconModule] }); })();
 
 
 /***/ })

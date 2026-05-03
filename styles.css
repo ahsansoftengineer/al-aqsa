@@ -10889,7 +10889,7 @@ progress {
 
 di-tbl-txt input[type=text] {
   border: 0px;
-  border-bottom: 2px solid indigo;
+  border-bottom: 2px solid #673ab7;
   height: 40px;
   font-size: 16px;
   font-weight: 400;
@@ -10905,8 +10905,8 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
 /* Target all scrollbars in the application */
 
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 10px;
+  width: 3px;
+  height: 3px;
 }
 
 /* Track (the background) */
@@ -10919,14 +10919,14 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
 /* Thumb (the draggable handle) */
 
 ::-webkit-scrollbar-thumb {
-  background: #ff8800;
+  background: #673ab7;
   border-radius: 10px;
 }
 
 /* Thumb on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff6600;
+  background: #673ab7;
 }
 
 /*# sourceMappingURL=styles.css.map*/

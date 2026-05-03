@@ -1,6 +1,26 @@
 "use strict";
 (self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_feature_education-syllabus_education-syllabus_module_ts"],{
 
+/***/ 3934:
+/*!*************************************************************************!*\
+  !*** ./src/app/feature/education-syllabus/a-index/a-index.component.ts ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AIndexComponent": () => (/* binding */ AIndexComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class AIndexComponent {
+    static ɵfac = function AIndexComponent_Factory(t) { return new (t || AIndexComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AIndexComponent, selectors: [["aam-a-index"]], decls: 0, vars: 0, template: function AIndexComponent_Template(rf, ctx) { }, encapsulation: 2 });
+}
+
+
+/***/ }),
+
 /***/ 2950:
 /*!***************************************************************************!*\
   !*** ./src/app/feature/education-syllabus/book-add/book-add.component.ts ***!
@@ -127,6 +147,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _question_question_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./question/question.component */ 7680);
 /* harmony import */ var _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./subjectz/subjectz.component */ 8340);
 /* harmony import */ var _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./subjectz-add/subjectz-add.component */ 5512);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./a-index/a-index.component */ 3934);
+
 
 
 
@@ -139,8 +161,37 @@ const Routez = [
     // ✅ THIS is the missing piece
     {
         path: '',
-        redirectTo: 'admin',
+        redirectTo: 'index',
         pathMatch: 'full',
+    },
+    {
+        path: 'index',
+        component: _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_8__.AIndexComponent,
+        data: {
+            title: 'Syllabus',
+            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
+            layer: ['Syllabus'],
+        },
+    },
+    {
+        path: 'subject',
+        component: _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_6__.SubjectzComponent,
+        data: {
+            title: 'Subject',
+            linkList: '/feature/syllabus/subject-add',
+            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
+            layer: ['Syllabus', 'Subject'],
+        },
+    },
+    {
+        path: 'subject-add',
+        component: _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_7__.SubjectzAddComponent,
+        data: {
+            title: 'Subject',
+            linkList: '/feature/syllabus/subject',
+            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.ADD, src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.EDIT, src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
+            layer: ['Syllabus', 'Subject', 'Add | Edit'],
+        },
     },
     {
         path: 'book',
@@ -202,26 +253,6 @@ const Routez = [
             layer: ['Syllabus', 'Question', 'Add | Edit'],
         },
     },
-    {
-        path: 'subject',
-        component: _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_6__.SubjectzComponent,
-        data: {
-            title: 'Subject',
-            linkList: '/feature/syllabus/subject-add',
-            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
-            layer: ['Syllabus', 'Subject'],
-        },
-    },
-    {
-        path: 'subject-add',
-        component: _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_7__.SubjectzAddComponent,
-        data: {
-            title: 'Subject',
-            linkList: '/feature/syllabus/subject',
-            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.ADD, src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.EDIT, src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
-            layer: ['Syllabus', 'Subject', 'Add | Edit'],
-        },
-    },
 ];
 
 
@@ -237,18 +268,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EducationSyllabusModule": () => (/* binding */ EducationSyllabusModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _education_syllabus_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./education-syllabus-routing.module */ 3705);
-/* harmony import */ var _book_add_book_add_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./book-add/book-add.component */ 2950);
-/* harmony import */ var _book_book_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./book/book.component */ 4636);
-/* harmony import */ var _chapter_add_chapter_add_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chapter-add/chapter-add.component */ 6602);
-/* harmony import */ var _chapter_chapter_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chapter/chapter.component */ 8011);
-/* harmony import */ var _question_add_question_add_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./question-add/question-add.component */ 7135);
-/* harmony import */ var _question_question_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./question/question.component */ 7680);
-/* harmony import */ var _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./subjectz-add/subjectz-add.component */ 5512);
-/* harmony import */ var _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./subjectz/subjectz.component */ 8340);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./a-index/a-index.component */ 3934);
+/* harmony import */ var _book_add_book_add_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./book-add/book-add.component */ 2950);
+/* harmony import */ var _book_book_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./book/book.component */ 4636);
+/* harmony import */ var _chapter_add_chapter_add_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chapter-add/chapter-add.component */ 6602);
+/* harmony import */ var _chapter_chapter_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chapter/chapter.component */ 8011);
+/* harmony import */ var _question_add_question_add_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./question-add/question-add.component */ 7135);
+/* harmony import */ var _question_question_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./question/question.component */ 7680);
+/* harmony import */ var _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./subjectz-add/subjectz-add.component */ 5512);
+/* harmony import */ var _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./subjectz/subjectz.component */ 8340);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ 124);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/core */ 2560);
+
 
 
 
@@ -264,18 +297,19 @@ __webpack_require__.r(__webpack_exports__);
 
 class EducationSyllabusModule {
     static ɵfac = function EducationSyllabusModule_Factory(t) { return new (t || EducationSyllabusModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({ type: EducationSyllabusModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_10__.CommonModule,
-            _angular_router__WEBPACK_IMPORTED_MODULE_11__.RouterModule.forChild(_education_syllabus_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez)] });
+    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineNgModule"]({ type: EducationSyllabusModule });
+    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_11__.CommonModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouterModule.forChild(_education_syllabus_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez)] });
 }
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵsetNgModuleScope"](EducationSyllabusModule, { declarations: [_subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_8__.SubjectzComponent,
-        _book_book_component__WEBPACK_IMPORTED_MODULE_2__.BookComponent,
-        _chapter_chapter_component__WEBPACK_IMPORTED_MODULE_4__.ChapterComponent,
-        _question_question_component__WEBPACK_IMPORTED_MODULE_6__.QuestionComponent,
-        _book_add_book_add_component__WEBPACK_IMPORTED_MODULE_1__.BookAddComponent,
-        _chapter_add_chapter_add_component__WEBPACK_IMPORTED_MODULE_3__.ChapterAddComponent,
-        _question_add_question_add_component__WEBPACK_IMPORTED_MODULE_5__.QuestionAddComponent,
-        _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_7__.SubjectzAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_10__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_11__.RouterModule] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_10__["ɵɵsetNgModuleScope"](EducationSyllabusModule, { declarations: [_a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__.AIndexComponent,
+        _subjectz_subjectz_component__WEBPACK_IMPORTED_MODULE_9__.SubjectzComponent,
+        _book_book_component__WEBPACK_IMPORTED_MODULE_3__.BookComponent,
+        _chapter_chapter_component__WEBPACK_IMPORTED_MODULE_5__.ChapterComponent,
+        _question_question_component__WEBPACK_IMPORTED_MODULE_7__.QuestionComponent,
+        _book_add_book_add_component__WEBPACK_IMPORTED_MODULE_2__.BookAddComponent,
+        _chapter_add_chapter_add_component__WEBPACK_IMPORTED_MODULE_4__.ChapterAddComponent,
+        _question_add_question_add_component__WEBPACK_IMPORTED_MODULE_6__.QuestionAddComponent,
+        _subjectz_add_subjectz_add_component__WEBPACK_IMPORTED_MODULE_8__.SubjectzAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_11__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_12__.RouterModule] }); })();
 
 
 /***/ }),

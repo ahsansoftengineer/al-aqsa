@@ -1,6 +1,30 @@
 "use strict";
 (self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_feature_education_education_module_ts"],{
 
+/***/ 9625:
+/*!****************************************************************!*\
+  !*** ./src/app/feature/education/a-index/a-index.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "AIndexComponent": () => (/* binding */ AIndexComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+
+class AIndexComponent {
+    static ɵfac = function AIndexComponent_Factory(t) { return new (t || AIndexComponent)(); };
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AIndexComponent, selectors: [["aam-a-index"]], decls: 2, vars: 0, template: function AIndexComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "a-index works!");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        } }, encapsulation: 2 });
+}
+
+
+/***/ }),
+
 /***/ 6256:
 /*!******************************************************************************!*\
   !*** ./src/app/feature/education/attendance-add/attendance-add.component.ts ***!
@@ -188,6 +212,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _student_promote_add_student_promote_add_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./student-promote-add/student-promote-add.component */ 699);
 /* harmony import */ var _sectionz_sectionz_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sectionz/sectionz.component */ 2932);
 /* harmony import */ var _sectionz_add_sectionz_add_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sectionz-add/sectionz-add.component */ 7214);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./a-index/a-index.component */ 9625);
+
 
 
 
@@ -207,8 +233,17 @@ const Routez = [
     // ✅ THIS is the missing piece
     {
         path: '',
-        redirectTo: 'institute',
+        redirectTo: 'index',
         pathMatch: 'full',
+    },
+    {
+        path: 'index',
+        component: _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_15__.AIndexComponent,
+        data: {
+            title: 'Education',
+            permission: [src_app_core_enums__WEBPACK_IMPORTED_MODULE_0__.URL_ACTION.VIEW],
+            layer: ['Education'],
+        },
     },
     {
         path: 'attendance',
@@ -365,24 +400,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "EducationModule": () => (/* binding */ EducationModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _education_routing_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./education-routing.module */ 9997);
-/* harmony import */ var _institute_institute_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./institute/institute.component */ 908);
-/* harmony import */ var _classz_classz_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./classz/classz.component */ 4448);
-/* harmony import */ var _library_library_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./library/library.component */ 5266);
-/* harmony import */ var _class_routine_class_routine_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./class-routine/class-routine.component */ 2158);
-/* harmony import */ var _student_promote_student_promote_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./student-promote/student-promote.component */ 6183);
-/* harmony import */ var _attendance_attendance_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./attendance/attendance.component */ 6841);
-/* harmony import */ var _attendance_add_attendance_add_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./attendance-add/attendance-add.component */ 6256);
-/* harmony import */ var _class_routine_add_class_routine_add_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./class-routine-add/class-routine-add.component */ 6962);
-/* harmony import */ var _classz_add_classz_add_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./classz-add/classz-add.component */ 3487);
-/* harmony import */ var _institute_add_institute_add_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./institute-add/institute-add.component */ 963);
-/* harmony import */ var _library_add_library_add_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./library-add/library-add.component */ 640);
-/* harmony import */ var _student_promote_add_student_promote_add_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./student-promote-add/student-promote-add.component */ 699);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/router */ 124);
-/* harmony import */ var _sectionz_sectionz_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sectionz/sectionz.component */ 2932);
-/* harmony import */ var _sectionz_add_sectionz_add_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sectionz-add/sectionz-add.component */ 7214);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./a-index/a-index.component */ 9625);
+/* harmony import */ var _institute_institute_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./institute/institute.component */ 908);
+/* harmony import */ var _classz_classz_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./classz/classz.component */ 4448);
+/* harmony import */ var _library_library_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./library/library.component */ 5266);
+/* harmony import */ var _class_routine_class_routine_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./class-routine/class-routine.component */ 2158);
+/* harmony import */ var _student_promote_student_promote_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./student-promote/student-promote.component */ 6183);
+/* harmony import */ var _attendance_attendance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./attendance/attendance.component */ 6841);
+/* harmony import */ var _attendance_add_attendance_add_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./attendance-add/attendance-add.component */ 6256);
+/* harmony import */ var _class_routine_add_class_routine_add_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./class-routine-add/class-routine-add.component */ 6962);
+/* harmony import */ var _classz_add_classz_add_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./classz-add/classz-add.component */ 3487);
+/* harmony import */ var _institute_add_institute_add_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./institute-add/institute-add.component */ 963);
+/* harmony import */ var _library_add_library_add_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./library-add/library-add.component */ 640);
+/* harmony import */ var _student_promote_add_student_promote_add_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./student-promote-add/student-promote-add.component */ 699);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/router */ 124);
+/* harmony import */ var _sectionz_sectionz_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sectionz/sectionz.component */ 2932);
+/* harmony import */ var _sectionz_add_sectionz_add_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./sectionz-add/sectionz-add.component */ 7214);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/core */ 2560);
+
 
 
 
@@ -404,24 +441,25 @@ __webpack_require__.r(__webpack_exports__);
 
 class EducationModule {
     static ɵfac = function EducationModule_Factory(t) { return new (t || EducationModule)(); };
-    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineNgModule"]({ type: EducationModule });
-    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.CommonModule,
-            _angular_router__WEBPACK_IMPORTED_MODULE_17__.RouterModule.forChild(_education_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez)] });
+    static ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineNgModule"]({ type: EducationModule });
+    static ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵdefineInjector"]({ imports: [_angular_common__WEBPACK_IMPORTED_MODULE_17__.CommonModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_18__.RouterModule.forChild(_education_routing_module__WEBPACK_IMPORTED_MODULE_0__.Routez)] });
 }
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_15__["ɵɵsetNgModuleScope"](EducationModule, { declarations: [_institute_institute_component__WEBPACK_IMPORTED_MODULE_1__.InstituteComponent,
-        _classz_classz_component__WEBPACK_IMPORTED_MODULE_2__.ClasszComponent,
-        _library_library_component__WEBPACK_IMPORTED_MODULE_3__.LibraryComponent,
-        _class_routine_class_routine_component__WEBPACK_IMPORTED_MODULE_4__.ClassRoutineComponent,
-        _student_promote_student_promote_component__WEBPACK_IMPORTED_MODULE_5__.StudentPromoteComponent,
-        _attendance_attendance_component__WEBPACK_IMPORTED_MODULE_6__.AttendanceComponent,
-        _attendance_add_attendance_add_component__WEBPACK_IMPORTED_MODULE_7__.AttendanceAddComponent,
-        _class_routine_add_class_routine_add_component__WEBPACK_IMPORTED_MODULE_8__.ClassRoutineAddComponent,
-        _classz_add_classz_add_component__WEBPACK_IMPORTED_MODULE_9__.ClasszAddComponent,
-        _institute_add_institute_add_component__WEBPACK_IMPORTED_MODULE_10__.InstituteAddComponent,
-        _library_add_library_add_component__WEBPACK_IMPORTED_MODULE_11__.LibraryAddComponent,
-        _student_promote_add_student_promote_add_component__WEBPACK_IMPORTED_MODULE_12__.StudentPromoteAddComponent,
-        _sectionz_sectionz_component__WEBPACK_IMPORTED_MODULE_13__.SectionzComponent,
-        _sectionz_add_sectionz_add_component__WEBPACK_IMPORTED_MODULE_14__.SectionzAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_17__.RouterModule] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_16__["ɵɵsetNgModuleScope"](EducationModule, { declarations: [_a_index_a_index_component__WEBPACK_IMPORTED_MODULE_1__.AIndexComponent,
+        _institute_institute_component__WEBPACK_IMPORTED_MODULE_2__.InstituteComponent,
+        _classz_classz_component__WEBPACK_IMPORTED_MODULE_3__.ClasszComponent,
+        _library_library_component__WEBPACK_IMPORTED_MODULE_4__.LibraryComponent,
+        _class_routine_class_routine_component__WEBPACK_IMPORTED_MODULE_5__.ClassRoutineComponent,
+        _student_promote_student_promote_component__WEBPACK_IMPORTED_MODULE_6__.StudentPromoteComponent,
+        _attendance_attendance_component__WEBPACK_IMPORTED_MODULE_7__.AttendanceComponent,
+        _attendance_add_attendance_add_component__WEBPACK_IMPORTED_MODULE_8__.AttendanceAddComponent,
+        _class_routine_add_class_routine_add_component__WEBPACK_IMPORTED_MODULE_9__.ClassRoutineAddComponent,
+        _classz_add_classz_add_component__WEBPACK_IMPORTED_MODULE_10__.ClasszAddComponent,
+        _institute_add_institute_add_component__WEBPACK_IMPORTED_MODULE_11__.InstituteAddComponent,
+        _library_add_library_add_component__WEBPACK_IMPORTED_MODULE_12__.LibraryAddComponent,
+        _student_promote_add_student_promote_add_component__WEBPACK_IMPORTED_MODULE_13__.StudentPromoteAddComponent,
+        _sectionz_sectionz_component__WEBPACK_IMPORTED_MODULE_14__.SectionzComponent,
+        _sectionz_add_sectionz_add_component__WEBPACK_IMPORTED_MODULE_15__.SectionzAddComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_17__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_18__.RouterModule] }); })();
 
 
 /***/ }),
