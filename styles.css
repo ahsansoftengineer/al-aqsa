@@ -4873,7 +4873,13 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 
 .mat-sidenav {
   background-color: #F2F2F2;
-  width: 230px !important;
+  width: 180px !important;
+}
+
+@media (min-width: 992px) {
+  .mat-sidenav {
+    width: 230px !important;
+  }
 }
 
 .header {
@@ -10927,6 +10933,10 @@ th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:la
 
 ::-webkit-scrollbar-thumb:hover {
   background: #673ab7;
+}
+
+* {
+  transition: all 0.3s ease;
 }
 
 /*# sourceMappingURL=styles.css.map*/
