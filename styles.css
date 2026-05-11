@@ -5036,6 +5036,33 @@ mat-grid-tile {
   }
 }
 
+td.mat-cell {
+  padding: 0px !important;
+}
+
+td.mat-cell:first-of-type {
+  padding-left: 5px !important;
+}
+
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type,
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
+  padding: 0px !important;
+  padding-left: 5px !important;
+}
+
+tr.mat-row, tr.mat-footer-row {
+  height: 40px !important;
+}
+
+.mat-menu-content:not(:empty) {
+  padding: 0px !important;
+}
+
+.mat-list-base .mat-list-item .mat-list-text > * {
+  font-weight: 500 !important;
+  font-size: 13px !important;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -10899,11 +10926,6 @@ di-tbl-txt input[type=text] {
   height: 40px;
   font-size: 16px;
   font-weight: 400;
-}
-
-th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type,
-th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type {
-  padding: 2px 0px !important;
 }
 
 /* styles.scss - Add this at the root level */

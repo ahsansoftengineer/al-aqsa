@@ -1,148 +1,6 @@
 "use strict";
 (self["webpackChunkEdu_FE"] = self["webpackChunkEdu_FE"] || []).push([["src_app_feature_userz_userz_module_ts"],{
 
-/***/ 2390:
-/*!***************************************!*\
-  !*** ./src/app/core/data/generate.ts ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DATA_DUMMY": () => (/* binding */ DATA_DUMMY)
-/* harmony export */ });
-const DATA_DUMMY = (name, length = 15) => {
-    let data = [];
-    for (let i = 0; i < length; i++) {
-        const element = {
-            id: i + 1,
-            title: `${name} ${i} Title`,
-            status: i % 2 == 0 ? 'active' : 'disable',
-            desc: `${name} ${i} Desc`,
-            createdAt: `2026-0${i}-0${i}T0${i}:00:00Z`,
-            updatedAt: `2026-0${i + 1}-0${i + 1}T0${i + 1}:00:00Z`,
-            // actions: '1',
-        };
-        data.push(element);
-    }
-    return data;
-};
-
-
-/***/ }),
-
-/***/ 5951:
-/*!************************************************!*\
-  !*** ./src/app/core/forms/common/base.form.ts ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormBase": () => (/* binding */ FormBase)
-/* harmony export */ });
-function FormBase(that, d = {}) {
-    return {
-        id: [d?.id || ''],
-        title: [d?.title || '', that._vs._val('Name', { minChar: 4, alpha: 1 })],
-        status: [d?.status || '', that._vs._val('Status', { maxChar: 10, alpha: 1 })],
-        desc: [d?.desc || '', that._vs._val('', { maxChar: 255, specialChar: 1 })],
-    };
-}
-
-
-/***/ }),
-
-/***/ 9531:
-/*!*************************************!*\
-  !*** ./src/app/core/forms/index.ts ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormAdmin": () => (/* reexport safe */ _userz_form__WEBPACK_IMPORTED_MODULE_1__.FormAdmin),
-/* harmony export */   "FormBase": () => (/* reexport safe */ _common_base_form__WEBPACK_IMPORTED_MODULE_0__.FormBase),
-/* harmony export */   "FormBaseUserz": () => (/* reexport safe */ _userz_form__WEBPACK_IMPORTED_MODULE_1__.FormBaseUserz),
-/* harmony export */   "FormParent": () => (/* reexport safe */ _userz_form__WEBPACK_IMPORTED_MODULE_1__.FormParent),
-/* harmony export */   "FormStudent": () => (/* reexport safe */ _userz_form__WEBPACK_IMPORTED_MODULE_1__.FormStudent),
-/* harmony export */   "FormTeacher": () => (/* reexport safe */ _userz_form__WEBPACK_IMPORTED_MODULE_1__.FormTeacher)
-/* harmony export */ });
-/* harmony import */ var _common_base_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/base.form */ 5951);
-/* harmony import */ var _userz_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./userz.form */ 9460);
-
-
-
-
-/***/ }),
-
-/***/ 9460:
-/*!******************************************!*\
-  !*** ./src/app/core/forms/userz.form.ts ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FormAdmin": () => (/* binding */ FormAdmin),
-/* harmony export */   "FormBaseUserz": () => (/* binding */ FormBaseUserz),
-/* harmony export */   "FormParent": () => (/* binding */ FormParent),
-/* harmony export */   "FormStudent": () => (/* binding */ FormStudent),
-/* harmony export */   "FormTeacher": () => (/* binding */ FormTeacher)
-/* harmony export */ });
-/* harmony import */ var _common_base_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/base.form */ 5951);
-
-function FormBaseUserz(that, d = {}) {
-    return {
-        ...(0,_common_base_form__WEBPACK_IMPORTED_MODULE_0__.FormBase)(that, d),
-        gender: [d?.gender || '', that._vs._val('Gender', { minChar: 5, alpha: 1 })],
-        dob: [d?.dob || '', that._vs._val('Date of Birth', { minChar: 10, alpha: 1 })],
-        email: [d?.email || '', that._vs._val('Email', { minChar: 25, email: 1 })],
-    };
-}
-function FormAdmin(that, d = {}) {
-    that._fs._form = that._fb.group({
-        ...FormBaseUserz(that, d),
-    });
-}
-function FormTeacher(that, d = {}) {
-    that._fs._form = that._fb.group({
-        ...FormBaseUserz(that, d)
-    });
-}
-function FormParent(that, d = {}) {
-    that._fs._form = that._fb.group({
-        ...FormBaseUserz(that, d)
-    });
-}
-function FormStudent(that, d = {}) {
-    that._fs._form = that._fb.group({
-        ...FormBaseUserz(that, d),
-        fatherName: [d?.fatherName || '', that._vs._val('Father Name', { minChar: 3, alpha: 1 })],
-        className: [d?.className || '', that._vs._val('Class', { minChar: 1 })],
-        section: [d?.section || '', that._vs._val('Section', { minChar: 1 })],
-    });
-}
-
-
-/***/ }),
-
-/***/ 3825:
-/*!*******************************!*\
-  !*** ./src/app/core/index.ts ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "DATA_DUMMY": () => (/* reexport safe */ _data_generate__WEBPACK_IMPORTED_MODULE_0__.DATA_DUMMY)
-/* harmony export */ });
-/* harmony import */ var _data_generate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data/generate */ 2390);
-
-
-
-/***/ }),
-
 /***/ 2118:
 /*!************************************************************!*\
   !*** ./src/app/feature/userz/a-index/a-index.component.ts ***!
@@ -153,15 +11,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AIndexComponent": () => (/* binding */ AIndexComponent)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _shared_component_menu_index_menu_index_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../shared/component/menu-index/menu-index.component */ 3810);
+
 
 class AIndexComponent {
+    basePath = 'feature/user';
+    menuItems = [
+        { label: 'Admin', icon: 'admin_panel_settings', route: 'admin', description: 'Manage all administrators' },
+        { label: 'Teachers', icon: 'supervisor_account', route: 'teacher', description: 'Manage teacher records' },
+        { label: 'Parents', icon: 'family_restroom', route: 'parent', description: 'Manage parent records' },
+        { label: 'Students', icon: 'school', route: 'student', description: 'Manage student records' },
+        { label: 'User Type', icon: 'category', route: 'user-type', description: 'Manage user types' },
+    ];
     static ɵfac = function AIndexComponent_Factory(t) { return new (t || AIndexComponent)(); };
-    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AIndexComponent, selectors: [["aam-a-index"]], decls: 2, vars: 0, template: function AIndexComponent_Template(rf, ctx) { if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "a-index works!");
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        } }, encapsulation: 2 });
+    static ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AIndexComponent, selectors: [["aam-a-index"]], decls: 1, vars: 2, consts: [[3, "menuItems", "basePath"]], template: function AIndexComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "aam-menu-index", 0);
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("menuItems", ctx.menuItems)("basePath", ctx.basePath);
+        } }, dependencies: [_shared_component_menu_index_menu_index_component__WEBPACK_IMPORTED_MODULE_0__.MenuIndexComponent], styles: [".user-card-container[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 20px;\n  padding: 20px;\n}\n\n.stats-card[_ngcontent-%COMP%] {\n  cursor: pointer;\n  transition: transform 0.2s, box-shadow 0.2s;\n  border-top: 4px solid #3f51b5;\n}\n\n\n\n.stats-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);\n}\n\n.card-footer[_ngcontent-%COMP%] {\n  margin-top: 15px;\n  font-size: 0.85rem;\n  color: #3f51b5;\n  font-weight: 500;\n}\n\n.icon-blue[_ngcontent-%COMP%] {\n  color: #2196f3;\n}\n\n.icon-green[_ngcontent-%COMP%] {\n  color: #4caf50;\n}\n\n.icon-orange[_ngcontent-%COMP%] {\n  color: #ff9800;\n}\n\n@media (max-width: 768px) {\n  .user-card-container[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImEtaW5kZXguY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0VBQ0EscUNBQUE7RUFDQSxTQUFBO0VBQ0EsYUFBQTtBQUNGOztBQUVBO0VBQ0UsZUFBQTtFQUNBLDJDQUFBO0VBQ0EsNkJBQUE7QUFDRjs7QUFFQSxpQkFBQTs7QUFDQTtFQUNFLDJCQUFBO0VBQ0EsMENBQUE7QUFDRjs7QUFFQTtFQUNFLGdCQUFBO0VBQ0Esa0JBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7QUFDRjs7QUFFQTtFQUFhLGNBQUE7QUFFYjs7QUFEQTtFQUFjLGNBQUE7QUFLZDs7QUFKQTtFQUFlLGNBQUE7QUFRZjs7QUFOQTtFQUNFO0lBQ0UsMEJBQUE7RUFTRjtBQUNGIiwiZmlsZSI6ImEtaW5kZXguY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudXNlci1jYXJkLWNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgzLCAxZnIpO1xyXG4gIGdhcDogMjBweDtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG59XHJcblxyXG4uc3RhdHMtY2FyZCB7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjJzLCBib3gtc2hhZG93IDAuMnM7XHJcbiAgYm9yZGVyLXRvcDogNHB4IHNvbGlkICMzZjUxYjU7XHJcbn1cclxuXHJcbi8qIEhvdmVyIGVmZmVjdCAqL1xyXG4uc3RhdHMtY2FyZDpob3ZlciB7XHJcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKC01cHgpO1xyXG4gIGJveC1zaGFkb3c6IDAgNnB4IDEycHggcmdiYSgwLDAsMCwwLjE1KTtcclxufVxyXG5cclxuLmNhcmQtZm9vdGVyIHtcclxuICBtYXJnaW4tdG9wOiAxNXB4O1xyXG4gIGZvbnQtc2l6ZTogMC44NXJlbTtcclxuICBjb2xvcjogIzNmNTFiNTtcclxuICBmb250LXdlaWdodDogNTAwO1xyXG59XHJcblxyXG4uaWNvbi1ibHVlIHsgY29sb3I6ICMyMTk2ZjM7IH1cclxuLmljb24tZ3JlZW4geyBjb2xvcjogIzRjYWY1MDsgfVxyXG4uaWNvbi1vcmFuZ2UgeyBjb2xvcjogI2ZmOTgwMDsgfVxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7XHJcbiAgLnVzZXItY2FyZC1jb250YWluZXIge1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnI7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"] });
 }
 
 
