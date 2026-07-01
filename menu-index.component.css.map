@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_core/_route/menu-index/menu-index.component.scss"],
+  "sourcesContent": [".menu-grid {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\r\n  gap: 20px;\r\n  padding: 20px;\r\n}\r\n.menu-card mat-card-header {\r\n  justify-content: space-between;\r\n}\r\n.mat-card-header-text{\r\n  margin: 0px !important;\r\n}\r\n.menu-card-body {\r\n  height: 50px;\r\n\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,yBAAA,OAAA,SAAA,EAAA,OAAA,KAAA,EAAA;AACA,OAAA;AACA,WAAA;;AAEF,CAAA,UAAA;AACE,mBAAA;;AAEF,CAAA;AACE,UAAA;;AAEF,CAAA;AACE,UAAA;;",
+  "names": []
+}

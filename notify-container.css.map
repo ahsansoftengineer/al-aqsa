@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_core/_dialog/notify-container/notify-container.ts"],
+  "sourcesContent": ["\n    .notify-container {\n      position: fixed;\n      top: 16px;\n      right: 16px;\n      width: 450px;\n      max-width: 95vw;\n      max-height: 80vh;\n      overflow-y: auto;\n      z-index: 99999;\n      display: flex;\n      flex-direction: column;\n      gap: 10px;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,YAAA;AACA,OAAA;AACA,SAAA;AACA,SAAA;AACA,aAAA;AACA,cAAA;AACA,cAAA;AACA,WAAA;AACA,WAAA;AACA,kBAAA;AACA,OAAA;;",
+  "names": []
+}

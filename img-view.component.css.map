@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/dialogs/img-view/img-view.component.css"],
+  "sourcesContent": [".example-card {\r\n  max-width: 400px;\r\n}\r\n\r\n.example-header-image {\r\n  background-image: url(\"https://material.angular.io/assets/img/examples/shiba1.jpg\");\r\n  background-size: cover;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAC;AACC,aAAW;AACb;AAEA,CAAC;AACC,oBAAkB;AAClB,mBAAiB;AACnB;",
+  "names": []
+}

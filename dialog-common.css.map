@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_core/_dialog/dialog-common/dialog-common.ts"],
+  "sourcesContent": ["\n    :host {\n      display: block;\n    }\n    mat-card {\n      box-shadow: none;\n      overflow: hidden;\n      border: 2px solid black;\n    }\n    mat-card-title {\n      display: flex;\n      align-items: center;\n      gap: 8px;\n    }\n    .dialog-header {\n      display: flex;\n      justify-content: space-between;\n      width: 100%;\n      align-items: center;\n    }\n    .mat-mdc-dialog-surface {\n      background: transparent;\n      border-radius: 10px;\n    }\n    .mat-mdc-card-outlined {\n      border: transparent;\n    }\n  "],
+  "mappings": ";AACI;AACE,WAAA;;AAEF;AACE,cAAA;AACA,YAAA;AACA,UAAA,IAAA,MAAA;;AAEF;AACE,WAAA;AACA,eAAA;AACA,OAAA;;AAEF,CAAA;AACE,WAAA;AACA,mBAAA;AACA,SAAA;AACA,eAAA;;AAEF,CAAA;AACE,cAAA;AACA,iBAAA;;AAEF,CAAA;AACE,UAAA;;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/control/opt-radio/opt-radio.ts"],
+  "sourcesContent": ["\n    \n  b .asterik_required {\n    color: gray;\n  }\n  b .asterik_required:hover {\n    color: red;\n  }\n\n    .ele-wrap {\n      background-color: var(\n        --mat-form-field-filled-container-color,\n        var(--mat-sys-surface-variant)\n      );\n      height: 57px;\n      margin-top: 4px;\n      border-radius: 5px 5px 0px 0px;\n      border-bottom: 1px solid black;\n      margin-bottom: 5px;\n    }\n    mat-error {\n      font-size: var(--mat-form-field-subscript-text-size);\n    }\n  "],
+  "mappings": ";AAEE,EAAA,CAAA;AACE,SAAA;;AAEF,EAAA,CAHA,gBAGA;AACE,SAAA;;AAGA,CAAA;AACE,oBAAA,IAAA,uCAAA,EAAA,IAAA;AAIA,UAAA;AACA,cAAA;AACA,iBAAA,IAAA,IAAA,IAAA;AACA,iBAAA,IAAA,MAAA;AACA,iBAAA;;AAEF;AACE,aAAA,IAAA;;",
+  "names": []
+}

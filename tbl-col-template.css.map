@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/table/tbl-col-template/tbl-col-template.ts"],
+  "sourcesContent": ["\n    .cols-wrapper {\n      display: flex;\n      flex-wrap: nowrap;\n      align-items: center;\n      gap: 8px; /* optional spacing */\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;AACA,aAAA;AACA,eAAA;AACA,OAAA;;",
+  "names": []
+}

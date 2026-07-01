@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/feature/account-in/account-in-routing.module.ts", "src/app/feature/account-in/account-in.module.ts"],
+  "sourcesContent": ["import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AccountInRoutingModule { }\r\n", "import { NgModule } from '@angular/core';\r\n\r\nimport { AccountInRoutingModule } from './account-in-routing.module';\r\nimport { AngularzModule } from '@_modules/angularz.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    AngularzModule,\r\n    AccountInRoutingModule\r\n  ]\r\n})\r\nexport class AccountInModule { }\r\n"],
+  "mappings": ";;;;;;;;;;AAGA,IAAM,SAAiB,CAAA;AAMjB,IAAO,yBAAP,MAAO,wBAAsB;;qCAAtB,yBAAsB;EAAA;wEAAtB,wBAAsB,CAAA;4EAHvB,aAAa,SAAS,MAAM,GAC5B,YAAY,EAAA,CAAA;;;sEAEX,wBAAsB,CAAA;UAJlC;WAAS;MACR,SAAS,CAAC,aAAa,SAAS,MAAM,CAAC;MACvC,SAAS,CAAC,YAAY;KACvB;;;;;ACKK,IAAO,kBAAP,MAAO,iBAAe;;qCAAf,kBAAe;EAAA;wEAAf,iBAAe,CAAA;;IAJxB;IACA;EAAsB,EAAA,CAAA;;;sEAGb,iBAAe,CAAA;UAP3B;WAAS;MACR,cAAc,CAAA;MACd,SAAS;QACP;QACA;;KAEH;;;",
+  "names": []
+}

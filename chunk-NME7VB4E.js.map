@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/feature/account-out/account-out-routing.module.ts", "src/app/feature/account-out/account-out.module.ts"],
+  "sourcesContent": ["import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AccountOutRoutingModule { }\r\n", "import { NgModule } from '@angular/core';\r\n\r\nimport { AccountOutRoutingModule } from './account-out-routing.module';\r\nimport { AngularzModule } from '@_modules/angularz.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    AngularzModule,\r\n    AccountOutRoutingModule\r\n  ]\r\n})\r\nexport class AccountOutModule { }\r\n"],
+  "mappings": ";;;;;;;;;;AAGA,IAAM,SAAiB,CAAA;AAMjB,IAAO,0BAAP,MAAO,yBAAuB;;qCAAvB,0BAAuB;EAAA;wEAAvB,yBAAuB,CAAA;4EAHxB,aAAa,SAAS,MAAM,GAC5B,YAAY,EAAA,CAAA;;;sEAEX,yBAAuB,CAAA;UAJnC;WAAS;MACR,SAAS,CAAC,aAAa,SAAS,MAAM,CAAC;MACvC,SAAS,CAAC,YAAY;KACvB;;;;;ACKK,IAAO,mBAAP,MAAO,kBAAgB;;qCAAhB,mBAAgB;EAAA;wEAAhB,kBAAgB,CAAA;;IAJzB;IACA;EAAuB,EAAA,CAAA;;;sEAGd,kBAAgB,CAAA;UAP5B;WAAS;MACR,cAAc,CAAA;MACd,SAAS;QACP;QACA;;KAEH;;;",
+  "names": []
+}
