@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_theme/headers/headers.component.scss"],
-  "sourcesContent": ["\r\n.example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n// mat-toolbar {\r\n//   display:flex;\r\n//   position: fixed;\r\n//   justify-content: space-between;\r\n// }"],
-  "mappings": ";AACA,CAAA;AACE,QAAA,EAAA,EAAA;;",
-  "names": []
-}

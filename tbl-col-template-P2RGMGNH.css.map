@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/table/tbl-col-template/tbl-col-template.ts"],
+  "sourcesContent": ["\n    .cols-wrapper {\n      display: flex;\n      flex-wrap: nowrap;\n      align-items: center;\n      gap: 8px; /* optional spacing */\n    }\n    .theme-row:hover {\n      cursor: pointer;\n      background-color: #79797944;\n    }\n    ::ng-deep .mat-sort-header-arrow > svg {\n      fill: #fff !important;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;AACA,aAAA;AACA,eAAA;AACA,OAAA;;AAEF,CAAA,SAAA;AACE,UAAA;AACA,oBAAA,KAAA,GAAA,EAAA,GAAA,EAAA,GAAA,EAAA;;AAEF,UAAA,CAAA,sBAAA,EAAA;AACE,QAAA;;",
+  "names": []
+}

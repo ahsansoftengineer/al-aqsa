@@ -1,0 +1,135 @@
+{
+  "configVersion": 1,
+  "timestamp": 1783309501445,
+  "index": "/al-aqsa/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/al-aqsa/chunk-53CSVDUX.js",
+        "/al-aqsa/chunk-AN4HFGOZ.js",
+        "/al-aqsa/chunk-EVJKSHZG.js",
+        "/al-aqsa/chunk-FJOBV3BA.js",
+        "/al-aqsa/chunk-FYAEN232.js",
+        "/al-aqsa/chunk-G2ZNVSLM.js",
+        "/al-aqsa/chunk-GE5DPNEV.js",
+        "/al-aqsa/chunk-KBGALCVX.js",
+        "/al-aqsa/chunk-KZ5STYMK.js",
+        "/al-aqsa/chunk-MNWATNWP.js",
+        "/al-aqsa/chunk-MS6RX6N2.js",
+        "/al-aqsa/chunk-P5H6T4RD.js",
+        "/al-aqsa/chunk-PM4ADLNH.js",
+        "/al-aqsa/chunk-PRA2B2XX.js",
+        "/al-aqsa/chunk-QJZZQSG3.js",
+        "/al-aqsa/chunk-SEU5QYBY.js",
+        "/al-aqsa/chunk-TBPCKURY.js",
+        "/al-aqsa/chunk-U25YIAVP.js",
+        "/al-aqsa/chunk-UAYUVWYX.js",
+        "/al-aqsa/chunk-UNK6RJ7F.js",
+        "/al-aqsa/chunk-Z5FAQA5I.js",
+        "/al-aqsa/chunk-ZOTFYO6X.js",
+        "/al-aqsa/favicon.ico",
+        "/al-aqsa/index.html",
+        "/al-aqsa/main-2OKRHOYK.js",
+        "/al-aqsa/manifest.webmanifest",
+        "/al-aqsa/polyfills-PBFM45AN.js",
+        "/al-aqsa/scripts-QDN5PXII.js",
+        "/al-aqsa/styles-TQ3WM7F3.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/al-aqsa/icons/icon-128x128.png",
+        "/al-aqsa/icons/icon-144x144.png",
+        "/al-aqsa/icons/icon-152x152.png",
+        "/al-aqsa/icons/icon-192x192.png",
+        "/al-aqsa/icons/icon-384x384.png",
+        "/al-aqsa/icons/icon-512x512.png",
+        "/al-aqsa/icons/icon-72x72.png",
+        "/al-aqsa/icons/icon-96x96.png",
+        "/al-aqsa/logo/al-aqsa-hufaz.png",
+        "/al-aqsa/logo/al-aqsa.png",
+        "/al-aqsa/screenshot/education.png",
+        "/al-aqsa/system/upload.gif",
+        "/al-aqsa/system/upload.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/al-aqsa/chunk-53CSVDUX.js": "efdc3dd9f4d48a6554685c0176e34070efdc0704",
+    "/al-aqsa/chunk-AN4HFGOZ.js": "0316bcd94d661ce8db44b9943af4d188e3678137",
+    "/al-aqsa/chunk-EVJKSHZG.js": "a57d0bc13b02a390c6134d091ffc40d60472f35e",
+    "/al-aqsa/chunk-FJOBV3BA.js": "1dc294a2310d26fed26a0f2cc463048755686769",
+    "/al-aqsa/chunk-FYAEN232.js": "c42d5036d07eb80c588e04e703bd42a5aa09ce40",
+    "/al-aqsa/chunk-G2ZNVSLM.js": "5868a26565ea27ced06373b7793f00d924e349f0",
+    "/al-aqsa/chunk-GE5DPNEV.js": "89aa07320ac77c1a2fb23ccca7b0e72f5ed6e699",
+    "/al-aqsa/chunk-KBGALCVX.js": "d6835324ee883878bf2e6dd72d9c6362d5fb7a5b",
+    "/al-aqsa/chunk-KZ5STYMK.js": "22953ddd10276f6beefcf546393511a85a25cd4b",
+    "/al-aqsa/chunk-MNWATNWP.js": "72800923fa470ea7d945bc4111972f9e8265210a",
+    "/al-aqsa/chunk-MS6RX6N2.js": "ae253939a818dd59367c4abae32b093d93595729",
+    "/al-aqsa/chunk-P5H6T4RD.js": "5aeb08514622703bf9d643742f1397657ba6af3b",
+    "/al-aqsa/chunk-PM4ADLNH.js": "449295187a75ef18ad91f1afd457e99924e3504d",
+    "/al-aqsa/chunk-PRA2B2XX.js": "d52eafae9d3fd21a891d5d78a2be33a63baed5e3",
+    "/al-aqsa/chunk-QJZZQSG3.js": "00fd5ea909a5b06989848e5b5246330f4e61604d",
+    "/al-aqsa/chunk-SEU5QYBY.js": "db6a6f1c033e87ddf071fb98d647595050b451dd",
+    "/al-aqsa/chunk-TBPCKURY.js": "403f3122dfe027f6d516cb6aed0dbd1a8e2e1a3d",
+    "/al-aqsa/chunk-U25YIAVP.js": "f65652febe0303ad1f242fa71e95c3782f796ce5",
+    "/al-aqsa/chunk-UAYUVWYX.js": "6318ecaa88720bf72a76262d04949e8306ba9f6e",
+    "/al-aqsa/chunk-UNK6RJ7F.js": "70a07f8284812a48a36bb67f7fa27d101e80bcdf",
+    "/al-aqsa/chunk-Z5FAQA5I.js": "cc48affba45c771e726b607354203f03d472ffd4",
+    "/al-aqsa/chunk-ZOTFYO6X.js": "2cdc329a420b020dbe42ac6ce5345c7aca6ba65f",
+    "/al-aqsa/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/al-aqsa/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/al-aqsa/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/al-aqsa/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/al-aqsa/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/al-aqsa/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/al-aqsa/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/al-aqsa/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/al-aqsa/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/al-aqsa/index.html": "774b8427b0c0440309fa72fa6200994064053001",
+    "/al-aqsa/logo/al-aqsa-hufaz.png": "0b78c95c8b6dc94b860e8360e86d75b3cd9296e2",
+    "/al-aqsa/logo/al-aqsa.png": "cd33dbb347888b180f86afc3ef095de2f4b3906e",
+    "/al-aqsa/main-2OKRHOYK.js": "6b763a388f0a5ded92ef20d0db20d556207a2629",
+    "/al-aqsa/manifest.webmanifest": "9b161d49834a1792731fa65ecc264fd2327e6972",
+    "/al-aqsa/polyfills-PBFM45AN.js": "d8cdcf9038dfad697c4c459b0cf8ac201026e557",
+    "/al-aqsa/screenshot/education.png": "d246ed43d5532dd112916bbcf81697487c40fac8",
+    "/al-aqsa/scripts-QDN5PXII.js": "68dc09c9488aacc2c91ad1af4ba732d3f5c408c0",
+    "/al-aqsa/styles-TQ3WM7F3.css": "f27652568ca4970f7f3d23aa101f2086eb0c2c72",
+    "/al-aqsa/system/upload.gif": "8aec582e6232ca1488d844b9695c1631a175e76d",
+    "/al-aqsa/system/upload.png": "6ec7f311ded39888ca4220ed45d46ab15f24fe09"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
