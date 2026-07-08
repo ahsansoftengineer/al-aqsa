@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1783309501445,
+  "timestamp": 1783530453977,
   "index": "/al-aqsa/index.html",
   "assetGroups": [
     {
@@ -105,7 +105,7 @@
     "/al-aqsa/logo/al-aqsa-hufaz.png": "0b78c95c8b6dc94b860e8360e86d75b3cd9296e2",
     "/al-aqsa/logo/al-aqsa.png": "cd33dbb347888b180f86afc3ef095de2f4b3906e",
     "/al-aqsa/main-2OKRHOYK.js": "6b763a388f0a5ded92ef20d0db20d556207a2629",
-    "/al-aqsa/manifest.webmanifest": "9b161d49834a1792731fa65ecc264fd2327e6972",
+    "/al-aqsa/manifest.webmanifest": "722ef4a13334c6ef4bc4a3bd7c63a6a5e48e4d31",
     "/al-aqsa/polyfills-PBFM45AN.js": "d8cdcf9038dfad697c4c459b0cf8ac201026e557",
     "/al-aqsa/screenshot/education.png": "d246ed43d5532dd112916bbcf81697487c40fac8",
     "/al-aqsa/scripts-QDN5PXII.js": "68dc09c9488aacc2c91ad1af4ba732d3f5c408c0",
