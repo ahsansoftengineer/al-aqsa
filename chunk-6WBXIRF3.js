@@ -4,14 +4,14 @@ import {
   CtrlTxt,
   FormBasic,
   SharedModule
-} from "./chunk-SEU5QYBY.js";
+} from "./chunk-CVI4AJCD.js";
 import {
   TblColTemplate
-} from "./chunk-U25YIAVP.js";
+} from "./chunk-FBSGLUKQ.js";
 import {
   RoutezFeatureModule
-} from "./chunk-PM4ADLNH.js";
-import "./chunk-53CSVDUX.js";
+} from "./chunk-WPVSBSBL.js";
+import "./chunk-FTNMW4TO.js";
 import {
   BaseClassTemplate,
   FormBase,
@@ -19,7 +19,7 @@ import {
   TM_List,
   URL_CONTRL,
   URL_SRVC
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import "./chunk-ZOTFYO6X.js";
 import "./chunk-KZ5STYMK.js";
 import {
@@ -536,7 +536,7 @@ var ClassSection = class _ClassSection extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ClassSection, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -614,17 +614,17 @@ var ClassSectionAdd = class _ClassSectionAdd extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ClassSectionAdd, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-section-add", template: `<form-basic>
-  <ng-container moreInfo >
-    <ctrl-txt [ctrl]="{ field: 'classId', lbl: 'Class' }"></ctrl-txt>
-    <ctrl-txt [ctrl]="{ field: 'sectionId', lbl: 'Section' }"></ctrl-txt>
-    <ctrl-txt [ctrl]="{ field: 'teacherId', lbl: 'Teacher' }"></ctrl-txt>
-    <ctrl-opt-radio [ctrl]="{ field: 'gender', lbl: 'Gender' }" [listz]="_ss.GENDER"></ctrl-opt-radio>
-
-    <ctrl-timez [ctrl]="{ field: 'timeFrom', lbl: 'Time From' }"></ctrl-timez>
-    <ctrl-timez [ctrl]="{ field: 'timeTo', lbl: 'Time To' }"></ctrl-timez>
-  </ng-container>
-</form-basic>
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-section-add", template: `<form-basic>\r
+  <ng-container moreInfo >\r
+    <ctrl-txt [ctrl]="{ field: 'classId', lbl: 'Class' }"></ctrl-txt>\r
+    <ctrl-txt [ctrl]="{ field: 'sectionId', lbl: 'Section' }"></ctrl-txt>\r
+    <ctrl-txt [ctrl]="{ field: 'teacherId', lbl: 'Teacher' }"></ctrl-txt>\r
+    <ctrl-opt-radio [ctrl]="{ field: 'gender', lbl: 'Gender' }" [listz]="_ss.GENDER"></ctrl-opt-radio>\r
+\r
+    <ctrl-timez [ctrl]="{ field: 'timeFrom', lbl: 'Time From' }"></ctrl-timez>\r
+    <ctrl-timez [ctrl]="{ field: 'timeTo', lbl: 'Time To' }"></ctrl-timez>\r
+  </ng-container>\r
+</form-basic>\r
 ` }]
   }], () => [{ type: ActivatedRoute }], null);
 })();
@@ -670,4 +670,4 @@ var EducationModule = class _EducationModule {
 export {
   EducationModule
 };
-//# sourceMappingURL=chunk-UNK6RJ7F.js.map
+//# sourceMappingURL=chunk-6WBXIRF3.js.map

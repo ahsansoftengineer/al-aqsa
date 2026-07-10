@@ -10,14 +10,14 @@ import {
   MatToolbar,
   MatToolbarRow,
   MatzThemeModule
-} from "./chunk-QJZZQSG3.js";
+} from "./chunk-S4FZW74V.js";
 import "./chunk-KBGALCVX.js";
 import {
   MenuIndexComponent
-} from "./chunk-PM4ADLNH.js";
+} from "./chunk-WPVSBSBL.js";
 import {
   NGX_NGB_Other_Module
-} from "./chunk-53CSVDUX.js";
+} from "./chunk-FTNMW4TO.js";
 import {
   AppInjector,
   BaseClassFuncs,
@@ -42,7 +42,7 @@ import {
   ThemeService,
   TranslateLoader,
   provideTranslateService
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import "./chunk-ZOTFYO6X.js";
 import {
   BreakpointObserver,
@@ -6052,7 +6052,7 @@ var routes = [
       },
       {
         path: "feature",
-        loadChildren: () => import("./chunk-FJOBV3BA.js").then((m) => m.FeatureModule)
+        loadChildren: () => import("./chunk-FUB7RPGK.js").then((m) => m.FeatureModule)
       },
       { path: "", redirectTo: "/dashboard", pathMatch: "full" }
     ]
@@ -6782,4 +6782,4 @@ var AppModule = class _AppModule {
 
 // src/main.ts
 platformBrowser().bootstrapModule(AppModule).catch((err) => console.error(err));
-//# sourceMappingURL=main-2OKRHOYK.js.map
+//# sourceMappingURL=main-3YAHDWJQ.js.map

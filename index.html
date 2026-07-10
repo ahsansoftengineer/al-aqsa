@@ -22,8 +22,18 @@
 <link rel="stylesheet" href="styles-TQ3WM7F3.css"></head>
 
 <body>
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<link rel="modulepreload" href="chunk-QJZZQSG3.js"><link rel="modulepreload" href="chunk-KBGALCVX.js"><link rel="modulepreload" href="chunk-PM4ADLNH.js"><link rel="modulepreload" href="chunk-53CSVDUX.js"><link rel="modulepreload" href="chunk-GE5DPNEV.js"><link rel="modulepreload" href="chunk-ZOTFYO6X.js"><link rel="modulepreload" href="chunk-KZ5STYMK.js"><link rel="modulepreload" href="chunk-Z5FAQA5I.js"><script src="polyfills-PBFM45AN.js" type="module"></script><script src="scripts-QDN5PXII.js" defer></script><script src="main-2OKRHOYK.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-S4FZW74V.js"><link rel="modulepreload" href="chunk-KBGALCVX.js"><link rel="modulepreload" href="chunk-WPVSBSBL.js"><link rel="modulepreload" href="chunk-FTNMW4TO.js"><link rel="modulepreload" href="chunk-AUTYE7TV.js"><link rel="modulepreload" href="chunk-ZOTFYO6X.js"><link rel="modulepreload" href="chunk-KZ5STYMK.js"><link rel="modulepreload" href="chunk-Z5FAQA5I.js"><script src="polyfills-PBFM45AN.js" type="module"></script><script src="scripts-QDN5PXII.js" defer></script><script src="main-3YAHDWJQ.js" type="module"></script></body>
 
 </html>

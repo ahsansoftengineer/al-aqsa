@@ -1,7 +1,7 @@
 import {
   NgxSpinnerModule,
   TranslateModule
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import {
   _animationsDisabled
 } from "./chunk-KZ5STYMK.js";
@@ -139,4 +139,4 @@ export {
   MatPseudoCheckboxModule,
   NGX_NGB_Other_Module
 };
-//# sourceMappingURL=chunk-53CSVDUX.js.map
+//# sourceMappingURL=chunk-FTNMW4TO.js.map

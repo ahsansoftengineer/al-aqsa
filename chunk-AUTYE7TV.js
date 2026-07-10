@@ -7246,7 +7246,7 @@ var DialogCommon = class _DialogCommon {
       \u0275\u0275advance(2);
       \u0275\u0275textInterpolate1(" ", ctx.data.confirmText ?? "OK", " ");
     }
-  }, dependencies: [MatButton, MatIconButton, MatIcon, MatCard, MatCardActions, MatCardContent, MatCardHeader], styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Work/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-CVRNIIH6.css.map */\n"], encapsulation: 2 });
+  }, dependencies: [MatButton, MatIconButton, MatIcon, MatCard, MatCardActions, MatCardContent, MatCardHeader], styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Codez/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-BP3EHOPY.css.map */\n"], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DialogCommon, [{
@@ -7281,7 +7281,7 @@ var DialogCommon = class _DialogCommon {
     </button>\r
   </mat-card-actions>\r
 </mat-card>\r
-`, styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Work/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-CVRNIIH6.css.map */\n"] }]
+`, styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Codez/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-BP3EHOPY.css.map */\n"] }]
   }], () => [{ type: MatDialogRef }, { type: void 0, decorators: [{
     type: Inject,
     args: [MAT_DIALOG_DATA]
@@ -8637,12 +8637,12 @@ var NotifyContainer = class _NotifyContainer {
       \u0275\u0275advance();
       \u0275\u0275repeater(ctx.service.notifications());
     }
-  }, dependencies: [NotifyCard], styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Work/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-APWSQLRP.css.map */\n"], encapsulation: 2 });
+  }, dependencies: [NotifyCard], styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-ONLS646B.css.map */\n"], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NotifyContainer, [{
     type: Component,
-    args: [{ encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, standalone: false, selector: "notify-container", template: '<div class="notify-container">\r\n  @for(item of service.notifications(); track item.id){\r\n  <notify-card [data]="item"> </notify-card>\r\n  }\r\n</div>\r\n', styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Work/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-APWSQLRP.css.map */\n"] }]
+    args: [{ encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, standalone: false, selector: "notify-container", template: '<div class="notify-container">\r\n  @for(item of service.notifications(); track item.id){\r\n  <notify-card [data]="item"> </notify-card>\r\n  }\r\n</div>\r\n', styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-ONLS646B.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -11333,4 +11333,4 @@ export {
   BaseClassFuncs,
   BaseClassTemplate
 };
-//# sourceMappingURL=chunk-GE5DPNEV.js.map
+//# sourceMappingURL=chunk-AUTYE7TV.js.map

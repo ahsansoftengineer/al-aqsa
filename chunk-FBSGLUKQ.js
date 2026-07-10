@@ -2,7 +2,7 @@ import {
   MatPseudoCheckbox,
   MatPseudoCheckboxModule,
   NGX_NGB_Other_Module
-} from "./chunk-53CSVDUX.js";
+} from "./chunk-FTNMW4TO.js";
 import {
   CdkColumnDef,
   MatCell,
@@ -19,7 +19,7 @@ import {
   SelectionModel,
   TemplateService,
   TranslatePipe
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import {
   A11yModule,
   ActiveDescendantKeyManager,
@@ -5655,7 +5655,7 @@ var TblColTemplate = class _TblColTemplate {
     if (rf & 2) {
       \u0275\u0275conditional(ctx.lb?.ds ? 0 : -1);
     }
-  }, dependencies: [NgClass, MatTable, MatHeaderCellDef, MatHeaderRowDef, MatColumnDef, MatCellDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatSort, MatSortHeader, MatTooltip, TblActionsComponent, DatePipe, TranslatePipe], styles: ["\n.cols-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: center;\n  gap: 8px;\n}\n.theme-row[_ngcontent-%COMP%]:hover {\n  cursor: pointer;\n  background-color: rgba(121, 121, 121, 0.2666666667);\n}\n  .mat-sort-header-arrow > svg {\n  fill: #fff !important;\n}\n/*# sourceMappingURL=tbl-col-template-P2RGMGNH.css.map */"] });
+  }, dependencies: [NgClass, MatTable, MatHeaderCellDef, MatHeaderRowDef, MatColumnDef, MatCellDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatSort, MatSortHeader, MatTooltip, TblActionsComponent, DatePipe, TranslatePipe], styles: ["\n.cols-wrapper[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: center;\n  gap: 8px;\n}\n.theme-row[_ngcontent-%COMP%]:hover {\n  cursor: pointer;\n  background-color: rgba(121, 121, 121, 0.2666666667);\n}\n  .mat-sort-header-arrow > svg {\n  fill: #fff !important;\n}\n/*# sourceMappingURL=tbl-col-template-G32G2THB.css.map */"] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TblColTemplate, [{
@@ -5752,7 +5752,7 @@ var TblColTemplate = class _TblColTemplate {
   <tbl-cols-end [lb]="lb"></tbl-cols-end>\r
 </div>\r
 } -->\r
-`, styles: ["/* angular:styles/component:scss;96b56d802f87a6c1dd30fd6ca9fe6fe721f329ad85c7ead10dbb37bacd9823ad;C:/Work/edu-fe-admin/src/_shared/table/tbl-col-template/tbl-col-template.ts */\n.cols-wrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: center;\n  gap: 8px;\n}\n.theme-row:hover {\n  cursor: pointer;\n  background-color: rgba(121, 121, 121, 0.2666666667);\n}\n::ng-deep .mat-sort-header-arrow > svg {\n  fill: #fff !important;\n}\n/*# sourceMappingURL=tbl-col-template-P2RGMGNH.css.map */\n"] }]
+`, styles: ["/* angular:styles/component:scss;96b56d802f87a6c1dd30fd6ca9fe6fe721f329ad85c7ead10dbb37bacd9823ad;C:/Codez/edu-fe-admin/src/_shared/table/tbl-col-template/tbl-col-template.ts */\n.cols-wrapper {\n  display: flex;\n  flex-wrap: nowrap;\n  align-items: center;\n  gap: 8px;\n}\n.theme-row:hover {\n  cursor: pointer;\n  background-color: rgba(121, 121, 121, 0.2666666667);\n}\n::ng-deep .mat-sort-header-arrow > svg {\n  fill: #fff !important;\n}\n/*# sourceMappingURL=tbl-col-template-G32G2THB.css.map */\n"] }]
   }], null, { lb: [{
     type: Input
   }] });
@@ -5835,4 +5835,4 @@ export {
   TblColTemplate,
   TableModule
 };
-//# sourceMappingURL=chunk-U25YIAVP.js.map
+//# sourceMappingURL=chunk-FBSGLUKQ.js.map

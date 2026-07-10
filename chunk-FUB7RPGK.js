@@ -1,6 +1,6 @@
 import {
   MatzThemeModule
-} from "./chunk-QJZZQSG3.js";
+} from "./chunk-S4FZW74V.js";
 import {
   MatGridList,
   MatGridTile
@@ -9,16 +9,16 @@ import {
   MatTooltipModule,
   TableModule,
   TblPaginatorComponent
-} from "./chunk-U25YIAVP.js";
+} from "./chunk-FBSGLUKQ.js";
 import {
   NGX_NGB_Other_Module
-} from "./chunk-53CSVDUX.js";
+} from "./chunk-FTNMW4TO.js";
 import {
   BaseClassSrvc,
   BaseClassTemplate,
   TranslateModule,
   TranslatePipe
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import "./chunk-ZOTFYO6X.js";
 import {
   A11yModule,
@@ -599,7 +599,7 @@ var routes = [
       },
       {
         path: "user",
-        loadChildren: () => import("./chunk-TBPCKURY.js").then((m) => m.UserzModule)
+        loadChildren: () => import("./chunk-ALSO74IA.js").then((m) => m.UserzModule)
       },
       {
         path: "account-in",
@@ -611,23 +611,23 @@ var routes = [
       },
       {
         path: "education",
-        loadChildren: () => import("./chunk-UNK6RJ7F.js").then((m) => m.EducationModule)
+        loadChildren: () => import("./chunk-6WBXIRF3.js").then((m) => m.EducationModule)
       },
       {
         path: "library",
-        loadChildren: () => import("./chunk-UAYUVWYX.js").then((m) => m.EducationLibraryModule)
+        loadChildren: () => import("./chunk-AMGPD7NR.js").then((m) => m.EducationLibraryModule)
       },
       {
         path: "exam",
-        loadChildren: () => import("./chunk-EVJKSHZG.js").then((m) => m.EducationExamModule)
+        loadChildren: () => import("./chunk-RUWRZNIL.js").then((m) => m.EducationExamModule)
       },
       {
         path: "syllabus",
-        loadChildren: () => import("./chunk-PRA2B2XX.js").then((m) => m.EducationSyllabusModule)
+        loadChildren: () => import("./chunk-MYD2BPXB.js").then((m) => m.EducationSyllabusModule)
       },
       {
         path: "file-upload",
-        loadChildren: () => import("./chunk-FYAEN232.js").then((m) => m.FileUploadModule)
+        loadChildren: () => import("./chunk-OSEQ6VA7.js").then((m) => m.FileUploadModule)
       },
       {
         path: "notification",
@@ -721,4 +721,4 @@ var FeatureModule = class _FeatureModule {
 export {
   FeatureModule
 };
-//# sourceMappingURL=chunk-FJOBV3BA.js.map
+//# sourceMappingURL=chunk-FUB7RPGK.js.map

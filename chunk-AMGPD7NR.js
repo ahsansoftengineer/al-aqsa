@@ -3,14 +3,14 @@ import {
   CtrlTxt,
   FormBasic,
   SharedModule
-} from "./chunk-SEU5QYBY.js";
+} from "./chunk-CVI4AJCD.js";
 import {
   TblColTemplate
-} from "./chunk-U25YIAVP.js";
+} from "./chunk-FBSGLUKQ.js";
 import {
   RoutezFeatureModule
-} from "./chunk-PM4ADLNH.js";
-import "./chunk-53CSVDUX.js";
+} from "./chunk-WPVSBSBL.js";
+import "./chunk-FTNMW4TO.js";
 import {
   BaseClassTemplate,
   FormBase,
@@ -18,7 +18,7 @@ import {
   TM_List,
   URL_CONTRL,
   URL_SRVC
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import "./chunk-ZOTFYO6X.js";
 import "./chunk-KZ5STYMK.js";
 import {
@@ -164,7 +164,7 @@ var LibraryCabinet = class _LibraryCabinet extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryCabinet, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -211,7 +211,7 @@ var LibraryCabinetAdd = class _LibraryCabinetAdd extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryCabinetAdd, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: '<form-basic [isMoreinfo]="false"></form-basic>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: '<form-basic [isMoreinfo]="false"></form-basic>\r\n' }]
   }], () => [{ type: ActivatedRoute }], null);
 })();
 (() => {
@@ -247,7 +247,7 @@ var LibraryShelf = class _LibraryShelf extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryShelf, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -295,7 +295,7 @@ var LibraryShelfAdd = class _LibraryShelfAdd extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryShelfAdd, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: '<form-basic [isMoreinfo]="false"></form-basic>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: '<form-basic [isMoreinfo]="false"></form-basic>\r\n' }]
   }], () => [{ type: ActivatedRoute }], null);
 })();
 (() => {
@@ -337,7 +337,7 @@ var LibraryBook = class _LibraryBook extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryBook, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -411,15 +411,15 @@ var LibraryBookAdd = class _LibraryBookAdd extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(LibraryBookAdd, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: `<form-basic [isMoreinfo]="true">
-  <ng-container moreInfo>
-    <ctrl-dd-static [ctrl]="{ field: 'libraryId', lbl: 'Library' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-    <ctrl-dd-static [ctrl]="{ field: 'cabinetId', lbl: 'Cabinet' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-    <ctrl-dd-static [ctrl]="{ field: 'shelfId', lbl: 'Shelf' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-    <ctrl-txt [ctrl]="{ field: 'publisher', lbl: 'Publisher' }"></ctrl-txt>
-    <ctrl-txt [ctrl]="{ field: 'author', lbl: 'Author' }"></ctrl-txt>
-  </ng-container>
-</form-basic>
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: `<form-basic [isMoreinfo]="true">\r
+  <ng-container moreInfo>\r
+    <ctrl-dd-static [ctrl]="{ field: 'libraryId', lbl: 'Library' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+    <ctrl-dd-static [ctrl]="{ field: 'cabinetId', lbl: 'Cabinet' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+    <ctrl-dd-static [ctrl]="{ field: 'shelfId', lbl: 'Shelf' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+    <ctrl-txt [ctrl]="{ field: 'publisher', lbl: 'Publisher' }"></ctrl-txt>\r
+    <ctrl-txt [ctrl]="{ field: 'author', lbl: 'Author' }"></ctrl-txt>\r
+  </ng-container>\r
+</form-basic>\r
 ` }]
   }], () => [{ type: ActivatedRoute }], null);
 })();
@@ -460,7 +460,7 @@ var BookIssue = class _BookIssue extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BookIssue, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\n' }]
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz", template: '<tbl-col-template [lb]="_template?.lb"></tbl-col-template>\r\n' }]
   }], null, null);
 })();
 (() => {
@@ -526,13 +526,13 @@ var BookIssueAdd = class _BookIssueAdd extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BookIssueAdd, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: `<form-basic [isMoreinfo]="true">
-  <ng-container moreInfo>
-    <ctrl-dd-static [ctrl]="{ field: 'libraryBookId', lbl: 'Book' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-    <ctrl-dd-static [ctrl]="{ field: 'studentId', lbl: 'Student' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-    <ctrl-dd-static [ctrl]="{ field: 'attendantId', lbl: 'Attendant' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>
-  </ng-container>
-</form-basic>
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-classz-add", template: `<form-basic [isMoreinfo]="true">\r
+  <ng-container moreInfo>\r
+    <ctrl-dd-static [ctrl]="{ field: 'libraryBookId', lbl: 'Book' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+    <ctrl-dd-static [ctrl]="{ field: 'studentId', lbl: 'Student' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+    <ctrl-dd-static [ctrl]="{ field: 'attendantId', lbl: 'Attendant' }" [listz]="{ listStatic: _ss.STATUS }"></ctrl-dd-static>\r
+  </ng-container>\r
+</form-basic>\r
 ` }]
   }], () => [{ type: ActivatedRoute }], null);
 })();
@@ -574,4 +574,4 @@ var EducationLibraryModule = class _EducationLibraryModule {
 export {
   EducationLibraryModule
 };
-//# sourceMappingURL=chunk-UAYUVWYX.js.map
+//# sourceMappingURL=chunk-AMGPD7NR.js.map

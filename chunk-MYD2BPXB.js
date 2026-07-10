@@ -1,14 +1,14 @@
 import {
   SharedModule
-} from "./chunk-SEU5QYBY.js";
-import "./chunk-U25YIAVP.js";
+} from "./chunk-CVI4AJCD.js";
+import "./chunk-FBSGLUKQ.js";
 import {
   RoutezFeatureModule
-} from "./chunk-PM4ADLNH.js";
-import "./chunk-53CSVDUX.js";
+} from "./chunk-WPVSBSBL.js";
+import "./chunk-FTNMW4TO.js";
 import {
   BaseClassTemplate
-} from "./chunk-GE5DPNEV.js";
+} from "./chunk-AUTYE7TV.js";
 import "./chunk-ZOTFYO6X.js";
 import "./chunk-KZ5STYMK.js";
 import {
@@ -328,4 +328,4 @@ var EducationSyllabusModule = class _EducationSyllabusModule {
 export {
   EducationSyllabusModule
 };
-//# sourceMappingURL=chunk-PRA2B2XX.js.map
+//# sourceMappingURL=chunk-MYD2BPXB.js.map

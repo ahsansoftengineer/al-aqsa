@@ -1,7 +1,7 @@
 import {
   RoutezFeatureModule
-} from "./chunk-PM4ADLNH.js";
-import "./chunk-GE5DPNEV.js";
+} from "./chunk-WPVSBSBL.js";
+import "./chunk-AUTYE7TV.js";
 import "./chunk-KZ5STYMK.js";
 import {
   AngularzModule,
@@ -34,7 +34,7 @@ var TypeFile = class _TypeFile {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TypeFile, [{
     type: Component,
-    args: [{ selector: "aam-type-file", standalone: false, template: "<p>type-file works!</p>\n" }]
+    args: [{ selector: "aam-type-file", standalone: false, template: "<p>type-file works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -57,7 +57,7 @@ var TypeFileAdd = class _TypeFileAdd {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TypeFileAdd, [{
     type: Component,
-    args: [{ selector: "aam-type-file-add", standalone: false, template: "<p>type-file-add works!</p>\n" }]
+    args: [{ selector: "aam-type-file-add", standalone: false, template: "<p>type-file-add works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -80,7 +80,7 @@ var UploadFile = class _UploadFile {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(UploadFile, [{
     type: Component,
-    args: [{ selector: "aam-upload-file", standalone: false, template: "<p>upload-file works!</p>\n" }]
+    args: [{ selector: "aam-upload-file", standalone: false, template: "<p>upload-file works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -103,7 +103,7 @@ var UploadFileAdd = class _UploadFileAdd {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(UploadFileAdd, [{
     type: Component,
-    args: [{ selector: "aam-upload-file-add", standalone: false, template: "<p>upload-file-add works!</p>\n" }]
+    args: [{ selector: "aam-upload-file-add", standalone: false, template: "<p>upload-file-add works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -129,7 +129,7 @@ var TypeVideo = class _TypeVideo {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TypeVideo, [{
     type: Component,
-    args: [{ selector: "aam-type-video", standalone: false, template: "<p>type-video works!</p>\n" }]
+    args: [{ selector: "aam-type-video", standalone: false, template: "<p>type-video works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -152,7 +152,7 @@ var TypeVideoAdd = class _TypeVideoAdd {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TypeVideoAdd, [{
     type: Component,
-    args: [{ selector: "aam-type-video-add", standalone: false, template: "<p>type-video-add works!</p>\n" }]
+    args: [{ selector: "aam-type-video-add", standalone: false, template: "<p>type-video-add works!</p>\r\n" }]
   }], null, null);
 })();
 (() => {
@@ -179,4 +179,4 @@ var FileUploadModule = class _FileUploadModule {
 export {
   FileUploadModule
 };
-//# sourceMappingURL=chunk-FYAEN232.js.map
+//# sourceMappingURL=chunk-OSEQ6VA7.js.map
