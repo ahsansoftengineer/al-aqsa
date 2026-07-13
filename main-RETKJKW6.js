@@ -12,17 +12,18 @@ import {
   MatToolbar,
   MatToolbarRow,
   MatzThemeModule
-} from "./chunk-FFP35TTC.js";
-import "./chunk-KY45CN25.js";
+} from "./chunk-XS4FJ3PE.js";
+import "./chunk-CXJUNSPP.js";
 import {
+  MenuFeatureIndex,
   MenuIndexComponent
-} from "./chunk-I62GNV6F.js";
+} from "./chunk-XDNOSMU5.js";
 import {
   BaseClassFuncs,
   BaseClassSrvc,
   NGX_NGB_Other_Module,
   SideNavService
-} from "./chunk-5HJD6THY.js";
+} from "./chunk-P2RKEVL2.js";
 import {
   AppInjector,
   Custom,
@@ -36,6 +37,7 @@ import {
   MatExpansionModule,
   MatProgressBar,
   MatProgressBarModule,
+  MenuModuleIndex,
   NotifyCard,
   NotifyContainer,
   ProviderService,
@@ -46,8 +48,8 @@ import {
   TranslateLoader,
   TranslatePipe,
   provideTranslateService
-} from "./chunk-L25IYKSY.js";
-import "./chunk-DHZERB3R.js";
+} from "./chunk-CKWZC2YS.js";
+import "./chunk-5EUKFK7D.js";
 import {
   BreakpointObserver,
   MatButton,
@@ -60,7 +62,7 @@ import {
   MatMenuItem,
   MatMenuModule,
   MatMenuTrigger
-} from "./chunk-USXUCR7E.js";
+} from "./chunk-ACFZPOBY.js";
 import {
   ANIMATION_MODULE_TYPE,
   AngularzModule,
@@ -154,6 +156,7 @@ import {
   ɵɵrepeaterTrackByIdentity,
   ɵɵresetView,
   ɵɵrestoreView,
+  ɵɵsetComponentScope,
   ɵɵtemplate,
   ɵɵtext,
   ɵɵtextInterpolate,
@@ -161,7 +164,7 @@ import {
   ɵɵtwoWayBindingSet,
   ɵɵtwoWayListener,
   ɵɵtwoWayProperty
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // node_modules/.pnpm/@angular+animations@22.0.4__4c4d2295aaf7c9887240b85209fb2b2f/node_modules/@angular/animations/fesm2022/_private_export-chunk.mjs
 /**
@@ -6107,10 +6110,10 @@ var FullTemplateComponent = class _FullTemplateComponent {
 
 // src/app/app-routing.module.ts
 var routes = [
-  { path: "", redirectTo: "dashboard", pathMatch: "full" },
+  { path: "", redirectTo: "feature", pathMatch: "full" },
   {
     path: "auth",
-    loadChildren: () => import("./chunk-SEMBD3V2.js").then((m) => m.FeatureAuthModule)
+    loadChildren: () => import("./chunk-ZVUTVNLN.js").then((m) => m.FeatureAuthModule)
   },
   {
     path: "",
@@ -6124,11 +6127,11 @@ var routes = [
     children: [
       {
         path: "dashboard",
-        loadChildren: () => import("./chunk-V7HQ6KYO.js").then((m) => m.FeatureDashboardModule)
+        loadChildren: () => import("./chunk-TJ3LC35D.js").then((m) => m.FeatureDashboardModule)
       },
       {
         path: "feature",
-        loadChildren: () => import("./chunk-FEX7XRZ3.js").then((m) => m.FeatureModule)
+        loadChildren: () => import("./chunk-DFRCMCZC.js").then((m) => m.FeatureModule)
       },
       { path: "", redirectTo: "/dashboard", pathMatch: "full" }
     ]
@@ -6313,6 +6316,8 @@ var exportz = [
   NotifyContainer,
   NotifyCard,
   MenuIndexComponent,
+  MenuModuleIndex,
+  MenuFeatureIndex,
   LoaderComponent
 ];
 var CoreModule = class _CoreModule {
@@ -6352,6 +6357,8 @@ var CoreModule = class _CoreModule {
     }]
   }], null, null);
 })();
+\u0275\u0275setComponentScope(MenuModuleIndex, [MenuIndexComponent], []);
+\u0275\u0275setComponentScope(MenuFeatureIndex, [MenuIndexComponent], []);
 
 // src/_theme/footers/footers.component.ts
 var FootersComponent = class _FootersComponent {
@@ -6858,4 +6865,4 @@ var AppModule = class _AppModule {
 
 // src/main.ts
 platformBrowser().bootstrapModule(AppModule).catch((err) => console.error(err));
-//# sourceMappingURL=main-Y72LOWGS.js.map
+//# sourceMappingURL=main-RETKJKW6.js.map

@@ -7,7 +7,7 @@ import {
   ɵɵdefineDirective,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // node_modules/.pnpm/@angular+material@22.0.2_fafb1761f712f01913f2bad44e62ee2a/node_modules/@angular/material/fesm2022/_line-chunk.mjs
 var MatLine = class _MatLine {
@@ -76,4 +76,4 @@ export {
   setLines,
   MatLineModule
 };
-//# sourceMappingURL=chunk-DHZERB3R.js.map
+//# sourceMappingURL=chunk-5EUKFK7D.js.map

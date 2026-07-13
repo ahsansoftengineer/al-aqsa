@@ -16,7 +16,7 @@ import {
   _StructuralStylesLoader,
   _animationsDisabled,
   _getAnimationsState
-} from "./chunk-USXUCR7E.js";
+} from "./chunk-ACFZPOBY.js";
 import {
   BasePortalOutlet,
   BehaviorSubject,
@@ -165,6 +165,7 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef,
   ɵɵproperty,
+  ɵɵpureFunction0,
   ɵɵqueryRefresh,
   ɵɵrepeater,
   ɵɵrepeaterCreate,
@@ -179,7 +180,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // node_modules/.pnpm/@ngx-translate+core@17.0.0__c5d7f0eb0a31c0a5711e66bbf085bbcc/node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
 var MissingTranslationHandler = class {
@@ -7173,19 +7174,24 @@ var Custom = class {
 function DialogCommon_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 11);
+    \u0275\u0275elementStart(0, "button", 12);
     \u0275\u0275listener("click", function DialogCommon_Conditional_14_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.cancel());
     });
-    \u0275\u0275text(1);
+    \u0275\u0275elementStart(1, "mat-icon", 11);
+    \u0275\u0275text(2, "cancel");
     \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "span");
+    \u0275\u0275text(4);
+    \u0275\u0275pipe(5, "translate");
+    \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance();
-    \u0275\u0275textInterpolate1(" ", ctx_r1.data.cancelText ?? "Cancel", " ");
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(5, 1, ctx_r1.data.cancelText ?? "Cancel"));
   }
 }
 var DialogCommon = class _DialogCommon {
@@ -7204,7 +7210,7 @@ var DialogCommon = class _DialogCommon {
   static \u0275fac = function DialogCommon_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _DialogCommon)(\u0275\u0275directiveInject(MatDialogRef), \u0275\u0275directiveInject(MAT_DIALOG_DATA));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DialogCommon, selectors: [["dialog-common"]], standalone: false, decls: 17, vars: 8, consts: [["appearance", "outlined"], [2, "padding", "5px 0px 0px 10px", "margin", "-1px"], [1, "dialog-header", "text-light"], [1, "dialog-title", 2, "display", "flex", "gap", "5px"], [1, "ms-2"], ["mat-icon-button", "", "type", "button", "aria-label", "Close Dialog", 1, "d-flex", "me-2", 3, "click"], [1, "text-danger"], [1, "pt-3", 2, "min-height", "100px", "max-height", "80vh"], ["align", "end"], ["mat-button", ""], ["mat-flat-button", "", 3, "click"], ["mat-button", "", 3, "click"]], template: function DialogCommon_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DialogCommon, selectors: [["dialog-common"]], standalone: false, decls: 21, vars: 10, consts: [["appearance", "outlined"], [2, "padding", "5px 0px 0px 10px", "margin", "-1px"], [1, "dialog-header", "text-light"], [1, "dialog-title", 2, "display", "flex", "gap", "5px"], [1, "ms-2"], ["mat-icon-button", "", "type", "button", "aria-label", "Close Dialog", 1, "d-flex", "me-2", 3, "click"], [1, "text-danger"], [1, "pt-3", 2, "min-height", "100px", "max-height", "80vh"], ["align", "end"], ["mat-raised-button", "", "type", "button", "color", "accent", 1, "me-2"], ["mat-raised-button", "", "type", "button", "color", "primary", 1, "me-2", "bg-info", "text-light", 3, "click"], [1, "me-2"], ["mat-raised-button", "", "type", "button", "color", "accent", 1, "me-2", 3, "click"]], template: function DialogCommon_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-card", 0)(1, "mat-card-header", 1)(2, "div", 2)(3, "div", 3)(4, "mat-icon");
       \u0275\u0275text(5);
@@ -7223,13 +7229,18 @@ var DialogCommon = class _DialogCommon {
       \u0275\u0275text(12);
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(13, "mat-card-actions", 8);
-      \u0275\u0275conditionalCreate(14, DialogCommon_Conditional_14_Template, 2, 1, "button", 9);
+      \u0275\u0275conditionalCreate(14, DialogCommon_Conditional_14_Template, 6, 3, "button", 9);
       \u0275\u0275elementStart(15, "button", 10);
       \u0275\u0275listener("click", function DialogCommon_Template_button_click_15_listener() {
         return ctx.confirm();
       });
-      \u0275\u0275text(16);
-      \u0275\u0275elementEnd()()();
+      \u0275\u0275elementStart(16, "mat-icon", 11);
+      \u0275\u0275text(17, "check");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(18, "span");
+      \u0275\u0275text(19);
+      \u0275\u0275pipe(20, "translate");
+      \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
       \u0275\u0275advance();
@@ -7242,10 +7253,10 @@ var DialogCommon = class _DialogCommon {
       \u0275\u0275textInterpolate1(" ", ctx.data.message, " ");
       \u0275\u0275advance(2);
       \u0275\u0275conditional(ctx.data.showCancel ? 14 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275textInterpolate1(" ", ctx.data.confirmText ?? "OK", " ");
+      \u0275\u0275advance(5);
+      \u0275\u0275textInterpolate(\u0275\u0275pipeBind1(20, 8, ctx.data.confirmText ?? "OK"));
     }
-  }, dependencies: [MatButton, MatIconButton, MatIcon, MatCard, MatCardActions, MatCardContent, MatCardHeader], styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Codez/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-BP3EHOPY.css.map */\n"], encapsulation: 2 });
+  }, dependencies: [MatButton, MatIconButton, MatIcon, MatCard, MatCardActions, MatCardContent, MatCardHeader, TranslatePipe], styles: ["/* angular:styles/component:scss;e0bf391dec6a5b2487f94fea535b85ad87152e18787e104e4ec937865b2d84be;C:/Codez/edu-fe-admin/src/_core/components/dialog/dialog-common/dialog-common.ts */\n:host {\n  display: block;\n}\nmat-card {\n  box-shadow: none;\n  overflow: hidden;\n  border: 2px solid black;\n}\nmat-card-title {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n.dialog-header {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center;\n}\n.mat-mdc-dialog-surface {\n  background: transparent;\n  border-radius: 10px;\n}\n.mat-mdc-card-outlined {\n  border: transparent;\n}\n/*# sourceMappingURL=dialog-common-BP3EHOPY.css.map */\n"], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DialogCommon, [{
@@ -7270,13 +7281,14 @@ var DialogCommon = class _DialogCommon {
 \r
   <mat-card-actions align="end">\r
     @if(data.showCancel){\r
-    <button mat-button (click)="cancel()">\r
-      {{ data.cancelText ?? 'Cancel' }}\r
+    <button mat-raised-button type="button" color="accent" class="me-2"  (click)="cancel()">\r
+      <mat-icon class="me-2">cancel</mat-icon>\r
+      <span>{{ ( data.cancelText ?? 'Cancel') | translate }}</span>\r
     </button>\r
     }\r
-\r
-    <button mat-flat-button (click)="confirm()">\r
-      {{ data.confirmText ?? 'OK' }}\r
+    <button mat-raised-button type="button" color="primary" class="me-2 bg-info text-light"  (click)="confirm()">\r
+      <mat-icon class="me-2">check</mat-icon>\r
+      <span>{{ ( data.confirmText ?? 'OK') | translate }}</span>\r
     </button>\r
   </mat-card-actions>\r
 </mat-card>\r
@@ -8481,7 +8493,7 @@ var NotifyCard = class _NotifyCard {
   static \u0275fac = function NotifyCard_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NotifyCard)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NotifyCard, selectors: [["notify-card"]], inputs: { data: "data" }, standalone: false, decls: 23, vars: 12, consts: [["appearance", "outlined"], [1, "header"], [1, "title"], [1, "heading"], ["mat-icon-button", "", 3, "click"], ["mode", "determinate", 3, "value"], [2, "overflow-y", "scroll", "max-height", "65vh"], [3, "expanded"], ["align", "end"], ["mat-button", "", 3, "click"], [1, "validation-item"], [1, "text-danger"], [1, "text-secondary"]], template: function NotifyCard_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NotifyCard, selectors: [["notify-card"]], inputs: { data: "data" }, standalone: false, decls: 23, vars: 12, consts: [["appearance", "outlined"], [1, "header"], [1, "title"], [1, "heading"], ["mat-icon-button", "", 3, "click"], ["mode", "determinate", 3, "value"], [1, "py-2", 2, "overflow-y", "scroll", "max-height", "65vh"], [3, "expanded"], ["align", "end"], ["mat-button", "", 3, "click"], [1, "validation-item", "px-1"], [1, "text-danger"], [1, "text-secondary"]], template: function NotifyCard_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-card", 0)(1, "div", 1)(2, "div", 2)(3, "mat-icon");
       \u0275\u0275text(4);
@@ -8561,7 +8573,7 @@ var NotifyCard = class _NotifyCard {
 \r
   <mat-progress-bar mode="determinate" [value]="progress()"></mat-progress-bar>\r
 \r
-  <mat-card-content style="overflow-y: scroll; max-height: 65vh;">\r
+  <mat-card-content class="py-2" style="overflow-y: scroll; max-height: 65vh;">\r
     <p>{{ data.message }}</p>\r
     <!-- Only 500 Stack Trace Dev Mode -->\r
     @if(data.details){\r
@@ -8579,7 +8591,7 @@ var NotifyCard = class _NotifyCard {
         Validation Details\r
       </mat-expansion-panel-header>\r
       @for(item of data.validations; track item){\r
-      <div class="validation-item">\r
+      <div class="validation-item px-1">\r
         <strong class="text-danger">{{ item.field }}</strong>\r
         <ul>\r
           @for (error of item.errors; track $index) {\r
@@ -8636,12 +8648,12 @@ var NotifyContainer = class _NotifyContainer {
       \u0275\u0275advance();
       \u0275\u0275repeater(ctx.service.notifications());
     }
-  }, dependencies: [NotifyCard], styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-ONLS646B.css.map */\n"], encapsulation: 2 });
+  }, dependencies: [NotifyCard], styles: ["/* angular:styles/component:scss;e2df0247cf430df691de52825f5803e8b61f26bfc850956da615cf1c08b683f7;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: hidden;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-VOVE3AYR.css.map */\n"], encapsulation: 2 });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NotifyContainer, [{
     type: Component,
-    args: [{ encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, standalone: false, selector: "notify-container", template: '<div class="notify-container">\r\n  @for(item of service.notifications(); track item.id){\r\n  <notify-card [data]="item"> </notify-card>\r\n  }\r\n</div>\r\n', styles: ["/* angular:styles/component:scss;6fd00d240d94190a5f083503c0d22b7b6f23ab02881097c72e674d264d5bd68f;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: auto;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-ONLS646B.css.map */\n"] }]
+    args: [{ encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, standalone: false, selector: "notify-container", template: '<div class="notify-container">\r\n  @for(item of service.notifications(); track item.id){\r\n  <notify-card [data]="item"> </notify-card>\r\n  }\r\n</div>\r\n', styles: ["/* angular:styles/component:scss;e2df0247cf430df691de52825f5803e8b61f26bfc850956da615cf1c08b683f7;C:/Codez/edu-fe-admin/src/_core/components/dialog/notify-container/notify-container.ts */\n.notify-container {\n  position: fixed;\n  top: 16px;\n  right: 16px;\n  width: 450px;\n  max-width: 95vw;\n  max-height: 80vh;\n  overflow-y: hidden;\n  z-index: 99999;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n/*# sourceMappingURL=notify-container-VOVE3AYR.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
@@ -10367,6 +10379,49 @@ function FormBase(that, d = {}) {
   };
 }
 
+// src/_core/_route/menu-module-index/menu-module-index.ts
+var _c05 = () => [];
+var _forTrack02 = ($index, $item) => $item?.id ?? $index;
+function MenuModuleIndex_For_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275element(0, "theme-menu-index", 1);
+  }
+  if (rf & 2) {
+    const item_r1 = ctx.$implicit;
+    \u0275\u0275property("item", item_r1)("isModule", true);
+  }
+}
+var MenuModuleIndex = class _MenuModuleIndex {
+  _ss;
+  constructor(_ss) {
+    this._ss = _ss;
+    console.log(this._ss.activeSideBarParent);
+  }
+  static \u0275fac = function MenuModuleIndex_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MenuModuleIndex)(\u0275\u0275directiveInject(StateService));
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _MenuModuleIndex, selectors: [["theme-menu-module-index"]], hostAttrs: [1, "row", "mx-1"], standalone: false, decls: 3, vars: 1, consts: [[1, "row", "mx-0", "px-0", "my-2"], [3, "item", "isModule"]], template: function MenuModuleIndex_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "div", 0);
+      \u0275\u0275repeaterCreate(1, MenuModuleIndex_For_2_Template, 1, 2, "theme-menu-index", 1, _forTrack02);
+      \u0275\u0275elementEnd();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance();
+      \u0275\u0275repeater(ctx._ss.sideBarMenus ?? \u0275\u0275pureFunction0(0, _c05));
+    }
+  }, encapsulation: 2 });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MenuModuleIndex, [{
+    type: Component,
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "theme-menu-module-index", host: { class: "row mx-1" }, template: '<div class="row mx-0 px-0 my-2">\r\n  @for (item of (_ss.sideBarMenus ?? []); track item?.id ?? $index) {\r\n    <theme-menu-index [item]="item" [isModule]="true"></theme-menu-index>\r\n  }\r\n</div>\r\n' }]
+  }], () => [{ type: StateService }], null);
+})();
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(MenuModuleIndex, { className: "MenuModuleIndex", filePath: "_core/_route/menu-module-index/menu-module-index.ts", lineNumber: 13 });
+})();
+
 export {
   TranslateLoader,
   TranslateService,
@@ -10423,6 +10478,7 @@ export {
   TMSubmit,
   ValidatorService,
   IMG_URL,
-  FormBase
+  FormBase,
+  MenuModuleIndex
 };
-//# sourceMappingURL=chunk-L25IYKSY.js.map
+//# sourceMappingURL=chunk-CKWZC2YS.js.map

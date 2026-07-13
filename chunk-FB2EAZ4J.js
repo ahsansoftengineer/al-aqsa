@@ -5,7 +5,7 @@ import {
   MatPseudoCheckbox,
   MatPseudoCheckboxModule,
   NGX_NGB_Other_Module
-} from "./chunk-5HJD6THY.js";
+} from "./chunk-P2RKEVL2.js";
 import {
   CdkColumnDef,
   MatCell,
@@ -23,7 +23,7 @@ import {
   SelectionModel,
   TemplateService,
   TranslatePipe
-} from "./chunk-L25IYKSY.js";
+} from "./chunk-CKWZC2YS.js";
 import {
   A11yModule,
   ActiveDescendantKeyManager,
@@ -48,7 +48,7 @@ import {
   _VisuallyHiddenLoader,
   _animationsDisabled,
   coerceBooleanProperty
-} from "./chunk-USXUCR7E.js";
+} from "./chunk-ACFZPOBY.js";
 import {
   A,
   AngularzModule,
@@ -202,7 +202,7 @@ import {
   ɵɵtextInterpolate1,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // node_modules/.pnpm/@angular+material@22.0.2_fafb1761f712f01913f2bad44e62ee2a/node_modules/@angular/material/fesm2022/_tooltip-chunk.mjs
 var _c0 = ["tooltip"];
@@ -5508,47 +5508,47 @@ var TblActionsRow = class _TblActionsRow {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TblActionsRow, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "tbl-actions-row", template: `<!--
-<button mat-mini-fab color="accent" type="button" [matMenuTriggerFor]="menu"  (click)="_template.ActionListPrint()">
-  <mat-icon>more_vert</mat-icon>
-</button>
--->
-<button mat-icon-button [matMenuTriggerFor]="menu" type="button" style="height: 35px; overflow: visible;">
-  <mat-icon class="text-primary">more_vert</mat-icon>
-</button>
-<mat-menu #menu="matMenu" type="button">
-  <button mat-menu-item type="button" (click)="record.isShow = !record.isShow">
-    <mat-icon class="me-2">{{!record?.isShow ? 'visibility' : 'visibility_off'}}</mat-icon>
-    <span>{{!record?.isShow ? 'Show' : 'Hide'}}</span>
-  </button>
-  <!-- _template.ActionListEdit(record?.id) -->
-  <a mat-menu-item  color="primary" class="me-1" [routerLink]="[_template.linkUpdate, record?.id]">
-    <mat-icon class="me-2">edit</mat-icon>
-    <span>{{'Edit' | translate}}</span>
-  </a>
-  <button mat-menu-item type="button" (click)="_template.lb.copyItemJSON(record)">
-    <mat-icon class="me-2">content_copy</mat-icon>
-    <span>Copy JSON</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.exportItemToCSV(record)">
-    <mat-icon class="me-2">download</mat-icon>
-    <span>Export to CSV</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.updateStatus(record)">
-    <mat-icon class="me-2" ngClass="{{record.status === 'Active' ? 'text-success' : 'text-warning'}}">
-      {{record.status === 'Active' ? 'toggle_on' : 'toggle_off'}}
-    </mat-icon>
-    <span ngClass="{{record.status === 'Active' ? 'text-success' : 'text-warning'}}">{{record.status}}</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.updateDelete(record)">
-    <mat-icon class="me-2 text-danger">delete</mat-icon>
-    <span class="text-danger">Delete Soft</span>
-  </button>
-    <button mat-menu-item type="button" (click)="_template.lb.Delete(record)">
-    <mat-icon class="me-2 text-danger">delete</mat-icon>
-    <span class="text-danger">Delete</span>
-  </button>
-</mat-menu>
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "tbl-actions-row", template: `<!--\r
+<button mat-mini-fab color="accent" type="button" [matMenuTriggerFor]="menu"  (click)="_template.ActionListPrint()">\r
+  <mat-icon>more_vert</mat-icon>\r
+</button>\r
+-->\r
+<button mat-icon-button [matMenuTriggerFor]="menu" type="button" style="height: 35px; overflow: visible;">\r
+  <mat-icon class="text-primary">more_vert</mat-icon>\r
+</button>\r
+<mat-menu #menu="matMenu" type="button">\r
+  <button mat-menu-item type="button" (click)="record.isShow = !record.isShow">\r
+    <mat-icon class="me-2">{{!record?.isShow ? 'visibility' : 'visibility_off'}}</mat-icon>\r
+    <span>{{!record?.isShow ? 'Show' : 'Hide'}}</span>\r
+  </button>\r
+  <!-- _template.ActionListEdit(record?.id) -->\r
+  <a mat-menu-item  color="primary" class="me-1" [routerLink]="[_template.linkUpdate, record?.id]">\r
+    <mat-icon class="me-2">edit</mat-icon>\r
+    <span>{{'Edit' | translate}}</span>\r
+  </a>\r
+  <button mat-menu-item type="button" (click)="_template.lb.copyItemJSON(record)">\r
+    <mat-icon class="me-2">content_copy</mat-icon>\r
+    <span>Copy JSON</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.exportItemToCSV(record)">\r
+    <mat-icon class="me-2">download</mat-icon>\r
+    <span>Export to CSV</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.updateStatus(record)">\r
+    <mat-icon class="me-2" ngClass="{{record.status === 'Active' ? 'text-success' : 'text-warning'}}">\r
+      {{record.status === 'Active' ? 'toggle_on' : 'toggle_off'}}\r
+    </mat-icon>\r
+    <span ngClass="{{record.status === 'Active' ? 'text-success' : 'text-warning'}}">{{record.status}}</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.updateDelete(record)">\r
+    <mat-icon class="me-2 text-danger">delete</mat-icon>\r
+    <span class="text-danger">Delete Soft</span>\r
+  </button>\r
+    <button mat-menu-item type="button" (click)="_template.lb.Delete(record)">\r
+    <mat-icon class="me-2 text-danger">delete</mat-icon>\r
+    <span class="text-danger">Delete</span>\r
+  </button>\r
+</mat-menu>\r
 ` }]
   }], () => [{ type: TemplateService }], { record: [{
     type: Input
@@ -6190,41 +6190,41 @@ var TblActions = class _TblActions {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TblActions, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "tbl-actions", template: `@if (_template?.LG) {
-<button mat-raised-button color="primary" class="me-2" type="button" [matMenuTriggerFor]="menu" type="button">
-  <mat-icon>more_vert</mat-icon>
-  <span>{{ 'More' | translate }}</span>
-</button>
-}
-@else if (!_template?.LG) {
-<button mat-mini-fab [matMenuTriggerFor]="menu" type="button" class="me-2">
-  <mat-icon>more_vert</mat-icon>
-</button>
-}
-<mat-menu #menu="matMenu" type="button">
-<!--
-  <a mat-menu-item  color="primary" class="me-1 text-primary" [routerLink]="[_template.linkAdd]" [queryParams]="{id: record?.id}">
-    <mat-icon class="me-2 text-primary">edit</mat-icon>
-    <span>{{'Edit' | translate}}</span>
-  </a>
--->
-  <button mat-menu-item type="button" (click)="_template.lb.exportListToCSV(_template?.title)">
-    <mat-icon class="me-2">download</mat-icon>
-    <span>Download CSV</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.exportListToJSON(_template?.title)">
-    <mat-icon class="me-2">download</mat-icon>
-    <span>Download JSON</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.copyListJSON()">
-    <mat-icon class="me-2">content_copy</mat-icon>
-    <span>Copy JSON</span>
-  </button>
-  <button mat-menu-item type="button" (click)="_template.lb.printList()">
-    <mat-icon class="me-2">print</mat-icon>
-    <span>Print</span>
-  </button>
-</mat-menu>
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "tbl-actions", template: `@if (_template?.LG) {\r
+<button mat-raised-button color="primary" class="me-2" type="button" [matMenuTriggerFor]="menu" type="button">\r
+  <mat-icon>more_vert</mat-icon>\r
+  <span>{{ 'More' | translate }}</span>\r
+</button>\r
+}\r
+@else if (!_template?.LG) {\r
+<button mat-mini-fab [matMenuTriggerFor]="menu" type="button" class="me-2">\r
+  <mat-icon>more_vert</mat-icon>\r
+</button>\r
+}\r
+<mat-menu #menu="matMenu" type="button">\r
+<!--\r
+  <a mat-menu-item  color="primary" class="me-1 text-primary" [routerLink]="[_template.linkAdd]" [queryParams]="{id: record?.id}">\r
+    <mat-icon class="me-2 text-primary">edit</mat-icon>\r
+    <span>{{'Edit' | translate}}</span>\r
+  </a>\r
+-->\r
+  <button mat-menu-item type="button" (click)="_template.lb.exportListToCSV(_template?.title)">\r
+    <mat-icon class="me-2">download</mat-icon>\r
+    <span>Download CSV</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.exportListToJSON(_template?.title)">\r
+    <mat-icon class="me-2">download</mat-icon>\r
+    <span>Download JSON</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.copyListJSON()">\r
+    <mat-icon class="me-2">content_copy</mat-icon>\r
+    <span>Copy JSON</span>\r
+  </button>\r
+  <button mat-menu-item type="button" (click)="_template.lb.printList()">\r
+    <mat-icon class="me-2">print</mat-icon>\r
+    <span>Print</span>\r
+  </button>\r
+</mat-menu>\r
 ` }]
   }], () => [{ type: TemplateService }], null);
 })();
@@ -6309,4 +6309,4 @@ export {
   TblActions,
   TableModule
 };
-//# sourceMappingURL=chunk-TBXV42WL.js.map
+//# sourceMappingURL=chunk-FB2EAZ4J.js.map

@@ -5,7 +5,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // src/app/feature/notification/notification-routing.module.ts
 var routes = [];
@@ -52,4 +52,4 @@ var NotificationModule = class _NotificationModule {
 export {
   NotificationModule
 };
-//# sourceMappingURL=chunk-XEZZJRWH.js.map
+//# sourceMappingURL=chunk-BPEAXWFL.js.map

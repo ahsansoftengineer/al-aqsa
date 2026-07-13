@@ -1,10 +1,10 @@
 import {
   MatzThemeModule
-} from "./chunk-FFP35TTC.js";
+} from "./chunk-XS4FJ3PE.js";
 import {
   MatGridList,
   MatGridTile
-} from "./chunk-KY45CN25.js";
+} from "./chunk-CXJUNSPP.js";
 import {
   Btn,
   BtnLink,
@@ -12,21 +12,23 @@ import {
   TblActions,
   TblPaginatorComponent,
   UtilModule
-} from "./chunk-TBXV42WL.js";
+} from "./chunk-FB2EAZ4J.js";
 import {
   BaseClassTemplate
-} from "./chunk-5HJD6THY.js";
+} from "./chunk-P2RKEVL2.js";
 import {
+  EP,
+  MenuModuleIndex,
   TranslateModule,
   TranslatePipe
-} from "./chunk-L25IYKSY.js";
-import "./chunk-DHZERB3R.js";
+} from "./chunk-CKWZC2YS.js";
+import "./chunk-5EUKFK7D.js";
 import {
   A11yModule,
   MatCard,
   MatCardActions,
   MatCardContent
-} from "./chunk-USXUCR7E.js";
+} from "./chunk-ACFZPOBY.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -63,7 +65,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵtextInterpolate2
-} from "./chunk-KLKFXJY4.js";
+} from "./chunk-PXBP2UP3.js";
 
 // src/app/feature/z-template-feature/ztemplate-feature.ts
 var _c0 = () => [];
@@ -98,15 +100,15 @@ function ZTemplateFeature_Conditional_9_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "mat-grid-tile", 6);
-    \u0275\u0275element(1, "btn-link", 14);
-    \u0275\u0275elementStart(2, "btn", 15);
+    \u0275\u0275element(1, "btn-link", 13);
+    \u0275\u0275elementStart(2, "btn", 14);
     \u0275\u0275listener("clickz", function ZTemplateFeature_Conditional_9_Template_btn_clickz_2_listener() {
       \u0275\u0275restoreView(_r4);
       const ctx_r0 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r0._template.lb.refresh());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "btn", 16);
+    \u0275\u0275elementStart(3, "btn", 15);
     \u0275\u0275listener("clickz", function ZTemplateFeature_Conditional_9_Template_btn_clickz_3_listener() {
       \u0275\u0275restoreView(_r4);
       const ctx_r0 = \u0275\u0275nextContext();
@@ -128,21 +130,21 @@ function ZTemplateFeature_Conditional_9_Template(rf, ctx) {
 function ZTemplateFeature_Conditional_16_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
     const _r5 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "btn", 17);
+    \u0275\u0275elementStart(0, "btn", 16);
     \u0275\u0275listener("clickz", function ZTemplateFeature_Conditional_16_Conditional_1_Template_btn_clickz_0_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r0 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r0._template.fsb.resetForm());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(1, "btn", 18);
+    \u0275\u0275elementStart(1, "btn", 17);
     \u0275\u0275listener("clickz", function ZTemplateFeature_Conditional_16_Conditional_1_Template_btn_clickz_1_listener() {
       \u0275\u0275restoreView(_r5);
       const ctx_r0 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r0._template.fsb.submit());
     });
     \u0275\u0275elementEnd();
-    \u0275\u0275element(2, "btn-link", 19);
+    \u0275\u0275element(2, "btn-link", 18);
   }
   if (rf & 2) {
     const ctx_r0 = \u0275\u0275nextContext(2);
@@ -164,8 +166,8 @@ function ZTemplateFeature_Conditional_16_Template(rf, ctx) {
 }
 function ZTemplateFeature_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-card-actions", 13);
-    \u0275\u0275element(1, "tbl-paginator", 20);
+    \u0275\u0275elementStart(0, "mat-card-actions", 12);
+    \u0275\u0275element(1, "tbl-paginator", 19);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -207,7 +209,7 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
   static \u0275fac = function ZTemplateFeature_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _ZTemplateFeature)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ZTemplateFeature, selectors: [["aam-feature"]], standalone: false, features: [\u0275\u0275InheritDefinitionFeature], decls: 18, vars: 6, consts: [[1, "dashboard-card", "p-0", "m-0", "p-_template?.lg-2"], [1, "dashboard-card-content", "p-1"], ["cols", "12", "rowHeight", "55px", 1, ""], [1, "flex--start", 3, "colspan"], [1, "m-0", "mt-2", "fs-5"], [3, "href"], [1, "flex--end", "m-1", 3, "colspan"], ["cols", "1", 3, "rowHeight"], ["colspan", "1"], [1, "m-1", 2, "width", "100%", "height", "100%", "overflow-x", "auto"], ["cols", "1", "rowHeight", "60px"], ["colspan", "1", 1, "flex--end"], ["align", "end", 1, "m-2"], ["align", "end", 1, "mt-3"], ["lbl", "Add", "icon", "local_hospital", 3, "link"], ["lbl", "Refresh", "icon", "autorenew", 3, "clickz"], ["lbl", "Filter", 3, "clickz", "icon"], ["lbl", "Reset", "icon", "cached", 3, "clickz"], ["lbl", "Save", "icon", "save", 3, "clickz"], ["lbl", "Cancel", "icon", "cancel", 3, "link"], [3, "lb"]], template: function ZTemplateFeature_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ZTemplateFeature, selectors: [["aam-feature"]], standalone: false, features: [\u0275\u0275InheritDefinitionFeature], decls: 18, vars: 6, consts: [[1, "dashboard-card", "p-0", "m-1"], [1, "dashboard-card-content", "p-1"], ["cols", "12", "rowHeight", "55px", 1, "mb-2"], [1, "flex--start", 3, "colspan"], [1, "m-0", "mt-2", "fs-5"], [3, "href"], [1, "flex--end", 2, "overflow", "visible", 3, "colspan"], ["cols", "1", 3, "rowHeight"], ["colspan", "1"], [1, "m-1", 2, "width", "100%", "height", "100%", "overflow-x", "auto"], ["cols", "1", "rowHeight", "60px", 1, "mt-2"], ["colspan", "1", 1, "flex--end"], ["align", "end"], ["lbl", "Add", "icon", "local_hospital", 3, "link"], ["lbl", "Refresh", "icon", "autorenew", 3, "clickz"], ["lbl", "Filter", 3, "clickz", "icon"], ["lbl", "Reset", "icon", "cached", 3, "clickz"], ["lbl", "Save", "icon", "save", 3, "clickz"], ["lbl", "Cancel", "icon", "cancel", 3, "link"], [3, "lb"]], template: function ZTemplateFeature_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "mat-card", 0)(1, "mat-card-content", 1)(2, "mat-grid-list", 2)(3, "mat-grid-tile", 3)(4, "section");
       \u0275\u0275conditionalCreate(5, ZTemplateFeature_Conditional_5_Template, 3, 3, "h1", 4);
@@ -220,7 +222,7 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
       \u0275\u0275element(13, "router-outlet");
       \u0275\u0275elementEnd()()();
       \u0275\u0275elementStart(14, "mat-grid-list", 10)(15, "mat-grid-tile", 11);
-      \u0275\u0275conditionalCreate(16, ZTemplateFeature_Conditional_16_Template, 2, 1, "mat-card-actions", 12)(17, ZTemplateFeature_Conditional_17_Template, 2, 1, "mat-card-actions", 13);
+      \u0275\u0275conditionalCreate(16, ZTemplateFeature_Conditional_16_Template, 2, 1, "mat-card-actions", 12)(17, ZTemplateFeature_Conditional_17_Template, 2, 1, "mat-card-actions", 12);
       \u0275\u0275elementEnd()()()();
     }
     if (rf & 2) {
@@ -242,9 +244,9 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ZTemplateFeature, [{
     type: Component,
-    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-feature", template: `<mat-card class="dashboard-card  p-0 m-0 p-_template?.lg-2">\r
+    args: [{ standalone: false, encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush, selector: "aam-feature", template: `<mat-card class="dashboard-card p-0 m-1">\r
   <mat-card-content class="dashboard-card-content p-1">\r
-    <mat-grid-list class="" cols="12" rowHeight="55px">\r
+    <mat-grid-list class="mb-2" cols="12" rowHeight="55px">\r
       <mat-grid-tile [colspan]="_template.SM || _template.linkPaginate ? 12 : 5" class="flex--start">\r
         <section>\r
           @if (_template?.title) {\r
@@ -262,7 +264,7 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
         </section>\r
       </mat-grid-tile>\r
       @if (_template?.linkAdd && _template?.lb) {\r
-      <mat-grid-tile [colspan]="_template.SM ? 12 : 7" class="flex--end m-1">\r
+      <mat-grid-tile [colspan]="_template.SM ? 12 : 7" class="flex--end" style="overflow: visible;">\r
         <btn-link lbl="Add" icon="local_hospital" [link]="_template.linkAdd"></btn-link>\r
         <btn lbl="Refresh" icon="autorenew" (clickz)="_template.lb.refresh()"></btn>\r
         <btn lbl="Filter" [icon]="_template?.lb?.filterDefaultShow ? 'filter_alt' : 'filter_alt_off'" (clickz)="_template.lb.filterShow()"></btn>\r
@@ -279,10 +281,10 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
         </div>\r
       </mat-grid-tile>\r
     </mat-grid-list>\r
-    <mat-grid-list cols="1" rowHeight="60px">\r
+    <mat-grid-list cols="1" rowHeight="60px" class="mt-2">\r
       <mat-grid-tile colspan="1" class="flex--end">\r
         @if (_template?.linkPaginate) {\r
-        <mat-card-actions align="end" class="m-2">\r
+        <mat-card-actions align="end">\r
           @if (_template.fsb) {\r
           <btn lbl="Reset" icon="cached" (clickz)="_template.fsb.resetForm()"></btn>\r
           <btn lbl="Save" icon="save" (clickz)="_template.fsb.submit()"></btn>\r
@@ -290,7 +292,7 @@ var ZTemplateFeature = class _ZTemplateFeature extends BaseClassTemplate {
           }\r
         </mat-card-actions>\r
         }@else if (_template.linkAdd) {\r
-        <mat-card-actions align="end" class="mt-3">\r
+        <mat-card-actions align="end">\r
           <tbl-paginator [lb]="_template.lb"></tbl-paginator>\r
         </mat-card-actions>\r
         }\r
@@ -315,44 +317,56 @@ var routes = [
     children: [
       {
         path: "",
-        redirectTo: "user",
+        redirectTo: "index",
         pathMatch: "full"
       },
       {
+        path: "index",
+        component: MenuModuleIndex,
+        data: {
+          title: "Feature Module",
+          linkPaginate: ``,
+          linkAdd: ``,
+          linkUpdate: ``,
+          permission: [EP.Gets],
+          layer: ["Module", "Feature"]
+        }
+      },
+      {
         path: "user",
-        loadChildren: () => import("./chunk-JNBBYJRQ.js").then((m) => m.UserzModule)
+        loadChildren: () => import("./chunk-D37GRKMD.js").then((m) => m.UserzModule)
       },
       {
         path: "account-in",
-        loadChildren: () => import("./chunk-FKCCEXKE.js").then((m) => m.AccountInModule)
+        loadChildren: () => import("./chunk-XOTYFHUF.js").then((m) => m.AccountInModule)
       },
       {
         path: "account-out",
-        loadChildren: () => import("./chunk-32AI6GI2.js").then((m) => m.AccountOutModule)
+        loadChildren: () => import("./chunk-5ZISHQW7.js").then((m) => m.AccountOutModule)
       },
       {
         path: "education",
-        loadChildren: () => import("./chunk-A6IZFGQH.js").then((m) => m.EducationModule)
+        loadChildren: () => import("./chunk-5HN3JFC6.js").then((m) => m.EducationModule)
       },
       {
         path: "library",
-        loadChildren: () => import("./chunk-BRIJDHPE.js").then((m) => m.EducationLibraryModule)
+        loadChildren: () => import("./chunk-JUQ4HJCL.js").then((m) => m.EducationLibraryModule)
       },
       {
         path: "exam",
-        loadChildren: () => import("./chunk-ZN6WVXI2.js").then((m) => m.EducationExamModule)
+        loadChildren: () => import("./chunk-YXKD5EX7.js").then((m) => m.EducationExamModule)
       },
       {
         path: "syllabus",
-        loadChildren: () => import("./chunk-REW6NKB2.js").then((m) => m.EducationSyllabusModule)
+        loadChildren: () => import("./chunk-VMEWMM25.js").then((m) => m.EducationSyllabusModule)
       },
       {
         path: "file-upload",
-        loadChildren: () => import("./chunk-P6BGWVIN.js").then((m) => m.FileUploadModule)
+        loadChildren: () => import("./chunk-67B5AFIJ.js").then((m) => m.FileUploadModule)
       },
       {
         path: "notification",
-        loadChildren: () => import("./chunk-XEZZJRWH.js").then((m) => m.NotificationModule)
+        loadChildren: () => import("./chunk-BPEAXWFL.js").then((m) => m.NotificationModule)
       }
     ]
   }
@@ -408,4 +422,4 @@ var FeatureModule = class _FeatureModule {
 export {
   FeatureModule
 };
-//# sourceMappingURL=chunk-FEX7XRZ3.js.map
+//# sourceMappingURL=chunk-DFRCMCZC.js.map
