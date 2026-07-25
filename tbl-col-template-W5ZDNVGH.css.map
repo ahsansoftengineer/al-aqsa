@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/table/tbl-col-template/tbl-col-template.scss"],
+  "sourcesContent": [".cols-wrapper {\r\n  display: flex;\r\n  flex-wrap: nowrap;\r\n  align-items: center;\r\n  gap: 8px;\r\n  /* optional spacing */\r\n}\r\n\r\n.theme-row:hover {\r\n  cursor: pointer;\r\n  background-color: #d9d9d9;\r\n}\r\n\r\n::ng-deep .mat-sort-header-arrow>svg {\r\n  fill: #fff !important;\r\n}\r\n\r\n.table-empty-state {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n  .mat-headline-small {\r\n    margin: 0;\r\n  }\r\n\r\n  .mat-body-medium {\r\n    color: var(--mat-sys-on-surface-variant);\r\n    max-width: 320px;\r\n  }\r\n\r\n  button {\r\n    margin-top: 8px;\r\n  }\r\n}\r\n\r\n::ng-deep .mat-mdc-menu-item {\r\n  min-height: 40px;\r\n}\r\n\r\n.alt-row {\r\n  background-color: #c3c3c3fe;\r\n}\r\n\r\n.theme-row:hover {\r\n  background-color: #777777;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,aAAA;AACA,eAAA;AACA,OAAA;;AAIF,CAAA,SAAA;AACE,UAAA;AACA,oBAAA;;AAGF,UAAA,CAAA,sBAAA,EAAA;AACE,QAAA;;AAGF,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;AACA,mBAAA;AACA,SAAA;AACA,UAAA;;AAEA,CARF,kBAQE,CAAA;AACE,UAAA;;AAGF,CAZF,kBAYE,CAAA;AACE,SAAA,IAAA;AACA,aAAA;;AAGF,CAjBF,kBAiBE;AACE,cAAA;;AAIJ,UAAA,CAAA;AACE,cAAA;;AAGF,CAAA;AACE,oBAAA,KAAA,GAAA,EAAA,GAAA,EAAA,GAAA,EAAA;;AAGF,CAvCA,SAuCA;AACE,oBAAA;;",
+  "names": []
+}

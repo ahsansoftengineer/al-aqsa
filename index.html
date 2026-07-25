@@ -19,11 +19,21 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Al Aqsa Hufaz Academy">
   <link rel="apple-touch-icon" href="icons/icon-192x192.png">
-<link rel="stylesheet" href="styles-TQ3WM7F3.css"></head>
+<link rel="stylesheet" href="styles-KFI4L3CC.css"></head>
 
-<body>
+<body style="overflow: hidden;">
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<link rel="modulepreload" href="chunk-QJZZQSG3.js"><link rel="modulepreload" href="chunk-KBGALCVX.js"><link rel="modulepreload" href="chunk-PM4ADLNH.js"><link rel="modulepreload" href="chunk-53CSVDUX.js"><link rel="modulepreload" href="chunk-GE5DPNEV.js"><link rel="modulepreload" href="chunk-ZOTFYO6X.js"><link rel="modulepreload" href="chunk-KZ5STYMK.js"><link rel="modulepreload" href="chunk-Z5FAQA5I.js"><script src="polyfills-PBFM45AN.js" type="module"></script><script src="scripts-QDN5PXII.js" defer></script><script src="main-2OKRHOYK.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-FLNLGCLN.js"><link rel="modulepreload" href="chunk-JJM2TTAB.js"><link rel="modulepreload" href="chunk-IMU3S4IQ.js"><link rel="modulepreload" href="chunk-5OZXRHGX.js"><link rel="modulepreload" href="chunk-LLP7JRYF.js"><link rel="modulepreload" href="chunk-7CXVMO6G.js"><link rel="modulepreload" href="chunk-DSAO3SWD.js"><link rel="modulepreload" href="chunk-HWCWTAOC.js"><script src="polyfills-PBFM45AN.js" type="module"></script><script src="scripts-QDN5PXII.js" defer></script><script src="main-TPSGA4QT.js" type="module"></script></body>
 
 </html>

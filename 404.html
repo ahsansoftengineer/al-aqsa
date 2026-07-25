@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      color: #1e293b;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: #fff;
+      border-radius: 24px;
+      padding: 48px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      box-shadow:
+        0 25px 60px rgba(15, 23, 42, .08),
+        0 8px 20px rgba(15, 23, 42, .05);
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .code {
+      font-size: 72px;
+      font-weight: 800;
+      color: #2563eb;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 18px;
+      color: #0f172a;
+    }
+
+    p {
+      color: #64748b;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .hint {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+      }
+
+      .content {
+        order: 2;
+      }
+
+      .image {
+        order: 1;
+      }
+
+      .code {
+        font-size: 58px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="image">
+
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+
+        <circle cx="250" cy="200" r="140" fill="#DBEAFE" />
+
+        <rect x="170" y="110" width="160" height="180" rx="18" fill="#ffffff" stroke="#2563EB" stroke-width="6" />
+
+        <text x="250" y="210" text-anchor="middle" font-size="80" font-weight="700" fill="#2563EB">
+          404
+        </text>
+
+        <circle cx="160" cy="120" r="12" fill="#60A5FA" />
+        <circle cx="340" cy="280" r="10" fill="#93C5FD" />
+        <circle cx="350" cy="90" r="8" fill="#BFDBFE" />
+
+      </svg>
+
+    </div>
+
+    <div class="content">
+
+      <div class="code">404</div>
+
+      <h1>We couldn't find that page.</h1>
+
+      <p>
+        The page you requested may have been moved, renamed,
+        or the address may be incorrect.
+      </p>
+
+      <p>
+        If you refreshed the browser while viewing a page,
+        we'll take you back into the application.
+        Otherwise, you can continue browsing from the home page.
+      </p>
+
+      <a class="btn" href="/al-aqsa/">
+        Continue to Website
+      </a>
+
+      <div class="hint">
+        Redirecting automatically...
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    sessionStorage.redirect = location.href;
+    const l = window.location;
+    l.replace(`${l.protocol}//${l.hostname}${l.port ? ':' + l.port : ''}/al-aqsa/`);
+  </script>
+
+</body>
+
+</html>

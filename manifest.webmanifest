@@ -62,17 +62,17 @@
   ],
   "screenshots": [
     {
-      "src": "screenshots/education.png",
+      "src": "screenshots/edu.png",
       "sizes": "1366x768",
       "type": "image/png",
       "form_factor": "wide"
     }
   ],
-  "categories": ["education", "productivity", "business"],
+  "categories": ["edu", "productivity", "business"],
   "shortcuts": [
     {
       "name": "Education",
-      "url": "/feature/education/index"
+      "url": "/feature/edu/index"
     }
   ]
 }

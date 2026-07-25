@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_theme/headers/headers.component.scss"],
-  "sourcesContent": ["\r\n.example-spacer {\r\n  flex: 1 1 auto;\r\n}\r\n\r\n.brand {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 12px;\r\n}\r\n\r\n.brand-logo {\r\n  width: 42px;\r\n  height: 42px;\r\n  border-radius: 8px;\r\n  object-fit: contain;\r\n}\r\n\r\n.brand-text {\r\n  display: flex;\r\n  flex-direction: column;\r\n  line-height: 1.1;\r\n}\r\n\r\n.title {\r\n  font-size: 18px !important;\r\n  font-weight: 600;\r\n}\r\n\r\n.subtitle {\r\n  font-size: 12px;\r\n  opacity: 0.75;\r\n}\r\n"],
-  "mappings": ";AACA,CAAA;AACE,QAAA,EAAA,EAAA;;AAGF,CAAA;AACE,WAAA;AACA,eAAA;AACA,OAAA;;AAGF,CAAA;AACE,SAAA;AACA,UAAA;AACA,iBAAA;AACA,cAAA;;AAGF,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;;AAGF,CAAA;AACE,aAAA;AACA,eAAA;;AAGF,CAAA;AACE,aAAA;AACA,WAAA;;",
-  "names": []
-}

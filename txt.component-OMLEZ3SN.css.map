@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_shared/control/txt/txt.component.ts"],
-  "sourcesContent": ["\n    \n  b .asterik_required {\n    color: gray;\n  }\n  b .asterik_required:hover {\n    color: red;\n  }\n\n  "],
-  "mappings": ";AAEE,EAAA,CAAA;AACE,SAAA;;AAEF,EAAA,CAHA,gBAGA;AACE,SAAA;;",
-  "names": []
-}
