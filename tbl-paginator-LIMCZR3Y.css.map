@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/table/tbl-paginator/tbl-paginator.ts"],
+  "sourcesContent": ["\n    .mat-mdc-paginator-container{\n      padding: 0px !important;\n    }\n    .mat-mdc-paginator-range-label{\n      margin: 0px 5px 0px 5px !important;\n    }\n    .mat-mdc-paginator {\n      background: transparent !important;\n    }\n    .mat-mdc-paginator-page-size mat-form-field {\n      margin: 0px !important;\n    }\n  "],
+  "mappings": ";AACI,CAAA;AACE,WAAA;;AAEF,CAAA;AACE,UAAA,IAAA,IAAA,IAAA;;AAEF,CAAA;AACE,cAAA;;AAEF,CAAA,4BAAA;AACE,UAAA;;",
+  "names": []
+}

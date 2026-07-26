@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_shared/control/file-uploader/file-uploader.component.css"],
-  "sourcesContent": [".upload-large {\r\n  position: absolute;\r\n  width: 100% !important;\r\n  height: 100% !important;\r\n  left: 0;\r\n  right: 0;\r\n  opacity: 0;\r\n}\r\n.img-fluid {\r\n  height: 150px;\r\n  text-align: auto;\r\n}\r\n\r\n/* img */\r\n.custom__img__div {\r\n  width: 100%;\r\n  padding: 3px, 5px;\r\n  margin-top: 15px;\r\n  border: 1px solid #8e8e8e;\r\n  border-radius: 3px;\r\n}\r\n.custom__img {\r\n  display: block;\r\n  width: auto;\r\n  height: 150px;\r\n  margin: 0px auto;\r\n}\r\n\r\n.zoom {\r\n  transition: transform 1s, opacity 1s, border-radius 1s;\r\n  /* opacity: 0.7; */\r\n  z-index: 200;\r\n  border-radius: 5px;\r\n}\r\n\r\n.zoom:hover {\r\n  transform: scale(1.2);\r\n  opacity: 1;\r\n  border-radius: 7px;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAC;AACC,YAAU;AACV,SAAO;AACP,UAAQ;AACR,QAAM;AACN,SAAO;AACP,WAAS;AACX;AACA,CAAC;AACC,UAAQ;AACR,cAAY;AACd;AAGA,CAAC;AACC,SAAO;AACP,WAAS,GAAG,EAAE;AACd,cAAY;AACZ,UAAQ,IAAI,MAAM;AAClB,iBAAe;AACjB;AACA,CAAC;AACC,WAAS;AACT,SAAO;AACP,UAAQ;AACR,UAAQ,IAAI;AACd;AAEA,CAAC;AACC;AAAA,IAAY,UAAU,EAAE;AAAA,IAAE,QAAQ,EAAE;AAAA,IAAE,cAAc;AAEpD,WAAS;AACT,iBAAe;AACjB;AAEA,CAPC,IAOI;AACH,aAAW,MAAM;AACjB,WAAS;AACT,iBAAe;AACjB;",
-  "names": []
-}

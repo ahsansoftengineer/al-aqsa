@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_theme/sb-l-nav/side-bar-mat-list-item/side-bar-mat-list-item.component.scss"],
-  "sourcesContent": [".mdc-list-item.mdc-list-item--with-one-line {\r\n  height: 35px;\r\n  border-radius: 0px;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAA,aAAA,CAAA;AACE,UAAA;AACA,iBAAA;;",
-  "names": []
-}

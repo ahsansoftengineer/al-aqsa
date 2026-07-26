@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_core/components/loader/loader.css"],
+  "sourcesContent": ["h1 {\r\n  color: white;\r\n  text-shadow: 2px 1px 2px black;\r\n  font-size: 25px;\r\n}\r\nspan {\r\n  color: white;\r\n  text-shadow: 1px 1px 2px black;\r\n  font-size: 33px;\r\n  font-weight: 100;\r\n}\r\n@media (max-width: 768px) {\r\n  h1 {\r\n    font-size: 13px;\r\n    text-shadow: 1px 1px 0px black;\r\n  }\r\n  span {\r\n    font-size: 15px;\r\n    text-shadow: 1px 1px 0px black;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,SAAO;AACP,eAAa,IAAI,IAAI,IAAI;AACzB,aAAW;AACb;AACA;AACE,SAAO;AACP,eAAa,IAAI,IAAI,IAAI;AACzB,aAAW;AACX,eAAa;AACf;AACA,QAAO,WAAY;AACjB;AACE,eAAW;AACX,iBAAa,IAAI,IAAI,IAAI;AAC3B;AACA;AACE,eAAW;AACX,iBAAa,IAAI,IAAI,IAAI;AAC3B;AACF;",
+  "names": []
+}
