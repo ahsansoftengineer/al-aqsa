@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/_shared/control/txt/txt.ts"],
+  "sourcesContent": ["\n    input[type=\"number\"]::-webkit-outer-spin-button,\n    input[type=\"number\"]::-webkit-inner-spin-button {\n      -webkit-appearance: none;\n      margin: 0;\n    }\n  "],
+  "mappings": ";AACI,KAAA,CAAA,YAAA;AAAA,KAAA,CAAA,YAAA;AAEE,sBAAA;AACA,UAAA;;",
+  "names": []
+}
