@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_shared/control/opt-checkbox/opt-checkbox.ts"],
-  "sourcesContent": ["\n    .ele-wrap {\n      background-color: var(--mat-form-field-filled-container-color, var(--mat-sys-surface-variant));\n      height: 57px;\n      margin-top: 4px;\n      border-radius: 5px 5px 0px 0px;\n      border-bottom: 1px solid black;\n      margin-bottom: 5px;\n    }\n    mat-error {\n      font-size: var(--mat-form-field-subscript-text-size);\n    }\n  "],
-  "mappings": ";AACI,CAAA;AACE,oBAAA,IAAA,uCAAA,EAAA,IAAA;AACA,UAAA;AACA,cAAA;AACA,iBAAA,IAAA,IAAA,IAAA;AACA,iBAAA,IAAA,MAAA;AACA,iBAAA;;AAEF;AACE,aAAA,IAAA;;",
-  "names": []
-}

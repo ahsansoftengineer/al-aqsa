@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_shared/filters/tbl-filter-template/tbl-filter-template.ts"],
-  "sourcesContent": ["\n    .mat-expansion-panel-body {\n      padding: 3px !important;\n      // padding-right: px !important;\n    }\n  "],
-  "mappings": ";AACI,CAAA;AACE,WAAA;;",
-  "names": []
-}

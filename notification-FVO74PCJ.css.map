@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/_theme/headers/notification/notification.scss"],
-  "sourcesContent": [".notification-menu {\r\n  width: 380px;\r\n  max-height: 500px;\r\n  overflow: auto;\r\n}\r\n\r\n.notification-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 12px 16px;\r\n  font-weight: 600;\r\n}\r\n\r\n.notification-content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-left: 12px;\r\n}\r\n\r\n.notification-content .title {\r\n  font-size: 14px;\r\n}\r\n\r\n.notification-content .time {\r\n  font-size: 12px;\r\n  color: gray;\r\n}\r\n"],
-  "mappings": ";AAAA,CAAA;AACE,SAAA;AACA,cAAA;AACA,YAAA;;AAGF,CAAA;AACE,WAAA;AACA,mBAAA;AACA,eAAA;AACA,WAAA,KAAA;AACA,eAAA;;AAGF,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;;AAGF,CANA,qBAMA,CAAA;AACE,aAAA;;AAGF,CAVA,qBAUA,CAAA;AACE,aAAA;AACA,SAAA;;",
-  "names": []
-}
