@@ -1,1 +1,0 @@
-import {w}from'./chunk-CAgqGege.js';import {A as Ar}from'./chunk-D-o1ruxF.js';import {d as de,a as ae}from'./main-AT3HXUG3.js';var p=[Ar,w],m=class r{static \u0275fac=function(a){return new(a||r)};static \u0275mod=de({type:r});static \u0275inj=ae({imports:[p,Ar]})};export{m};
