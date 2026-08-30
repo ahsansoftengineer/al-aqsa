@@ -1,0 +1,1 @@
+var i={YES_NO:[{id:true,name:"Yes"},{id:false,name:"No"}],SHOW_HIDE:[{id:true,name:"Show"},{id:false,name:"Hide"}],E_D:[{id:true,name:"Enabled"},{id:false,name:"Disabled"}]};export{i};
