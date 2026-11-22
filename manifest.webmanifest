@@ -62,17 +62,26 @@
   ],
   "screenshots": [
     {
-      "src": "screenshots/edu.png",
+      "src": "screenshot/academic.png",
       "sizes": "1366x768",
       "type": "image/png",
       "form_factor": "wide"
     }
   ],
-  "categories": ["edu", "productivity", "business"],
+  "categories": ["academic", "productivity", "business"],
   "shortcuts": [
     {
       "name": "Education",
-      "url": "/feature/edu/index"
+      "short_name": "Education",
+      "description": "Open Education module",
+      "url": "/al-aqsa/feature/academic/index",
+      "icons": [
+        {
+          "src": "/al-aqsa/screenshot/academic.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
     }
   ]
 }
